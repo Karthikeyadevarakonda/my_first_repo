@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+background-color:#141414;
+font-family: "Roboto", sans-serif;
+}
+
+#main-heading {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 760px;
+    text-align: center;
+    height: 100vh; 
+    position: relative;
+    bottom: 20px;
+}
+#main-heading h1{
+    color: #FFFFFF;
+    font-size: 47.0267px;
+    font-weight: 400;
+    position: relative;
+    top:140px
+}
+#profile-icons {
+   display: flex;
+   justify-content: center;
+   display: flex;
+   width: 800px;
+   margin: auto;
+   gap: 20px;
+   
+}
+
+#profile-icons img{
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+    
+}
+#profile-icons p{
+    color: gray;
+    cursor: pointer;
+    
+}
+#profile-icons p:hover{
+    color: #FFFFFF;
+    font-weight: 500;
+}
+#profile-icons img:hover{
+    border: 3px solid white;
+
+}
+#manage-profile{
+    position: relative;
+    bottom: 100px;
+    
+}
+#manage-profile button[type="submit"]{
+    background-color: #141414;;
+    color: #808080;
+    border: 1px solid #808080;
+    padding: 5.976px 16.928px;
+    letter-spacing: 2px;
+    font-size: 15px;
+    width: 180px;
+    height: 35px; 
+}
+#manage-profile button[type="submit"]:hover{
+    border:1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-weight: 600px;
+}
+#gradient {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.527) 30%, transparent 100%);
+    height: 12vh;
+    /* backdrop-filter: blur(10px); */
+}
+#add-profile{
+    width: 125px;
+    height: 120px;
+    background-color: transparent;
+    padding:20px;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+.fa-circle-plus{
+    color:rgba(132 128 128);
+    font-size:70px;
+    /* padding: 40px; */
+    text-align: center;
+    margin-bottom: 35px;
+}
+.fa-circle-plus:hover{
+    color:lightgrey
+}
+#add-profile:hover{
+    border: 3px solid white;
+}
