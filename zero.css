@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Inter", sans-serif;
+   
+}
+#nav-bar{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 70px;
+    box-shadow:1px 1px 0px 0px rgba(28, 4, 4, 0.075);
+    position:fixed;
+    z-index: 1000;
+    background-color: white;
+}
+#logo img{
+    width: 130px;
+    height: 17.5px;
+    position: relative;
+    top: 28px;
+    left: 80px;
+}
+#links{
+position: relative;
+display: flex;
+justify-content: end;
+right: 160px;
+gap: 40px;
+}
+#links a{
+    text-decoration: none;
+    font-size: 15.5px;
+    color: #444444; 
+}
+#links a:hover{
+    color: #387Ed1;
+}
+#zerodha-image img{
+    width: 625.9px;
+    height: 263.4px;
+    position: relative;
+    left: 10px;
+}
+#main-body{
+    height: 150vh;
+    width: 97vw;
+    /* margin-top: 75px; */
+}
+#main-body #zerodha-image{
+    /* border: 1px solid red; */
+    width: 627px;
+    margin: auto;
+    position: relative;
+    top: 123px;
+}
+#invest-heading h1{
+font-size: 44px;
+color: #424242;
+position: relative;
+left: 160px;
+top: 55px;
+font-weight: 600;
+}
+#imfo h5{
+    font-size:20px; 
+    color:#424242;
+    font-weight: 400;
+    width: 870px;
+    /* border: 1px solid red; */
+    position: relative;
+    top: 65px;
+    right: 50px;
+}
+#signup-button button{
+    font-size:19.2px;
+    border: 0;
+    color: #ffff;
+    background-color: #387ED1;
+    padding: 10px 30px;
+    border-radius: 3px;
+    position: relative;
+    top: 115px;
+    left: 250px;
+}
+#signup-button button:hover{
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+
+@media screen and (max-width: 960px) {
+
+    #links{
+        display: none;
+    }
+}
+@media screen and (max-width: 500px) {
+    
+}
+
