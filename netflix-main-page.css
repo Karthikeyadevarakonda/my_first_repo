@@ -145,13 +145,9 @@ margin: auto;
     height: 55px;
     margin-left: 10px;
 }
-#main{
-    /* max-width: 100%; */
-    /* width: 60%; */
-}
 #footer{
     height: 350vh;
-    width: 100%
+    width: 100%;
     background-color: black;
 }
 #footer #design-line{

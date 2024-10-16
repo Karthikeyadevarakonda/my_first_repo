@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Inter", sans-serif;  
+    background-color: black;
+}
+#main{
+    width: 95%;
+    margin: auto;
+    /* border: 1px solid red; */
+}
+#para1{
+    position: relative;
+    background-color: orange;
+    /* padding: 20px; */
+    left: 50px;
+    top: 50px;
+    border-radius: 20px;
+    animation: para1 3s alternate 0s 1;
+    width: 80%;
+    height: 190px;
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+}
+#para1 h1{
+    width: 50%;
+    /* border: 1px solid red; */
+    font-size: 120px;
+    margin: auto;
+    animation: para1-h1 3s alternate 0s 1;  
+}
+@keyframes para1 {
+    from{
+        transform: skewY(90deg);
+        /* scale: 2000%; */
+    }
+}
+@keyframes para1-h1 {
+        0% {
+            animation-timing-function: ease-in;
+            opacity: 0;
+            transform: translateX(-250px);
+        }
+    
+        38% {
+            animation-timing-function: ease-out;
+            opacity: 1;
+            transform: translateX(0);
+        }
+    
+        55% {
+            animation-timing-function: ease-in;
+            transform: translateX(-68px);
+        }
+    
+        72% {
+            animation-timing-function: ease-out;
+            transform: translateX(0);
+        }
+    
+        81% {
+            animation-timing-function: ease-in;
+            transform: translateX(-28px);
+        }
+    
+        90% {
+            animation-timing-function: ease-out;
+            transform: translateX(0);
+        }
+    
+        95% {
+            animation-timing-function: ease-in;
+            transform: translateX(-8px);
+        }
+    
+        100% {
+            animation-timing-function: ease-out;
+            transform: translateX(0);
+        }
+    }
+
+#para2{
+    position: relative;
+    background-color: orangered;
+    /* padding: 20px; */
+    left: 50px;
+    top: 120px;
+    border-radius: 20px;
+    animation: para2 3s alternate 0s 1 forwards;
+    width: 80%;
+    height: 190px;
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+}
+#para2 h1{
+    width: 74%;
+    /* border: 1px solid red; */
+    font-size: 120px;
+    margin: auto;
+    animation: para2-h1 3s alternate 0s 1 forwards; 
+}
+@keyframes para2 {
+    from{
+        transform: skewY(90deg);
+        /* scale: 2000%; */
+    }
+}
+@keyframes para2-h1 {
+        0% {
+            animation-timing-function: ease-in;
+            opacity: 0;
+            transform: translateX(-250px);
+        }
+    
+        38% {
+            animation-timing-function: ease-out;
+            opacity: 1;
+            transform: translateX(0);
+        }
+    
+        55% {
+            animation-timing-function: ease-in;
+            transform: translateX(-68px);
+        }
+    
+        72% {
+            animation-timing-function: ease-out;
+            transform: translateX(0);
+        }
+    
+        81% {
+            animation-timing-function: ease-in;
+            transform: translateX(-28px);
+        }
+    
+        90% {
+            animation-timing-function: ease-out;
+            transform: translateX(0);
+        }
+    
+        95% {
+            animation-timing-function: ease-in;
+            transform: translateX(-8px);
+        }
+    
+        100% {
+            animation-timing-function: ease-out;
+            transform: translateX(0);
+        }
+    }
+
+
+@media screen and (max-width:1200px){
+    #main{
+        width: 100%;
+        margin: auto;
+        background-color: black;
+        height: 100vh;
+        
+    }
+    #para2{
+        position: relative;
+        background-color: orangered;
+        /* padding: 20px; */
+        left: 90px;
+        top: 450px;
+        border-radius: 20px;
+        animation: para2 3s alternate 0s 1 forwards;
+        width: 80%;
+        height: 20vh;
+        display:flex ;
+        flex-direction: column;
+        align-items: center;
+    }
+    #para2 h1{
+        width: 50%;
+        /* border: 1px solid red; */
+        font-size: 80px;
+        margin: auto;
+        animation: para2-h1 3s alternate 0s 1 forwards; 
+    }
+    #para1{
+        position: relative;
+        background-color: orange;
+        /* padding: 20px; */
+        left: 90px;
+        top: 350px;
+        border-radius: 20px;
+        animation: para1 3s alternate 0s 1;
+        width: 80%;
+        height: 20vh;
+        display:flex ;
+        flex-direction: column;
+        align-items: center;
+    }
+    #para1 h1{
+        width: 50%;
+        /* border: 1px solid red; */
+        font-size: 80px;
+        margin: auto;
+        animation: para1-h1 3s alternate 0s 1;  
+    }
+   
+}
