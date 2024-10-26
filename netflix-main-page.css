@@ -126,6 +126,9 @@ margin: auto;
     width: 370px;
     height: 55px;
     border-radius: 4px;
+    color: white;
+    font-size: 20px;
+    padding-left: 20px;
 }
 #email-and-get-started input[type="text"]::placeholder{
     padding-left: 12px;
