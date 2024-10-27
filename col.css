@@ -73,7 +73,7 @@ body{
     height: 100vh;
     /* border: 1px solid red; */
     background-color: #ffffff;
-    color: white;
+    color: black;
      display: flex;
      flex-direction: column;
      justify-content: flex-end;
