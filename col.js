@@ -54,5 +54,6 @@ window.addEventListener('keydown',(e)=>{
        
     }else{
         alert("click space bar to change colours");
+    
     }
 })
