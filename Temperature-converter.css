@@ -58,3 +58,19 @@ label{
 #convert:active{
        transform: scale(0.89);
 }
+
+@media screen and (max-width: 1200px) {
+    #container{
+        width: 300px;
+        height: 530px;
+        /* border: 1px solid red; */
+        padding-left: 50px;
+        padding-top: 50px;
+        position: relative;
+        margin: auto;
+        border-radius: 10px;
+        top: 30px;
+        box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.484);
+        background: linear-gradient(180deg,rgba(45, 134, 235, 0.742) 50%,grey 90%);
+    }
+}
