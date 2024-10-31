@@ -63,7 +63,7 @@ body{
     border-radius: 5px;
     translate: transform 1s ease-in-out;
     position: relative;
-    right: 20px;
+    right: 10px;
     top: 50px;
 }
 .box:hover{
@@ -97,4 +97,32 @@ body{
 }
 .costP{
     cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+    .box{
+        height: 120px;
+    }
+    #container-1 input{
+        width: 200px;
+        height: 70px;
+        padding-left: 20px;
+        padding-right: 10px;
+        border-radius: 4px;
+        border: 1px solid black;
+        outline: none;
+        overflow: hidden;
+    }
+    #container-1 input::placeholder{
+        font-size: 30px;
+    }
+    #btn1{
+    width: 65px;
+    height: 60px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(184, 169, 198);
+    margin-left: 10px;
+    box-shadow: 3px 3px 2px 1px gray;
+    }
 }
