@@ -29,6 +29,7 @@ label{
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.651);
     overflow: hidden;
+    outline: none;
 }
 #convertF{
     width: 200px;
@@ -37,6 +38,7 @@ label{
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.651);
     overflow: hidden;
+    outline: none;
 }
 
 #container img{
@@ -46,7 +48,7 @@ label{
     border-radius: 4px;
     top: 60px;
 }
-#convert{
+/* #convert{
     font-size:19.2px;
     border: 0;
     color: #ffff;
@@ -54,10 +56,10 @@ label{
     padding: 10px 30px;
     border-radius: 3px;
     transition: transform 0.3s ease;
-}
-#convert:active{
+} */
+/* #convert:active{
        transform: scale(0.89);
-}
+} */
 
 @media screen and (max-width: 1200px) {
     #container{
