@@ -29,10 +29,10 @@ btn1.addEventListener('click',()=>{
     let costP = document.createElement('p');
     let dateP = document.createElement('p');
 
-    costP.innerText = TodoCost;
-    dateP.innerText = Tododate;
+    costP.innerText = "Price: "+ TodoCost +" /-";
+    dateP.innerText = "Date: "+ Tododate;
 
-    p.innerText = Tododata;
+    p.innerText = "Item: "+ Tododata.toUpperCase();
     delbtn.innerHTML = '<i class="fa-solid fa-trash"></i>'; 
 
     p.classList.add('p-items');
@@ -79,5 +79,7 @@ btn1.addEventListener('click',()=>{
     TodoBox.value='';
     cost.value = '';
     date.value = '';
+    }else{
+        alert("enter three fields to add");
     }
 })
