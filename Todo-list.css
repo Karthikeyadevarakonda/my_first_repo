@@ -1,0 +1,100 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#main{
+    margin: auto;
+    width: 800px;
+    /* border: 1px solid red; */
+    height: 100vh;
+}
+#container-1{
+    width: 800px;
+    height: 80px;
+    position: relative;
+    top: 50px;
+     /* border: 1px solid black; */
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+}
+#container-1 input{
+    width: 200px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+    outline: none;
+    overflow: hidden;
+}
+
+body{
+    background-color: lightblue;
+}
+#container-1{
+    display: flex;
+}
+#btn1{
+    width: 50px;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(184, 169, 198);
+    margin-left: 10px;
+    box-shadow: 3px 3px 2px 1px gray;
+}
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    width: 750px; 
+    height: 80px; 
+    align-items: center;
+    border: 1px solid black;
+    box-shadow: 3px 3px 2px 1px gray;
+    margin: 20px auto;
+    background-color:black;
+    color: white;
+    font-weight: 700;
+    padding: 20px;
+    border-radius: 5px;
+    translate: transform 1s ease-in-out;
+    position: relative;
+    right: 20px;
+    top: 50px;
+}
+.box:hover{
+  transform: scale(1.049);
+}
+.p-items{
+    flex-grow: 1;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.finish{
+    text-decoration: line-through;
+}
+.btn-items{
+    color: red;
+    font-size: 20px;
+}
+.info-container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-right: 10px;
+    gap: 2px;
+}
+.p-items{
+    color: orange;
+}
+.dateP{
+    color: rgb(78, 78, 188);
+    cursor: pointer;
+}
+.costP{
+    cursor: pointer;
+}
