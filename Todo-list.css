@@ -101,6 +101,7 @@ body{
 @media screen and (max-width: 1200px) {
     .box{
         height: 120px;
+        translate: none;
     }
     #container-1 input{
         width: 200px;
