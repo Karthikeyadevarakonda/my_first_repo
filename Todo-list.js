@@ -1,85 +1,93 @@
-const TodoBox = document.getElementById('Todo-box');
+
 const btn1 = document.getElementById('btn1');
 const container2 = document.getElementById('container-2');
 const itemsContainers = document.getElementById('itemsContainer');
 
-const cost = document.getElementById('price');
-const date = document.getElementById('date');
+
+const names = document.getElementById('names');
+const id = document.getElementById('id');
+const course = document.getElementById('course');
+const fee = document.getElementById('fee');
 
 
 
 
 
+let table = document.createElement('table');
+table.style.border = '1px solid black'; // Add a border for visibility
+table.style.width = '100%';
+itemsContainers.appendChild(table);
 
 
+let FirstcolumnsNames = document.createElement('tr');
+FirstcolumnsNames.style.display='none';
+
+let namesArray = ['NAMES','STD_ID','COURSE','FEE'];
+
+namesArray.forEach( eachX =>{
+     let column  =  document.createElement('th');
+     column.textContent = eachX;
+     FirstcolumnsNames.appendChild(column);
+});
+
+table.appendChild(FirstcolumnsNames);
 
 btn1.addEventListener('click',()=>{
-    let Tododata = TodoBox.value.trim();
-    let TodoCost = cost.value.trim();
-    let Tododate = date.value.trim();
+    let namefeild = names.value.trim();
+    let idfeild = id.value.trim();
+    let coursefeild = course.value.trim();
+    let feefeild = fee.value.trim();
 
+    if(namefeild && idfeild && coursefeild && feefeild !== ''){
 
-    if(Tododata && TodoCost && Tododate !== ''){
+        if(FirstcolumnsNames.style.display === 'none'){
+            FirstcolumnsNames.style.display='';
+        }
+     
+        let row = table.insertRow();
 
-    let itemContainer = document.createElement('div');
-    let infoContainer = document.createElement('div');
-    let p = document.createElement('p');
-    let delbtn = document.createElement('p');
-
-    let costP = document.createElement('p');
-    let dateP = document.createElement('p');
-
-    costP.innerText = "Price: "+ TodoCost +" /-";
-    dateP.innerText = "Date: "+ Tododate;
-
-    p.innerText = "Item: "+ Tododata.toUpperCase();
-    delbtn.innerHTML = '<i class="fa-solid fa-trash"></i>'; 
-
-    p.classList.add('p-items');
-    delbtn.classList.add('btn-items');
-    costP.classList.add('costP');
-    dateP.classList.add('dateP');
-
-    itemContainer.classList.add('box');
-    infoContainer.classList.add('info-container');
-
+       let cellname = row.insertCell();
+       cellname.textContent = namefeild;
     
+       let cellid = row.insertCell();
+       cellid.textContent = idfeild;
 
-    infoContainer.appendChild(p);
-    infoContainer.appendChild(costP);
-    infoContainer.appendChild(dateP);
-      
-    p.addEventListener('click',()=>{
-        p.classList.toggle('finish');
-        costP.classList.toggle('finish');
-        dateP.classList.toggle('finish');
-    })
-    costP.addEventListener('click',()=>{
-        p.classList.toggle('finish');
-        costP.classList.toggle('finish');
-        dateP.classList.toggle('finish');
-    })
-    dateP.addEventListener('click',()=>{
-        p.classList.toggle('finish');
-        costP.classList.toggle('finish');
-        dateP.classList.toggle('finish');
-    })
+       let cellcourse = row.insertCell();
+       cellcourse.textContent = coursefeild;
 
-    delbtn.addEventListener('click',()=>{
-        itemsContainers.removeChild(itemContainer);
-    })
+       let cellfee = row.insertCell();
+       cellfee.textContent = feefeild;
+
+       let deleteCell = row.insertCell();
+
+       let delbtn = document.createElement('button');
+       delbtn.innerHTML='<i class="fa-solid fa-trash"></i>';
+       delbtn.style.cursor ="pointer";
+
+       deleteCell.appendChild(delbtn);
+      deleteCell.classList.add('deletebutton');
+      delbtn.addEventListener('click',()=>{
+
+        if(confirm("ARE YOU SURE WANT TO DELETE THIS ROW ?")){
+            table.deleteRow(row.rowIndex);
+            alert('deleted sucessfuly');
+
+            if(table.rows.length === 1){
+            FirstcolumnsNames.style.display = 'none';            }
+        }else{
+            alert('delete canceled');
+        }
+
+        
+    });
      
     
-    itemContainer.appendChild(infoContainer);
-    
-    itemContainer.appendChild(delbtn);
 
-    itemsContainers.appendChild(itemContainer);
-
-    TodoBox.value='';
-    cost.value = '';
-    date.value = '';
+    names.value='';
+    id.value = '';
+    course.value = '';
+    fee.value ='';
     }else{
-        alert("enter three fields to add");
+        alert("enter four fields to add");
     }
 })

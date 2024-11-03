@@ -5,15 +5,16 @@
 }
 #main{
     margin: auto;
-    width: 800px;
+    width: 800px; 
     /* border: 1px solid red; */
     height: 100vh;
 }
 #container-1{
-    width: 800px;
+    width: 1000px;
     height: 80px;
     position: relative;
     top: 50px;
+    right: 70px;
      /* border: 1px solid black; */
      display: flex;
      align-items: center;
@@ -31,14 +32,14 @@
 }
 
 body{
-    background-color: lightblue;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 #container-1{
     display: flex;
 }
 #btn1{
-    width: 50px;
-    height: 40px;
+    width: 100px;
+    height: 35px;
     border-radius: 10px;
     outline: none;
     border: none;
@@ -47,83 +48,81 @@ body{
     box-shadow: 3px 3px 2px 1px gray;
 }
 
-.box{
-    display: flex;
-    justify-content: space-between;
-    width: 750px; 
-    height: 80px; 
-    align-items: center;
-    border: 1px solid black;
-    box-shadow: 3px 3px 2px 1px gray;
-    margin: 20px auto;
-    background-color:black;
-    color: white;
-    font-weight: 700;
-    padding: 20px;
-    border-radius: 5px;
-    translate: transform 1s ease-in-out;
+
+#itemsContainer button{
+   color: red;
+   background-color: transparent;
+   border: none;
+    cursor: pointer;
+}
+#itemsContainer table {
+    background-color: lightgray;
+    width: 100%;
+    border-collapse: collapse; 
     position: relative;
-    right: 10px;
-    top: 50px;
+    top: 60px;
+    right: 40px;
 }
-.box:hover{
-  transform: scale(1.049);
+
+#itemsContainer th, #itemsContainer td {
+    border: 1px solid white; 
+    text-align: center;
+    padding: 8px;
 }
-.p-items{
-    flex-grow: 1;
-    padding-right: 10px;
-    cursor: pointer;
+th{
+   background-color:  lightblue;
+    color: white;
 }
-.finish{
-    text-decoration: line-through;
-}
-.btn-items{
-    color: red;
-    font-size: 20px;
-}
-.info-container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    padding-right: 10px;
-    gap: 2px;
-}
-.p-items{
-    color: orange;
-}
-.dateP{
-    color: rgb(78, 78, 188);
-    cursor: pointer;
-}
-.costP{
-    cursor: pointer;
-}
-@media screen and (max-width: 1200px) {
-    .box{
-        height: 120px;
-        translate: none;
-    }
-    #container-1 input{
-        width: 200px;
-        height: 70px;
-        padding-left: 20px;
-        padding-right: 10px;
-        border-radius: 4px;
-        border: 1px solid black;
-        outline: none;
-        overflow: hidden;
-    }
-    #container-1 input::placeholder{
-        font-size: 30px;
-    }
-    #btn1{
-    width: 65px;
-    height: 60px;
+
+
+@media (max-width : 500px) {
+   #main{
+          width: 100px;
+          height: 280vh;
+   }
+   #container-1{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      height: 50vh;
+   }
+   #container-1 input{
+    width: 800px;
+    height: 100px;
+    position: relative;
+    top: 40px;
+    border-radius: 10px;
+    font-size: 40px;
+   }
+   #container-1 input::placeholder{
+      font-size: 40px;
+   }
+   #btn1{
+    width: 400px;
+    height: 85px;
     border-radius: 10px;
     outline: none;
     border: none;
     background-color: rgb(184, 169, 198);
     margin-left: 10px;
     box-shadow: 3px 3px 2px 1px gray;
-    }
+    position: relative;
+    top: 60px;
+    font-size: 40px;
 }
+#itemsContainer table {
+    background-color: lightgray;
+    border-collapse: collapse; 
+    width: 100%;
+    position: relative;
+    top: 150px;
+    left :50px;
+    font-size:35px;
+}
+#itemsContainer th, #itemsContainer td {
+   
+    padding: 8px;
+    font-size: 35px;
+}
+}
+
