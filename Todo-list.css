@@ -116,7 +116,7 @@ th{
     width: 100%;
     position: relative;
     top: 150px;
-    left :50px;
+    left :60px;
     font-size:35px;
 }
 #itemsContainer th, #itemsContainer td {
@@ -124,5 +124,12 @@ th{
     padding: 8px;
     font-size: 35px;
 }
+#itemsContainer button{
+    color: red;
+    background-color: transparent;
+    border: none;
+     cursor: pointer;
+     font-size: 40px;
+ }
 }
 

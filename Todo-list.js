@@ -22,7 +22,7 @@ itemsContainers.appendChild(table);
 let FirstcolumnsNames = document.createElement('tr');
 FirstcolumnsNames.style.display='none';
 
-let namesArray = ['NAMES','STD_ID','COURSE','FEE'];
+let namesArray = ['NAMES','STD_ID','COURSE','FEE','ACTION'];
 
 namesArray.forEach( eachX =>{
      let column  =  document.createElement('th');
@@ -65,11 +65,12 @@ btn1.addEventListener('click',()=>{
        delbtn.style.cursor ="pointer";
 
        deleteCell.appendChild(delbtn);
-      deleteCell.classList.add('deletebutton');
+    //   itemsContainers.classList.add('deletebutton');
       delbtn.addEventListener('click',()=>{
 
         if(confirm("ARE YOU SURE WANT TO DELETE THIS ROW ?")){
             table.deleteRow(row.rowIndex);
+            
             alert('deleted sucessfuly');
 
             if(table.rows.length === 1){
