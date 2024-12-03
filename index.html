@@ -5,26 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./clock.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 <div id="clock">
 <div id="times">
-    <h1 id="hours">
-        00
+    <h1 id="hours" class="backgroud-for-times">
+        <span class="names">HOUR</span>
+       <span id="a">00</span>
     </h1>
-    <span>:</span>
-    <h1 id="minutes">
-        00
+   
+    <h1 id="minutes" class="backgroud-for-times">
+        <span class="names">MIN</span>
+        <span id="b">00</span>
     </h1>
-    <span>:</span>
-    <h1 id="seconds">
-        00
+
+    <h1 id="seconds" class="backgroud-for-times">
+        <span class="names">SEC</span>
+        <span id="c">00</span>
+    </h1>
+    <h1 id="am-pm">
+        AM
     </h1>
 </div>
    <div id="buttons">
-    <button id="start-btn">START</button>
-    <button id="stop-btn">STOP</button>
-    <button id="reset-btn">RESET</button>
+    <button id="start-btn"><i class="fa-solid fa-play"></i></button>
+    <button id="stop-btn"><i class="fa-solid fa-pause"></i></button>
+    <button id="reset-btn"><i class="fa-solid fa-rotate-right"></i></button>
    </div>
 </div>
     <script src="./clock.js"></script>
