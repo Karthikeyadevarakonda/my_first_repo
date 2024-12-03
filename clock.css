@@ -99,7 +99,7 @@ body{
 @media (max-width : 500px) {
     #times{
         display: flex;
-        width: 400px;
+        width: 350px;
         height: 100px;
         align-items: center;
         position: relative;
