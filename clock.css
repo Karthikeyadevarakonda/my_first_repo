@@ -12,3 +12,13 @@
     gap: 10px;
     /* border: 1px solid red; */
 }
+#times{
+    display: flex;
+}
+span{
+    font-size: 30px;
+    position: relative;
+    bottom: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
