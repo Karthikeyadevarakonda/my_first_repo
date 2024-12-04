@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#model{
+    width: 500px;
+    height: 400px;
+    border-radius:8px;
+    color: white;
+    background-color:#32373b;
+    padding: 1.8rem;
+    display: none;
+}
+#icon{
+    width: 100px;
+    height: 130px;
+   
+}
+.fa-cookie-bite{
+    color: rgb(73, 73, 204);
+    font-size: 110px;
+}
+#title{
+    height: 45px;
+}
+p{
+    height: 70px;
+}
+#buttons{
+    height: 43px;
+}
+#one{
+    height: 38px;
+    width: 210px;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: 0;
+    font-size: 16px;
+    border-radius: 2px;
+}
+#two{
+    height: 38px;
+    width: 210px;
+    background-color: black;
+    color: white;
+    outline: none;
+    border: 0;
+    font-size: 16px;
+    border-radius: 2px;
+}
+#three{
+    height: 38px;
+    width: 425px;
+    outline: none;
+    border: 0;
+    border-radius: 2px;
+    font-size: 16px;
+}
+a{
+    color: white;
+}
