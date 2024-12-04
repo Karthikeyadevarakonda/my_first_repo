@@ -100,11 +100,11 @@ a{
 
 @media (max-width : 500px) {
     #model{
-        width: 300px;
+        width: 280px;
         height: 470px;
         position: fixed;
-        top: 460px;
-        left: 100px;
+        /* top: 460px;  */
+        /* left: 100px; */
     }
     #one{
    width: 100px;
