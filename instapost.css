@@ -191,6 +191,7 @@ body{
     #comments,
     #share {
         font-size: 22px;
+        padding: 10px;
     }
     #description {
         width: 100%;
@@ -231,5 +232,8 @@ body{
     body{
         background-color:black;
         width: 100%;
+    }
+    *{
+        outline: 1px solid red;
     }
 }
