@@ -139,7 +139,7 @@ body{
 }
 @media (max-width : 500px) {
     #container{
-        width: 473px;
+        width: 483px;
         height: 100vh;
         background-color: rgb(0, 0, 0);
         padding-top: 40px;
@@ -157,7 +157,7 @@ body{
     }
     #three-dots{
         width: 20px;
-        padding-left: 240px;
+        padding-left: 220px;
     }
     #footer{
         width: 100%;
@@ -173,11 +173,11 @@ body{
         color: #ffff;
         font-weight: 300;
         padding-top: 190px;
-        padding-left: 10px;
+        padding-left: 30px;
         padding-right: 10px;
     }
     #bookmark{
-        padding-left: 295px;
+        padding-left: 265px;
         padding-top: 10px;
         font-size: 25px;
     }
@@ -188,7 +188,7 @@ body{
     #likes{
         display: flex;
         gap:25px;
-        padding-left: 15px;
+        padding-left: 45px;
         align-items: center;
     }
     #logo img{
@@ -197,10 +197,17 @@ body{
         border-radius: 100%;
        
        }
+       #logo{
+        height: 50px;
+        border: 1px solid red;
+        display: flex;
+        align-items: center;
+        padding-left: 25px;
+    }
        #cat-name{
            color: #ffff;
            font-size: 20px ;
-           padding-left: 12px;
+           padding-left: 18px;
            font-weight: 500;
            
 }
