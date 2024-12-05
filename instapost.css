@@ -73,7 +73,7 @@ body{
    
 }
 #bookmark{
-    padding-left: 175px;
+    padding-left: 155px;
     padding-top: 10px;
     font-size: 25px;
 }
@@ -145,7 +145,6 @@ body{
         padding-top: 20px;
         border-radius: 0;
         position: relative;
-        /* left: 30px; */
 
     }
     #logo {
