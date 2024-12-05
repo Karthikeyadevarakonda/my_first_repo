@@ -137,78 +137,91 @@ body{
     margin-top: 2px;
    
 }
-@media (max-width : 500px) {
-    #container{
-        width: 483px;
-        height: 100vh;
-        background-color: rgb(0, 0, 0);
-        padding-top: 40px;
-        border-radius: 0px;
-        /* border: 1px solid red; */
-    }
-    #image{
-        height: 300px;
-        /* border: 1px solid red; */
-       
-    }
-    #image img{
+@media (max-width: 768px) {
+    #container {
         width: 100%;
+        height: 100vh;
+        background-color: black;
+        padding-top: 20px;
+        border-radius: 0;
+    }
+    #logo {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+    }
+    #logo img {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+    #cat-name {
+        color: white;
+        font-size: 18px;
+        padding-left: 10px;
+        font-weight: 500;
+    }
+    #three-dots {
+        width: 20px;
+      padding-left: 240px;
+    }
+    #footer {
+        width: 100%;
+        height: 60px;  
+    }
+    #likes {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        padding-bottom: 100px;
+        padding-left: 20px;
+    }
+    #bookmark i{
+       position: relative;
+       bottom: 20px;
+       left: 160px;
+    }
+    #bookmark {
+        font-size: 22px;
+    }
+    #heart,
+    #comments,
+    #share {
+        font-size: 22px;
+    }
+    #description {
+        width: 100%;
+        height: auto;
+        color: white;
+        padding: 10px;
         
     }
-    #three-dots{
-        width: 20px;
-        padding-left: 220px;
-    }
-    #footer{
-        width: 100%;
-        height: 50px;
-        /* border: 1px solid red; */
-        position: relative;
-        top: 180px;
-        display: flex;   
-    }
-    #description{
-        width: 100%;
-        height: 80px;
-        color: #ffff;
-        font-weight: 300;
-        padding-top: 190px;
-        padding-left: 30px;
-        padding-right: 10px;
-    }
-    #bookmark{
-        padding-left: 265px;
-        padding-top: 10px;
-        font-size: 25px;
-    }
     #description p{
-        font-size: 20px;
+        font-size: 15px;
         font-weight: 300;
     }
-    #likes{
-        display: flex;
-        gap:25px;
-        padding-left: 45px;
-        align-items: center;
+    #image {
+        height: auto;
     }
-    #logo img{
-        height: 35px;
-        width: 35px;
-        border-radius: 100%;
-       
-       }
-       #logo{
-        height: 50px;
-        border: 1px solid red;
-        display: flex;
-        align-items: center;
-        padding-left: 25px;
+    #image img {
+        width: 100%;
+        height: auto;
     }
-       #cat-name{
-           color: #ffff;
-           font-size: 20px ;
-           padding-left: 18px;
-           font-weight: 500;
-           
-}
+    #comments-imfo {
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    #comments-imfo p {
+        font-size: 14px;
+    }
+    #comments-imfo input {
+        width: 90%;
+        margin: 10px 0;
+        padding: 5px;
+        font-size: 14px;
+    }
 }
