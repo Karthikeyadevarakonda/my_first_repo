@@ -167,7 +167,7 @@ body{
     }
     #three-dots {
         width: 20px;
-      padding-left: 240px;
+      padding-left: 220px;
     }
     #footer {
         width: 100%;
@@ -183,7 +183,7 @@ body{
     #bookmark i{
        position: relative;
        bottom: 20px;
-       left: 160px;
+       left: 110px;
     }
     #bookmark {
         font-size: 22px;
