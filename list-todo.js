@@ -45,12 +45,12 @@ addBtn.addEventListener('click',()=>{
       const div = e.target.parentElement;
       const p = div.querySelector('.p-box');
    if(p.classList.contains('finish')){
-      p.remove();
+      div.remove();
       totalcount--;
       completedcount--;
      
    }else {
-      p.remove();
+      div.remove();
       totalcount--;
       incompletecount--;
    }
@@ -76,10 +76,3 @@ addBtn.addEventListener('click',()=>{
 })
 
 
-
-
-
-
-// e.target.parentElement.remove();
-//      totalcount--;
-//      one.innerText = "TOTAL = "+totalcount;
