@@ -178,7 +178,7 @@ body{
         gap: 15px;
         align-items: center;
         padding-bottom: 100px;
-        padding-left: 20px;
+        padding-left: 40px;
     }
     #bookmark i{
        position: relative;
@@ -197,7 +197,7 @@ body{
         width: 100%;
         height: auto;
         color: white;
-        padding: 10px;
+        padding-left: 20px;
         
     }
     #description p{
@@ -226,5 +226,12 @@ body{
         margin: 10px 0;
         padding: 5px;
         font-size: 14px;
+    }
+    body{
+        background-color:black;
+        display: flex;
+        justify-content: center;
+        font-family: sans-serif;
+      
     }
 }
