@@ -18,17 +18,6 @@ heart.addEventListener('click',()=>{
        }, 180);
     }
 })
-heart.addEventListener('touchend',()=>{
-    if(icon.style.color === 'red'){
-        icon.style.color = '';
-    }else if(icon.style.color === ''){
-       icon.style.color = 'red';
-       icon.style.transform = 'scale(1.3)';
-       setTimeout(() => {
-        icon.style.transform = 'scale(1)';
-       }, 180);
-    }
-})
 
 bookicon.addEventListener('click',()=>{
     if(bookicon.style.color === 'white'){
