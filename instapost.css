@@ -181,7 +181,7 @@ body{
     #bookmark i{
         position: relative;
         bottom: 20px;
-        left: 50px;
+        right: 20px;
      }
      #bookmark {
         font-size: 22px;
@@ -197,13 +197,15 @@ body{
         color: white;
         padding-left: 20px;
         position: relative;
-        bottom: -25px;
-        /* border: 1px solid red; */
-        margin-top: -25px;
+        bottom: 1px;
+     
+     
     }
     #description p{
         font-size: 15px;
         font-weight: 300;
+        position: relative;
+        bottom: 40px;
     }
     #image {
         height: auto;
