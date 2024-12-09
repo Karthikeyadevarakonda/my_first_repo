@@ -160,9 +160,9 @@ margin-left: 1rem;
 
    
         #main-title {
-            width: 270px;
+            width: 340px;
             height: auto;
-            margin: auto;
+            margin-left: auto;
             padding-top: 100px;
             padding-bottom: 50px;
             font-size: 30px; 
@@ -170,7 +170,7 @@ margin-left: 1rem;
             font-family: 'Arial', sans-serif; 
             color:rgba(255, 68, 0, 0.822); 
           /* border: 1px solid red; */
-            text-shadow: none;
+            text-shadow: 2px 1px 0px white;
         }
         
     
