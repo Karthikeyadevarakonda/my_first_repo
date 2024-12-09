@@ -152,11 +152,10 @@ margin-left: 1rem;
 #input-box {
     width: 100%;
     max-width: 360px;
-    padding-left: 1rem;
     margin-left: 10;
   }
   #container{
-    width: 90%;
+    width: 150%;
     padding: 1rem;
   }
 
