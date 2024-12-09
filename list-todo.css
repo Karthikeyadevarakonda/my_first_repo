@@ -57,8 +57,11 @@ body{
 #todo-container{
     position: relative;
     top: 130px;
-    left: 420px;
+    left: 620px;
     font-size: 25px;
+    border: 2px solid red;
+    height: auto;
+    width: 800px;
 }
 .finish{
     background-color: grey;
@@ -93,6 +96,8 @@ body{
         margin:1rem;
         
 }
+
+
 @media (max-width: 600px) {
     #top{
         width: 100%;
