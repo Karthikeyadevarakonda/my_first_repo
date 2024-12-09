@@ -87,8 +87,10 @@ function handleTodos(){
         objectsContainer.unshift(eachTodo);
         addtodos(objectsContainer);
         updateCounts()
+
        localStorage.setItem('tasks',JSON.stringify(objectsContainer));
        inputBox.value='';
+       inputBox.blur();
       }else{
          alert("ENTER data to add");
       }
@@ -134,6 +136,7 @@ TodoList.forEach(eachTodo =>{
     addtodos(objectsContainer);
     updateCounts()
     localStorage.setItem('tasks',JSON.stringify(objectsContainer));
+   
  
 })
 
