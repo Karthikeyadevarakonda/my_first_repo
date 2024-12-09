@@ -20,7 +20,7 @@ let completedcount =0;
 let incompletecount =0;
 
 function updateCounts(){
-
+  
     totalcount = objectsContainer.length;
     completedcount = objectsContainer.filter(todo => todo.iscompleted).length;
     incompletecount = totalcount - completedcount;
@@ -29,6 +29,8 @@ function updateCounts(){
      one.innerText = "ALL ( " +totalcount+ " )";
     three.innerText = "IN-PROGRESS ( " +incompletecount+ " )";
     two.innerText = "COMPLETED ( " +completedcount+ " )";
+    localStorage.setItem('counts',JSON.stringify(objectsContainer));
+    
  }
 
 function check(){
@@ -56,8 +58,14 @@ function Incompletedcheck(){
 
 }
 
-addBtn.addEventListener('click',()=>{
-   console.log(canAdd);
+addBtn.addEventListener('click',handleTodos);
+inputBox.addEventListener('keydown',(e)=>{
+   if(e.key === 'Enter'){
+      handleTodos();
+   }
+});
+
+function handleTodos(){
 
    if(!canAdd){
       alert('YOU CAN`T ADD FROM HERE GO TO "ALL" SECTION');
@@ -79,13 +87,13 @@ addBtn.addEventListener('click',()=>{
         addtodos(objectsContainer);
         updateCounts()
        inputBox.value='';
-        
+       localStorage.setItem('tasks',JSON.stringify(objectsContainer));
       }else{
          alert("ENTER data to add");
       }
    
-   });
-        
+   }
+      
 function addtodos(TodoList) {
    check();
 todoContainer.innerHTML = '';
@@ -124,6 +132,7 @@ TodoList.forEach(eachTodo =>{
     objectsContainer  = objectsContainer.filter(todo => todo.id !== +TodoId);
     addtodos(objectsContainer);
     updateCounts()
+    localStorage.setItem('tasks',JSON.stringify(objectsContainer));
  
 })
 
@@ -141,6 +150,7 @@ p.addEventListener('click', (e) => {
      sorttodos();
      addtodos(objectsContainer);
      updateCounts()
+     localStorage.setItem('tasks',JSON.stringify(objectsContainer));
      
    })
 });
@@ -183,6 +193,7 @@ three.addEventListener('click',()=>{
     objectsContainer  = objectsContainer.filter(todo => !todo.iscompleted);
      addtodos(objectsContainer);
      updateCounts()
+     localStorage.setItem('tasks',JSON.stringify(objectsContainer));
    
  });
  
@@ -210,4 +221,21 @@ if(objectsContainer.length > 0){
 }else{
    alert('no todos to delete..!')
 }
+localStorage.setItem('tasks',JSON.stringify(objectsContainer));
  })
+
+ let tasks = JSON.parse(localStorage.getItem('tasks'));
+
+ if(tasks !== null){
+   objectsContainer = tasks;
+   addtodos(tasks);
+ }else{
+   objectsContainer=[];
+ }
+
+ let counts = JSON.parse(localStorage.getItem('counts'));
+
+ if(counts !== null ){
+   objectsContainer = counts;
+   updateCounts(counts)
+ }
