@@ -19,7 +19,6 @@ let totalcount =0;
 let completedcount =0;
 let incompletecount =0;
 
-
 function updateCounts(){
 
     totalcount = objectsContainer.length;
@@ -53,7 +52,7 @@ function completedcheck(){
 
 function Incompletedcheck(){
    const incompleted = objectsContainer.filter(x=> !x.iscompleted)
-   clearBtn.style.display =  incompleted.length > 0 ? 'block' : 'none' ;
+   clearBtn.style.display = 'none';
 
 }
 
@@ -110,10 +109,9 @@ TodoList.forEach(eachTodo =>{
         if (eachTodo.iscompleted) {
 
             p.classList.add('finish');
-            p.innerHTML=`<i class="fa-regular fa-circle-check"></i>  `+ eachTodo.text;
+            p.innerHTML = `<i class="${eachTodo.iscompleted ? 'fa-regular fa-circle-check' : 'fa-regular fa-circle'}"></i> ${eachTodo.text}`;
         }
 
-  
      div.appendChild(p);
      div.appendChild(btn);
      todoContainer.appendChild(div);
@@ -131,7 +129,7 @@ TodoList.forEach(eachTodo =>{
 
 p.addEventListener('click', (e) => {
     
-    const TodoId = e.target.parentElement.getAttribute('data-id'); 
+    const TodoId = e.target.closest('div').getAttribute('data-id'); 
     
     objectsContainer = objectsContainer.map(obj => {
        if(obj.id === +TodoId){
@@ -172,18 +170,11 @@ two.addEventListener('click',()=>{
  });
    let d = true;
 three.addEventListener('click',()=>{
-   d =false;
- 
    canAdd=false;
    three.style.color ='#387ED1'
     one.style.color =''
      two.style.color=''
   let threeobjectsContainer  = objectsContainer.filter(todo => !todo.iscompleted);
-  if(!d){
-   clearBtn.disabled = true;
-  }else{
-   clearBtn.disabled = false;
-  }
    addtodos(threeobjectsContainer);
    Incompletedcheck();
  });
@@ -203,7 +194,7 @@ three.addEventListener('click',()=>{
 
 
  clear.addEventListener('click',(e)=>{
-   
+if(objectsContainer.length > 0){
    if(confirm('are u sure want to delete all todos ?')){
    objectsContainer= [];
    addtodos(objectsContainer);
@@ -216,4 +207,7 @@ three.addEventListener('click',()=>{
       alert('delete canceled');
       updateCounts()
    }
+}else{
+   alert('no todos to delete..!')
+}
  })
