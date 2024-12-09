@@ -128,8 +128,8 @@ TodoList.forEach(eachTodo =>{
        
    btn.addEventListener('click',(e)=>{    
 
-     const TodoId = e.target.closest('div').getAttribute('data-id');
-   
+     const TodoId = e.target.closest('div')?.getAttribute('data-id');
+      if(!TodoId) return;
     objectsContainer  = objectsContainer.filter(todo => todo.id !== +TodoId);
     addtodos(objectsContainer);
     updateCounts()
@@ -139,9 +139,10 @@ TodoList.forEach(eachTodo =>{
 })
 
 p.addEventListener('click', (e) => {
-    
-    const TodoId = e.target.closest('div').getAttribute('data-id'); 
-    
+   
+    const TodoId = e.target.closest('div')?.getAttribute('data-id'); 
+    if(!TodoId) return;
+   
     objectsContainer = objectsContainer.map(obj => {
        if(obj.id === +TodoId){
        obj.iscompleted = obj.iscompleted ? false : true;
@@ -149,9 +150,12 @@ p.addEventListener('click', (e) => {
        }
         return obj;
     })
+   
      sorttodos();
+   
      addtodos(objectsContainer);
      updateCounts()
+  
      localStorage.setItem('tasks',JSON.stringify(objectsContainer));
      
    })
