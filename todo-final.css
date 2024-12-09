@@ -5,6 +5,10 @@
     box-sizing: border-box;
     /* outline: 1px solid red; */
 }
+html, body {
+    overflow-x: hidden; 
+}
+
 body{
     font-family: "Inter", sans-serif;
     background-color: #4158D0;
@@ -141,4 +145,22 @@ margin-left: 1rem;
     left: 30px;
     color: rgba(240, 248, 255, 0.913);
     /* display: none; */
+}
+
+@media screen and (max-width: 568px) {
+    
+#input-box {
+    width: 100%;
+    max-width: 360px;
+    padding-left: 1rem;
+    margin-left: 10;
+  }
+  #container{
+    width: 90%;
+    padding: 1rem;
+  }
+
+#input-box::placeholder{
+    padding-left: 30px;
+}
 }
