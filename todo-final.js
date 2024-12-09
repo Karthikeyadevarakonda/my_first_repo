@@ -127,7 +127,7 @@ TodoList.forEach(eachTodo =>{
 
        
    btn.addEventListener('click',(e)=>{    
-
+      e.stopPropagation();
      const TodoId = e.target.closest('div')?.getAttribute('data-id');
       if(!TodoId) return;
     objectsContainer  = objectsContainer.filter(todo => todo.id !== +TodoId);
@@ -139,7 +139,7 @@ TodoList.forEach(eachTodo =>{
 })
 
 p.addEventListener('click', (e) => {
-   
+   e.stopPropagation();
     const TodoId = e.target.closest('div')?.getAttribute('data-id'); 
     if(!TodoId) return;
    
