@@ -62,6 +62,7 @@ addBtn.addEventListener('click',handleTodos);
 inputBox.addEventListener('keydown',(e)=>{
    if(e.key === 'Enter'){
       handleTodos();
+      inputBox.value ='';
    }
 });
 
@@ -86,8 +87,8 @@ function handleTodos(){
         objectsContainer.unshift(eachTodo);
         addtodos(objectsContainer);
         updateCounts()
-       inputBox.value='';
        localStorage.setItem('tasks',JSON.stringify(objectsContainer));
+       inputBox.value='';
       }else{
          alert("ENTER data to add");
       }
@@ -178,7 +179,7 @@ two.addEventListener('click',()=>{
     completedcheck();
    
  });
-   let d = true;
+
 three.addEventListener('click',()=>{
    canAdd=false;
    three.style.color ='#387ED1'
