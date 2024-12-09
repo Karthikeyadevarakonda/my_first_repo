@@ -197,7 +197,7 @@ three.addEventListener('click',()=>{
     objectsContainer  = objectsContainer.filter(todo => !todo.iscompleted);
      addtodos(objectsContainer);
      updateCounts()
-     localStorage.setItem('tasks',JSON.stringify(objectsContainer));
+    
    
  });
  
@@ -225,7 +225,7 @@ if(objectsContainer.length > 0){
 }else{
    alert('no todos to delete..!')
 }
-localStorage.setItem('tasks',JSON.stringify(objectsContainer));
+
  })
 
  let tasks = JSON.parse(localStorage.getItem('tasks'));
@@ -235,11 +235,4 @@ localStorage.setItem('tasks',JSON.stringify(objectsContainer));
    addtodos(tasks);
  }else{
    objectsContainer=[];
- }
-
- let counts = JSON.parse(localStorage.getItem('counts'));
-
- if(counts !== null ){
-   objectsContainer = counts;
-   updateCounts(counts)
  }
