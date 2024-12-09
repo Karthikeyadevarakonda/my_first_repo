@@ -182,7 +182,7 @@ margin-left: 1rem;
         width: 2px;
     }
     .div-box{
-        width: 85%;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
