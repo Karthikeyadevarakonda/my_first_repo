@@ -3,12 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* outline: 1px solid red; */
 }
-html, body {
-    /* overflow-x: hidden;  */
-}
-
 body{
     font-family: "Inter", sans-serif;
     background-color: #4158D0;
@@ -156,9 +151,8 @@ margin-left: 1rem;
         
     }
     #container{
-        width: 400px;
+        width: 370px;
         margin: auto;
-        /* border: 1px solid red; */
     }
     #input-box{
         width: 260px;
@@ -169,15 +163,16 @@ margin-left: 1rem;
         background: none;
         outline: none;
         margin-left: 40px;
+        font-size: 18px;
     }
-    #addBtn{
+    #addBtn i{
         position: relative;
-        right: 50px;
-        top: 5px;
+        left: 310px;
+        bottom: 45px;
         font-size: 30px;
         background: none;
         border: none;
-        color: #387ED1;;
+        color: #387ED1;
     }
     #input-box-todo{
         position: relative;
@@ -198,13 +193,13 @@ margin-left: 1rem;
         font-size: 18px;
         font-weight: 500;
        position: relative;
-       /* left: 10px; */
       }
     .p-box{
     padding: 0.2rem;
     border-radius: 0.5rem;
     margin-left: 1rem;
     font-size: 18px;
+    margin: 3px;
     }
     .btn-box{
         background: none;
@@ -273,6 +268,6 @@ margin-left: 1rem;
     #no-todos {
         color: rgba(240, 248, 255, 0.913);
         text-align: center; 
-    
+    }
 
 }

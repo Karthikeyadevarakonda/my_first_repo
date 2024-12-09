@@ -224,6 +224,7 @@ if(objectsContainer.length > 0){
 }else{
    alert('no todos to delete..!')
 }
+inputBox.value='';
 localStorage.setItem('tasks',JSON.stringify(objectsContainer));
  })
 
