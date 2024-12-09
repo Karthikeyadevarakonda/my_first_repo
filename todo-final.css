@@ -11,13 +11,27 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-#main-title{
-    width: 176px;
+#main-title {
+    width: 506px;
     height: auto;
     margin: auto;
     padding-top: 100px;
     padding-bottom: 50px;
+    font-size: 40px; 
+    font-weight: bold;
+    font-family: 'Arial', sans-serif; 
+    color:rgba(255, 68, 0, 0.822); 
+
+    text-shadow: 
+        1px 1px 1px #FFC300, 
+        2px 4px 0px #DAF7A6, 
+        3px 3px 0px #33FF57, 
+        4px 8px 0px #33FFF6,
+        5px 5px 0px #3357FF,
+        6px 7px 0px #8E33FF, 
+        7px 9px 0px #FF33F6;
 }
+
 #container{
     width: 500px;
     height: auto;
@@ -145,7 +159,7 @@ margin-left: 1rem;
     
 
     #main-title{
-        width: 256px;
+        width: 356px;
        font-size: 24px;
         margin: auto;
         
