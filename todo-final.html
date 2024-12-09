@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./todo-final.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div id="main-title"><h1>TODO-LIST</h1></div>
+    <main id="container">
+        
+        <div id="div1">
+         <h2 id="input-box-todo"><i class="fa-solid fa-list"></i></h2>
+          <input type="text" placeholder="ADD TODOS" id="input-box">
+          <button id="addBtn"><i class="fa-regular fa-floppy-disk"></i></button>
+        </div>
+        <div id="top">
+          <button class="top-names" id="one">ALL ( 0 )</button> 
+          <button class="top-names" id="two">COMPLETED ( 0 )</button> 
+          <button class="top-names" id="three">IN-PROGRESS ( 0 )</button> 
+          <button id="clear">CLEAR-ALL</button>
+        </div>
+        <br>
+        <hr>
+  <div id="todo-container" > 
+
+  </div>
+  <div id="no-todos"><marquee behavior="" direction="right"><h1><i>NO TODOS YET......<i class="fa-regular fa-face-frown"></i></i></h1></marquee></div>
+  <button id="clearbtn">CLEAR-COMPLETED</button>
+</main>
+    <script src="./todo-final.js"></script>
+</body>
+</html>
