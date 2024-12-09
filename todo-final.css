@@ -158,12 +158,22 @@ margin-left: 1rem;
 @media screen and (max-width: 568px) {
     
 
-    #main-title{
-        width: 356px;
-       font-size: 24px;
-        margin: auto;
+   
+        #main-title {
+            width: 270px;
+            height: auto;
+            margin: auto;
+            padding-top: 100px;
+            padding-bottom: 50px;
+            font-size: 30px; 
+            font-weight: bold;
+            font-family: 'Arial', sans-serif; 
+            color:rgba(255, 68, 0, 0.822); 
+          /* border: 1px solid red; */
+            text-shadow: none;
+        }
         
-    }
+    
     #container{
         width: 350px;
         margin: auto;
