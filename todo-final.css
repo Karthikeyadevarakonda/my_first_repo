@@ -189,7 +189,9 @@ margin-left: 1rem;
      #container{
         position: relative;
         /* right: px; */
-        width: 160%;
+        width: 150%;
+        margin: auto;
+        border-radius: 10px;
      }
      #clearbtn{
         left: 340px;
