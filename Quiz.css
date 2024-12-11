@@ -49,12 +49,15 @@ body{
     transition: all 1s;
     color: black;
     overflow: hidden;
+    cursor: pointer;
    
 }
-.ans-btn:hover{
+.ans-btn:hover:not([disabled]){
     background-color: #222;
-    color: #fff;
-   
+    color: #fff; 
+}
+.ans-btn:disabled{
+    cursor: no-drop;
 }
 #next{
     padding: 0.4rem;
@@ -72,4 +75,10 @@ body{
 }
 #next:hover{
     transform: scale(1.09);
+}
+.correct{
+    background-color: #9aeabc;
+}
+.incorrect{
+    background-color: #ff9393;
 }
