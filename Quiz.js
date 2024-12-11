@@ -8,52 +8,52 @@ const quiz = document.getElementById('app');
 let question =[
 
     {
- question :"What is the name of the Engine used by javaScript in Google Chrome ?",
+ question :"Which planet is known as the 'Red Planet' ?",
  answer:[
-         {text:"Spider-Monkey",correct:false},
-         {text:"V4",correct:false},
-         {text:"Chakra",correct:false},
-         {text:"V8",correct:true}     
+         {text:"Jupiter",correct:false},
+         {text:"Venus",correct:false},
+         {text:"saturn",correct:false},
+         {text:"Mars",correct:true}     
         ]
        
     },
     {
-        question :"JAVA SCRIPT is a ?",
+        question :"Which country is known as the 'Land of the Rising Sun' ?",
         answer:[
-                {text:"Multi-Threaded",correct:false},
-                {text:"NO-threads",correct:false},
-                {text:"Single-Threaded",correct:true},
-                {text:"All the above",correct:false}     
+                {text:"France",correct:false},
+                {text:"South-korea",correct:false},
+                {text:"Japan",correct:true},
+                {text:"Thailand",correct:false}     
                ]
               
            },
            {
-            question :"Which of the Following is not a js Function ?",
+            question :"What is the chemical symbol for Gold ?",
             answer:[
-                    {text:"console.log",correct:false},
-                    {text:"Set-TimeOut",correct:true},
-                    {text:"IsEmpty",correct:false},
-                    {text:"Parse.JSON",correct:false}     
+                    {text:"Ag",correct:false},
+                    {text:"Au",correct:true},
+                    {text:"Fe",correct:false},
+                    {text:"Hg",correct:false}     
                    ]
                   
                },
                {
-                question :"What is Function Expression in js ?",
+                question :"Choose the correct form of the verb:'By the time we arrive, she _____ already left.' ?",
                 answer:[
-                        {text:"A function assigned to a variable",correct:true},
-                        {text:"A function passed an argument",correct:false},
-                        {text:"A function that accepts the other function as a parameter",correct:false},
-                        {text:"None of the Above",correct:false}     
+                        {text:"Will Have",correct:true},
+                        {text:"Has",correct:false},
+                        {text:"Have",correct:false},
+                        {text:"Had",correct:false}     
                        ]
                       
                    },
                    {
-                    question :"What is other Name of Pyramid Boom ?", 
+                    question :"A car travels 180 km in 3 hours. What is the average speed of the car ?", 
                     answer:[
-                            {text:"Pyramid Doom",correct:false},
-                            {text:"Promises",correct:false},
-                            {text:"Call back hell",correct:true},
-                            {text:"async",correct:false}     
+                            {text:"50 km/h",correct:false},
+                            {text:"55 km/h",correct:false},
+                            {text:"60 km/h",correct:true},
+                            {text:"65 km/h",correct:false}     
                            ]
                           
                        }
