@@ -134,9 +134,12 @@ body{
         /* outline: 1px solid red; */
     }
     #next{
-        margin-left: 240px;
+        margin-left: 210px;
     }
     #app{
         margin-top: 100px;
+    }
+    .ans-btn{
+        margin-left: 13px;
     }
 }
