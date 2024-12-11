@@ -10,6 +10,8 @@ const noTodos =document.getElementById('no-todos');
 
 const todoContainer = document.getElementById('todo-container');
 const clear = document.getElementById('clear');
+
+
 let objectsContainer =[];
 let mainid = 101;
 
