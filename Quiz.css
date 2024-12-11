@@ -128,3 +128,15 @@ body{
 .incorrect{
     background-color: #ff9393;
 }
+
+@media screen and (max-width: 568px) {
+    *{
+        /* outline: 1px solid red; */
+    }
+    #next{
+        margin-left: 270px;
+    }
+    #app{
+        margin-top: 300px;
+    }
+}
