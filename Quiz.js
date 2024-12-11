@@ -1,8 +1,8 @@
 const questiontag  = document.getElementById('question');
 const answerButtons = document.getElementById('answer-buttons');
 const nextBtn = document.getElementById('next');
-
-
+const title = document.getElementById('title');
+const quiz = document.getElementById('app');
 
 
 let question =[
@@ -121,6 +121,9 @@ function selectAnswer(e){
    nextBtn.style.display = 'inline';
 }
 nextBtn.addEventListener('click',()=>{
+    quiz.classList.remove('animate'); 
+    void quiz.offsetWidth;   
+    quiz.classList.add('animate');  
     if(questionNoIndex < question.length){
         handleNextbutton();
     }else{
@@ -142,5 +145,6 @@ function showScore(){
     questiontag.innerHTML = `YOU HAVE choosed ${score} correct answers out of ${question.length} questions....!  your SCORE : ${score}`;
     nextBtn.innerText ='RESTART';
     nextBtn.style.display ='inline';
+    title.innerText = 'RESULTS'
 }
 startQuiz();
