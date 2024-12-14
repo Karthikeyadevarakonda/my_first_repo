@@ -7,7 +7,7 @@ btn.addEventListener('click',(e)=>{
    e.preventDefault();
    let newdata = userinput.value.trim();
    if(newdata !== ''){
-   let fetched = fetch('https://api.funtranslations.com/translate/emoji.json?text='+newdata)
+   let fetched = fetch('https://api.funtranslations.com/translate/doge.json?text='+newdata)
    .then((res)=>res.json())
    .then((data)=>{
         translated.innerText = data.contents.translated;
