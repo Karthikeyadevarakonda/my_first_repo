@@ -97,29 +97,30 @@ body{
     width: 70%;
     left: 20px;
     height: 70px;
-    top: 200px;
+    top: 100px;
    }
    #fetch-btn{
     left: 35px;
-    top: 200px;
+    top: 100px;
     height:70px ;
 
    }
    #image{
     left: 30px;
-    top: 200px;
+    top: 100px;
     width: 80%;
    }
    #one{
     font-size: 70px;
+    top: 20px;
    }
    #two{
     font-size: 60px;
-    top: 180px;
+    top: 90px;
     right: 90px;;
    }
    #three{
-     top: 170px;
+     top: 80px;
      left: 150px;
      font-size: 60px;
    }
