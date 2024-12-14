@@ -61,20 +61,20 @@ body,html{
     #title{
         left: -50px;
         width: 100%;
-        top: 20px;
+        top: 90px;
     }
     #translated{
-       top: 30px;
+       top: 190px;
        left: -90px;
     }
     #userinput{
-   top: -60px;
+   top: 90px;
    left: -90px;
     }
     #btn{
-        bottom: 100px;
+        bottom: 10px;
         left: 0px;
-        bottom: 290px;
+        bottom: 140px;
     }
     #main-div{
          left: 0px;
