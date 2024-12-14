@@ -3,22 +3,21 @@ const container = document.getElementById("container");
 fetch("https://dummyjson.com/users")
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
+   
     let newdata = data.users;
-    console.log(newdata);
+    
     let k = "";
 
     newdata.forEach((x) => {
-      k += `<div class="card"
+      k += `<div class="card">
        <div class="left-div">
         <img class="image" src=${x.image}/>
-        <p>${x.lastName} ${x.firstName}</p>
-       
+        <p class="name">${x.lastName} ${x.firstName}</p>
        </div>
     <div class="right-div">
         <p>${x.username}</p>
         <p>${x.address.city}</p>
-        <p>${x.email}</p>
+        <p class="mail">${x.email}</p>
     </div>
      <div class="gender">
         <p>${x.gender}</p>
@@ -27,7 +26,7 @@ fetch("https://dummyjson.com/users")
          <p>${x.company.department}</p>
        </div>
      </div>
-    `;
+    `
     });
     container.innerHTML = k;
   });
