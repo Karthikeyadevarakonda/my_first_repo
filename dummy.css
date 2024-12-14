@@ -65,7 +65,6 @@
 @media screen and (max-width: 568px) {
     .card{
         /* width: calc(100% - 20px); */
-        width: 100%;
-        max-width: 100%;
+        width: 500px;
     }
 }
