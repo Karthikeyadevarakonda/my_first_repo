@@ -111,17 +111,17 @@ body{
     width: 80%;
    }
    #one{
-    font-size: 70px;
+    font-size: 50px;
     top: 20px;
    }
    #two{
-    font-size: 60px;
-    top: 90px;
+    font-size: 40px;
+    top: 70px;
     right: 90px;;
    }
    #three{
-     top: 80px;
+     top: 60px;
      left: 150px;
-     font-size: 60px;
+     font-size: 40px;
    }
 }
