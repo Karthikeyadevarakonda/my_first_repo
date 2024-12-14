@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .card{
-    width: 630px;
+    width: 400px;
     height: 150px;
     display: flex;
     justify-content: space-around;
@@ -64,7 +64,8 @@
 }
 @media screen and (max-width: 568px) {
     .card{
-        width: calc(100% - 20px);
+        /* width: calc(100% - 20px); */
+        width: 100%;
         max-width: 100%;
     }
 }
