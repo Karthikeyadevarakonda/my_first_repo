@@ -1,12 +1,21 @@
-let x = {
-    "success": {
-      "total": 1
-    },
-    "contents": {
-      "translated": "Apple 🍏 is great fruit 🥧 fries 🍟 are yummy when you are in the car 🚡",
-      "text": "Apple is great fruit fries are yummy when you are in the car",
-      "translation": "emoji"
-    }
-  }
 
-  console.log(x.contents);
+
+const btn = document.getElementById('btn');
+const translated = document.getElementById('translated');
+const userinput = document.getElementById('userinput');
+btn.addEventListener('click',(e)=>{
+   e.preventDefault();
+   let newdata = userinput.value.trim();
+   if(newdata !== ''){
+   let fetched = fetch('https://api.funtranslations.com/translate/emoji.json?text='+newdata)
+   .then((res)=>res.json())
+   .then((data)=>{
+        translated.innerText = data.contents.translated;
+        userinput.value ='';
+   })
+   .catch((err)=> translated.innerText ="ERROS IN FETCHING")
+}else{
+    alert("ENTER DATA TO CONVERT")
+}
+})
+ 
