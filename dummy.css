@@ -62,3 +62,9 @@
 .name{
     color: gray;
 }
+@media screen and (max-width: 568px) {
+    .card{
+        width: calc(100% - 20px);
+        max-width: 100%;
+    }
+}
