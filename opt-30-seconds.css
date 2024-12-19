@@ -210,7 +210,7 @@ color: white;
   box-shadow: 0px 0px 5px 1px lightgray;
   position: absolute;
   right: 20px;
- bottom: 50px;
+ top: 20px;
   border-radius: 10px;
   background-color: rgba(211, 211, 211, 0.384);
   display: none;
@@ -236,7 +236,6 @@ color: white;
 }
 #img-div{
  width: 100%;
- border: 1px solid red;
  display: flex;
  flex-wrap: wrap;
  position: relative;
@@ -251,23 +250,24 @@ color: white;
 }
 
 #imfo-2{
-  padding: 4rem;
+  padding: 2rem;
   width: 500px;
   position: relative;
   top: 250px;
-  border: 1px solid red;
 }
 #img-div-2{
   width: 70%;
   position: relative;
   display: flex;
- top: 180px;
-  border: 1px solid red;
+  top: 100px;
  }
  #img-div-2 img{
    height: 300px;
    position: absolute;
    left: 60px;
+ }
+ #imfo{
+  margin-left: 30px;
  }
   #custom{
     width: 300px;
@@ -327,47 +327,14 @@ color: white;
     padding: 3rem;
     position: relative;
     border-radius: 30px;
-    bottom: 0px;
+    top: 50px;
     box-shadow: 0px 0px 20px 1px;
     left: 10px;
 }
-#inputBox{
-    height: 40px;
-    position: relative;
-    width: 285px;
-}
-#inputBox input{
-    width: 300px;
-    height: 43px;
-    padding-left: 20px;
-    font-size: 20px;
-}
-#timeDisplay{
-   font-size: 20px;
-}
-#slider{
-    position: relative;
-    top: 50px;
-}
-@keyframes box-1-slide-in {
-  from{
-     transform: translateX(100vw);
-  }
-  to{
-      transform:translateX(0);
-  }
-}
-@keyframes box-1-slide-out {
-  from{
-      transform:translateX(0);
-  }
-  to{
-      transform: translateX(100vw);  
-  }
-}
+
 #name{
   position:relative;
-  top: 150px;
+  top: 480px;
  text-align: center;
  width: 190px;
 }

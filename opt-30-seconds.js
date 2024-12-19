@@ -37,9 +37,6 @@ copyElement.addEventListener('click', () => {
 copyElement2.addEventListener('click', () => {
         navigator.clipboard.writeText(otpBox.value)
         copied2.style.display = 'block';
-       setTimeout(()=>{
-        copied2.style.display = 'none';
-       },1500)
       });
 
 setTimeout(()=>{
@@ -49,3 +46,17 @@ setTimeout(()=>{
             popUp.style.display = 'none';
         },6000)
     },3000);
+    
+const text = "OTP Code Generator....!";
+const textContainer = document.getElementById("text");
+let index = 0;
+
+    function typeText() {
+      if (index < text.length) {
+        textContainer.textContent += text[index];
+        index++;
+        setTimeout(typeText, 120); 
+      }
+    }
+
+ typeText();
