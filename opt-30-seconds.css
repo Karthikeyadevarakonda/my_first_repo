@@ -244,11 +244,11 @@ color: white;
 }
 
 #imfo-2{
-  padding: 1rem;
+  padding-left:20px;
   width: 440px;
   position: relative;
   top: 250px;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 #img-div-2{
   width: 70%;
