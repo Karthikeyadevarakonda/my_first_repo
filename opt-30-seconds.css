@@ -245,9 +245,10 @@ color: white;
 
 #imfo-2{
   padding: 2rem;
-  width: 500px;
+  width: 460px;
   position: relative;
   top: 250px;
+  border: 1px solid red;
 }
 #img-div-2{
   width: 70%;
@@ -258,7 +259,7 @@ color: white;
  #img-div-2 img{
    height: 300px;
    position: absolute;
-   left: 60px;
+   left: 30px;
  }
  #imfo{
   margin-left: 30px;
@@ -272,7 +273,7 @@ color: white;
     border-radius: 30px;
     top: 50px;
     box-shadow: 0px 0px 20px 1px;
-    left: 70px;
+    left: 40px;
 }
 
 #name{
