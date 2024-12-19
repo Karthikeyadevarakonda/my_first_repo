@@ -26,7 +26,7 @@ const inputBox = document.getElementById('inputBox');
 
 btn0.addEventListener('click',()=>{
    let input =  inputBox.value ;
-   if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+   if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
     inputBox.value = "0";
    }else{
     inputBox.value = input +"0";
@@ -35,7 +35,7 @@ btn0.addEventListener('click',()=>{
 })
 btn1.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
         inputBox.value = "1";
        }else{
         inputBox.value = input +"1";
@@ -43,7 +43,7 @@ btn1.addEventListener('click',()=>{
  })
  btn2.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
         inputBox.value = "2";
        }else{
         inputBox.value = input +"2";
@@ -51,7 +51,7 @@ btn1.addEventListener('click',()=>{
  })
  btn3.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
         inputBox.value = "3";
        }else{
         inputBox.value = input +"3";
@@ -59,7 +59,7 @@ btn1.addEventListener('click',()=>{
  })
  btn4.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
         inputBox.value = "4";
        }else{
         inputBox.value = input +"4";
@@ -67,7 +67,7 @@ btn1.addEventListener('click',()=>{
  })
  btn5.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
         inputBox.value = "5";
        }else{
         inputBox.value = input +"5";
@@ -75,7 +75,7 @@ btn1.addEventListener('click',()=>{
  })
  btn6.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
         inputBox.value = "6";
        }else{
         inputBox.value = input +"6";
@@ -83,7 +83,7 @@ btn1.addEventListener('click',()=>{
  })
  btn7.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
         inputBox.value = "7";
        }else{
         inputBox.value = input +"7";
@@ -91,7 +91,7 @@ btn1.addEventListener('click',()=>{
  })
  btn8.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
         inputBox.value = "8";
        }else{
         inputBox.value = input +"8";
@@ -99,7 +99,7 @@ btn1.addEventListener('click',()=>{
  })
  btn9.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
         inputBox.value = "9";
        }else{
         inputBox.value = input +"9";
@@ -107,7 +107,7 @@ btn1.addEventListener('click',()=>{
  })
  btnTwozeroes.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
         inputBox.value = "00";
        }else{
         inputBox.value = input +"00";
