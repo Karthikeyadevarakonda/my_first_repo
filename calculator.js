@@ -26,7 +26,7 @@ const inputBox = document.getElementById('inputBox');
 
 btn0.addEventListener('click',()=>{
    let input =  inputBox.value ;
-   if(input === "CANNOT DIVIDE BY 0" || input === "NaN" || input === "Infinity"){
+   if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
     inputBox.value = "0";
    }else{
     inputBox.value = input +"0";
@@ -35,49 +35,89 @@ btn0.addEventListener('click',()=>{
 })
 btn1.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    inputBox.value = input +"1";
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+        inputBox.value = "1";
+       }else{
+        inputBox.value = input +"1";
+       }
  })
  btn2.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    inputBox.value = input +"2";
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+        inputBox.value = "2";
+       }else{
+        inputBox.value = input +"2";
+       }
  })
  btn3.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    inputBox.value = input +"3";
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+        inputBox.value = "3";
+       }else{
+        inputBox.value = input +"3";
+       }
  })
  btn4.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    inputBox.value = input +"4";
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+        inputBox.value = "4";
+       }else{
+        inputBox.value = input +"4";
+       }
  })
  btn5.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    inputBox.value = input +"5";
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+        inputBox.value = "5";
+       }else{
+        inputBox.value = input +"5";
+       }
  })
  btn6.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    inputBox.value = input +"6";
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+        inputBox.value = "6";
+       }else{
+        inputBox.value = input +"6";
+       }
  })
  btn7.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    inputBox.value = input +"7";
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+        inputBox.value = "7";
+       }else{
+        inputBox.value = input +"7";
+       }
  })
  btn8.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    inputBox.value = input +"8";
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+        inputBox.value = "8";
+       }else{
+        inputBox.value = input +"8";
+       }
  })
  btn9.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    inputBox.value = input +"9";
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+        inputBox.value = "9";
+       }else{
+        inputBox.value = input +"9";
+       }
  })
  btnTwozeroes.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    inputBox.value = input +"00";
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+        inputBox.value = "00";
+       }else{
+        inputBox.value = input +"00";
+       }
  })
  btnAdd.addEventListener('click',()=>{
     let input =  inputBox.value ;
     let n = input.length;
     let y = input.slice(n-1,n);
-      if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== ''){
+      if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== '' && y !== 'y' && y !== 'N'&& y !== '!'){
             inputBox.value = input +"+";
       }
  })
@@ -85,7 +125,7 @@ btn1.addEventListener('click',()=>{
     let input =  inputBox.value ;
     let n = input.length;
     let y = input.slice(n-1,n);
-    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== ''){
+    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== '' && y !== 'y' && y !== 'N'&& y !== '!'){
         inputBox.value = input +"-";
       }
  })
@@ -93,7 +133,7 @@ btn1.addEventListener('click',()=>{
     let input =  inputBox.value ;
     let n = input.length;
     let y = input.slice(n-1,n);
-    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== ''){
+    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== '' && y !== 'y' && y !== 'N'&& y !== '!'){
         inputBox.value = input +"*";
       }
  })
@@ -101,7 +141,7 @@ btn1.addEventListener('click',()=>{
     let input =  inputBox.value ;
     let n = input.length;
     let y = input.slice(n-1,n);
-    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== ''){
+    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== '' && y !== 'y' && y !== 'N'&& y !== '!'){
         inputBox.value = input +"/";
       }
  })
@@ -109,7 +149,7 @@ btn1.addEventListener('click',()=>{
     let input =  inputBox.value ;
     let n = input.length;
     let y = input.slice(n-1,n);
-    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== ''){
+    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== '' && y !== 'y' && y !== 'N'&& y !== '!'){
         inputBox.value = input +".";
       }
  })
@@ -117,7 +157,7 @@ btn1.addEventListener('click',()=>{
     let input =  inputBox.value ;
     let n = input.length;
     let y = input.slice(n-1,n);
-    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== ''){
+    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== '' && y !== 'y' && y !== 'N'&& y !== '!'){
         inputBox.value = input +"%";
       }
  })
@@ -125,7 +165,7 @@ btn1.addEventListener('click',()=>{
     let input =  inputBox.value ;
     let n = input.length;
     let y = input.slice(n-1,n);
-    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== ''){
+    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== '' && y !== 'y' && y !== 'N'&& y !== '!'){
         inputBox.value = eval(input*input);
       }
  })
@@ -133,7 +173,7 @@ btn1.addEventListener('click',()=>{
     let input =  inputBox.value ;
     let n = input.length;
     let y = input.slice(n-1,n);
-    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== ''){
+    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== '' && y !== 'y' && y !== 'N'&& y !== '!'){
         inputBox.value = eval(1/input);
       }
  })
@@ -146,7 +186,7 @@ btn1.addEventListener('click',()=>{
     if(res !== ''){
     let finalRes = eval(res);
     if(finalRes.toString() === 'NaN'){
-        inputBox.value = "CANNOT DIVIDE BY 0";
+        inputBox.value = "CANNOT DIVIDE BY 0 !";
         return;
     }else{
     inputBox.value = finalRes;
@@ -155,8 +195,13 @@ btn1.addEventListener('click',()=>{
  })
  backspace.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    let y = input.slice(0,-1);
-    inputBox.value = y;
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+        inputBox.value = '';
+    }else{
+        let y = input.slice(0,-1);
+        inputBox.value = y;
+    }
+    
  })
 
 
