@@ -195,7 +195,7 @@ btn1.addEventListener('click',()=>{
  })
  backspace.addEventListener('click',()=>{
     let input =  inputBox.value ;
-    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"){
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity" || input === "-Infinity"){
         inputBox.value = '';
     }else{
         let y = input.slice(0,-1);
