@@ -222,20 +222,19 @@ color: white;
 #container{
     position: relative;
     bottom: 0;
-    left: 20px;
+    left: 35px;
 }
 #name{
  position:relative;
  top: 340px;
  height: 40px;
  text-align: center;
- width: 110%;
+ width: 130%;
 }
 #my-name{
 padding: 0.3rem;
 border-top-right-radius: 5px;
 width: 100%;
 position: absolute;
-bottom: 0;
 }
 }
