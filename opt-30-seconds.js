@@ -8,6 +8,25 @@ const copyElement2 = document.getElementById('copy-2')
 const copied2 =document.getElementById('copied2')
 
 
+
+
+function popIn(duration = 900){
+    popUp.style.display = 'block';
+    popUp.style.animation= `box-1-slide-in  ${duration}ms cubic-bezier(0.2, 1, 1, 1) forwards`;
+}
+
+function hidePopUp(duration = 900){
+    popUp.style.animation= `box-1-slide-out  ${duration}ms cubic-bezier(0.2, 1, 1, 1) forwards`;
+    setTimeout(()=>{
+        popUp.style.display = 'none';
+    },duration)
+}
+
+setTimeout(() => {
+    popIn();
+    setTimeout(hidePopUp, 4000);
+}, 3000);
+
 function generatedOtps(){
     let generatedOtp='';
         for(let i=0;i<4;i++){
@@ -38,15 +57,6 @@ copyElement2.addEventListener('click', () => {
         navigator.clipboard.writeText(otpBox.value)
         copied2.style.display = 'block';
       });
-
-setTimeout(()=>{
-        popUp.style.display = 'block';
-        popUp.style.animation= 'box-1-slide-in 900ms cubic-bezier(0.2, 1, 1, 1) forwards';
-        setTimeout(()=>{
-            popUp.style.display = 'none';
-        },6000)
-    },3000);
-    
 const text = "OTP Code Generator....!";
 const textContainer = document.getElementById("text");
 let index = 0;
