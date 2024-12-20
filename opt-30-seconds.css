@@ -244,10 +244,11 @@ color: white;
 }
 
 #imfo-2{
-  padding-left:30px;
-  width: 440px;
+  padding: 2rem;
+  width: 40px;
   position: relative;
   top: 250px;
+  border: 1px solid red;
 }
 #img-div-2{
   width: 70%;
@@ -258,7 +259,7 @@ color: white;
  #img-div-2 img{
    height: 300px;
    position: absolute;
-   left: 10px;
+   left: 30px;
  }
  #imfo{
   margin-left: 30px;
@@ -272,21 +273,20 @@ color: white;
     border-radius: 30px;
     top: 50px;
     box-shadow: 0px 0px 20px 1px;
-    left: 40px;
+    left: 70px;
 }
 
 #name{
   position:relative;
   top: 480px;
  text-align: center;
- width: 100%;
+ width: 190px;
 }
 #my-name{
 background-color: rgba(0, 0, 0, 0.607);
-padding: 1.3rem;
+padding: 0.3rem;
 font-size: 20px;
-font-weight: 600;
-border-top-right-radius: 12px;
+border-top-right-radius: 5px;
 color: white;
 }
 }
