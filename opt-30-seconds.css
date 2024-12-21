@@ -204,7 +204,7 @@ color: white;
   right: 95px;
 }
 #inner{
-  background-color: rgba(0, 255, 4, 0.639);
+  background-color: rgb(255, 0, 0);
   width:0;
   height: 5px;
   border-radius: 50px;
