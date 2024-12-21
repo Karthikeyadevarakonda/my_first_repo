@@ -1,0 +1,15 @@
+#outer{
+    margin: 100px;
+    width: 271px;
+    height: 5px;
+    background-color: rgba(211, 211, 211, 0.397);
+    border-radius: 50px;
+    position: relative;
+}
+#inner{
+    background-color: rgba(0, 255, 4, 0.639);
+    width:0;
+    height: 5px;
+    border-radius: 50px;
+    position: absolute;
+}
