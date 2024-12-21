@@ -231,22 +231,23 @@ color: white;
 #imfo-2{
   width: 420px;
   position: relative;
-  padding-right: 5px;
   padding-top: 2px;
   padding-left: 20px;
   text-align: justify;
   top: 170px;
+  left: 30px;
 }
 #img-div-2{
-  width: 70%;
+  width: 60%;
   position: relative;
   display: flex;
   top: 20px;
+  right: 40px;
  }
  #img-div-2 img{
    height: 270px;
    position: absolute;
-   left: 10px;
+   left : 10px;
  }
 #container{
     position: relative;
