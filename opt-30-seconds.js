@@ -36,15 +36,6 @@ function generatedOtps(){
 }
 generatedOtps();
 
-let value =30;
-    setInterval(() => {
-        value = (value - 1 + 31) % 31;
-        slider.value = value;     
-        timeDisplay.textContent = value;
-        if(value === 0){
-            generatedOtps();
-        }
-      },1000); 
 
 copyElement.addEventListener('click', () => {
         navigator.clipboard.writeText(otpBox.value)
@@ -70,3 +61,28 @@ let index = 0;
     }
 
  typeText();
+
+const inner = document.getElementById('inner');
+let maxwidth = 280;
+let duration = 30;
+let increment = maxwidth/duration;
+let valu =0;
+let value = 30;
+
+
+function combiningBothSliderAndTimer() {
+   let currentTime = duration;
+   setInterval(()=>{
+    currentTime--;
+    if(currentTime <= 0){
+        currentTime = duration;
+        generatedOtps();
+    }
+    timeDisplay.textContent = currentTime;
+
+    const width = ((duration - currentTime) / duration) * maxwidth;
+    inner.style.width = `${width}px`
+   },1000)
+}
+
+combiningBothSliderAndTimer();

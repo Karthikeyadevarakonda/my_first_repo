@@ -14,6 +14,18 @@
   right: 20px;
   cursor: pointer;
 }
+#bags{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  right: 20px;
+  top: 100px;
+}
+#bags img{
+  width: 100px;
+  height: 100px;
+}
 .toast-body{
    color: black;
    font-size: 20px;
@@ -181,7 +193,24 @@ border-top-right-radius: 5px;
 color: white;
 }
 
+#outer{
+  margin: 100px;
+  width: 271px;
+  height: 5px;
+  background-color: rgba(211, 211, 211, 0.397);
+  border-radius: 50px;
+  position: relative;
+  bottom: 80px;
+  right: 95px;
+}
+#inner{
+  background-color: rgba(0, 255, 4, 0.639);
+  width:0;
+  height: 5px;
+  border-radius: 50px;
+  position: absolute;
 
+}
 
 @media screen and (max-width: 568px) {
 #popUp{
