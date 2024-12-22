@@ -8,7 +8,6 @@
     height: 150px;
     display: flex;
     justify-content: space-around;
-    /* border: 1px solid black; */
     position: relative;
     padding: 0.5rem;
     border-radius: 8px;
