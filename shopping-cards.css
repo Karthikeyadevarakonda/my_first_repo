@@ -353,7 +353,7 @@ padding-left: 0px;
     }
     #searchBar{
         height: 40px;
-        width: 300px;
+        width: 260px;
         position: absolute;
         left: 90px;
         top: 30px;
@@ -393,11 +393,11 @@ padding-left: 0px;
         justify-content: space-between;
         position: absolute;
         left: 50px;
-        width: 95%;
+        width: 90%;
         height: 40px;
         top: 90px;
         letter-spacing: 2px;
-        font-size: 12px;
+        font-size: 10px;
     }
     #new{
         color: rgb(237, 54, 84);
