@@ -1,0 +1,73 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.eachTodo{
+    width: 954px;
+    margin: auto;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    border: 1px solid grey;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 2px;
+}
+.eachTodo:hover{
+    background-color: rgba(123, 139, 155, 0.153);
+}
+.editBtn{
+position: absolute;
+right: 60px;
+font-size: 20px;
+}
+.deleteBtn{
+    position: absolute;
+    right: 30px;
+    font-size: 20px;
+}
+.todo-text{
+    width: auto;
+    position: absolute;
+    left: 25px;
+    font-size: 20px;
+}
+.fa-trash-can{
+    color: red;
+}
+.fa-pen-to-square{
+    color: orange;
+}
+.fa-circle-check{
+    font-size: 20px;
+    color: greenyellow;
+}
+.finish{
+    text-decoration:line-through;
+}
+.notfinish{
+    text-decoration: none;
+}
+@media (max-width : 500px) {
+    .eachTodo{
+        width: 280px;
+    }
+    .editInput{
+           width: 100px;
+    }
+    #title{
+        margin: auto;
+        width: 210px;
+        height: 60px;
+        padding-top:5px;
+    }
+    #title-2{
+        margin: auto;
+        width: 210px;
+        height: 60px;
+        padding-top:5px;
+    }
+}

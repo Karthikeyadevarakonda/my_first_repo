@@ -53,7 +53,8 @@ searchBar.addEventListener('input',()=>{
  
  
 
-  let userInput = searchBar.value.toLowerCase.trim();
+  let userInput = searchBar.value.toLowerCase().trim();
+  console.log(userInput)
   if(userInput === ''){
     container.style.display = 'none';
     slidesConatiner.style.display = 'block'

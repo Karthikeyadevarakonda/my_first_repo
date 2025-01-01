@@ -4,44 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./shopping-cards.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        #code{
+            background-image: linear-gradient(to right, rgb(207, 119, 60) ,rgb(62, 62, 196));
+            color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            font-size: 40px;
+        }
+    </style>
 </head>
-<body id="body">
-    <div>
-        <nav id="nav-bar">
-            <img src="./vecteezy_shopping-paper-bags_.jpg" alt="image">
-            <input type="text" id="searchBar" placeholder="Search for products,Brands and More">
-            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
-            <select name="" id="menu">
-                <option value="reset" disabled selected>Search By Category</option>
-                <option value="all">ALL</option>
-                <option value="men's clothing">Men's clothing</option>
-                <option value="women's clothing">Women's clothing</option>
-                <option value="electronics">Electronics</option>
-                <option value="jewelery">Jewelery</option>
-            </select>
-            <div id="options">
-               <h5 id="option-btn-1" class="option-btn" data-value="men's clothing">MEN'S</h5>
-               <h5 id="option-btn-2" class="option-btn" data-value="women's clothing">WOMEN'S</h5>
-               <h5 id="option-btn-3" class="option-btn" data-value="electronics">ELECTRONICS</h5>
-               <h5 id="option-btn-4" class="option-btn" data-value="jewelery">JEWELERY </h5><sup id="new">NEW</sup>
-            </div>
-           <div>
-            <button id="home"><i class="fa-solid fa-house"></i></button>
-           </div>
-        </nav>
-    </div>
-    <div  id="slidesConatiner">
-           <div id="slides">
-         
-           </div>
-    </div>
-    <div id="container">
-
-        
-    </div>
-    <script src="./shopping-cards.js"></script>
+<body>
+<div class="flex flex-col justify-center items-center h-screen bg-slate-950">
+    <div  tabindex="0" class="w-full md:w-2/6 p-6  min-h-[450px] m-auto bg-black text-white shadow-[0px_0px_6px_1px_orangered] focus:outline-none focus:ring-2 focus:ring-orangered-800">
+        <h1 class="font-bold text-3xl text-center">Welcome To The <span id="code"  class="text-4xl ">CODE</span></h1>
+        <h1 class="text-xl my-5 text-center">Sign-In To Acess</h1>
+        <form action="" class="flex flex-col justify-between h-72 p-4 relative bottom-8 space-y-0">
+            <label for="uname" class="text-sm block w-20 px-1 relative top-12 ml-2 text-stone-400 bg-black h-3 z-10">USERNAME</label>
+            <input type="text" name="uname" placeholder="Enter your username" class="border block w-full h-[50px] p-5 bg-slate-950 text-white focus:outline-none focus:ring-2 focus:ring-blue-800 rounded relative top-6">
+            <label for="" class="block text-sm  w-20 px-1 relative top-6 ml-2 text-stone-400 bg-black h-3 z-10">PASSWORD</label>
+            <input type="text" placeholder="Enter password" class="border block w-full h-[50px] p-5 bg-slate-950 text-white focus:outline-none focus:ring-2 focus:ring-blue-800 rounded">
+            <button class="border border-0 block max-w-lg rounded h-[40px] bg-emerald-700 w-full">Sign-In</button>
+        </form>
+    </div>  
+</div>
+    <script src="./form-tailwind.js"></script>
 </body>
 </html>
