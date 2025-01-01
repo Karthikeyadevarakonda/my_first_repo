@@ -13,11 +13,92 @@
             font-weight: 700;
             font-size: 40px;
         }
+        #box:focus{
+            animation: shadowGrow 4s infinite alternate ease-in-out;
+        }
+        @keyframes shadowGrow {
+            0%{
+                box-shadow:inset 0px 0px 2px 3px orangered;   
+            }
+            5%{
+                box-shadow:inset 0px 0px 5px 3px orangered;   
+               
+            }
+            10%{
+                box-shadow:inset 0px 0px 8px 3px orangered;   
+            }
+            15%{
+                box-shadow:inset 0px 0px 10px 3px orangered;  
+
+            }
+            20%{
+                box-shadow:inset 0px 0px 12px 3px orangered;  
+
+            }
+            25%{
+                box-shadow:inset 0px 0px 15px 3px orangered;  
+
+            }
+            30%{
+                box-shadow:inset 0px 0px 18px 3px orangered;   
+            }
+            35%{
+                box-shadow:inset 0px 0px 20px 3px orangered;  
+            }
+            40%{
+                box-shadow:inset 0px 0px 23px 3px orangered;   
+            }
+            45%{
+                box-shadow:inset 0px 0px 25px 3px orangered;  
+            }
+            50%{
+                box-shadow:inset 0px 0px 27px 3px orangered;   
+            }
+            55%{
+                box-shadow:inset 0px 0px 30px 3px orangered;  
+            }
+            60%{
+                box-shadow:inset 0px 0px 32px 3px orangered;  
+    
+
+            }
+            65%{
+                box-shadow:inset 0px 0px 34px 3px orangered;  
+
+            }
+            70%{
+                box-shadow:inset 0px 0px 36px 3px orangered;  
+
+            }
+            75%{
+                box-shadow:inset 0px 0px 38px 3px orangered;  
+            }
+            80%{
+                box-shadow:inset 0px 0px 40px 3px orangered;  
+
+            }
+            85%{
+                box-shadow:inset 0px 0px 41px 3px orangered;  
+
+            }
+            90%{
+                box-shadow:inset 0px 0px 42px 3px orangered;  
+
+            }
+            95%{
+                box-shadow:inset 0px 0px 43px 3px orangered;  
+
+            }
+            100%{
+                box-shadow:inset 0px 0px 44px 3px orangered;  
+
+            }
+        }
     </style>
 </head>
 <body>
 <div class="flex flex-col justify-center items-center h-screen bg-slate-950">
-    <div  tabindex="0" class="w-full md:w-2/6 p-6  min-h-[450px] m-auto bg-black text-white shadow-[0px_0px_6px_1px_orangered] focus:outline-none focus:ring-2 focus:ring-orangered-800">
+    <div  tabindex="0"  id="box" class="w-full md:w-2/6 p-6 h-screen md:h-[450px] md:m-auto bg-black border-1 border-slate-900 text-white shadow-[0px_0px_40px_orangered] rounded  focus:outline-none focus:ring-2 focus:ring-orange-800">
         <h1 class="font-bold text-3xl text-center">Welcome To The <span id="code"  class="text-4xl ">CODE</span></h1>
         <h1 class="text-xl my-5 text-center">Sign-In To Acess</h1>
         <form action="" class="flex flex-col justify-between h-72 p-4 relative bottom-8 space-y-0">
