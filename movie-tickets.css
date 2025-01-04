@@ -375,9 +375,9 @@ body{
 @media (max-width : 500px) {
 
     #container{
-        height: 150vh;   
-        width: 265%;      
-        margin-top: 50px;
+        height: 100vh;   
+        width: 295%;      
+        margin-top: 150px;
     }
     #booked-sucessfull{
         width: 60%;
