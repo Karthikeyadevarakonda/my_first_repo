@@ -375,7 +375,7 @@ body{
 @media (max-width : 500px) {
 
     #container{
-        height: -20vh;   
+        height: calc(100vh - 100px);  
         width: 315%;      
         margin-top: 350px;
         position: relative;
@@ -387,9 +387,6 @@ body{
         left: 10%;
         top: 20px;
     }
-    #screen-bar{
-        height: 200px;
-    }
     #body{
         height: -100px;
     }
@@ -398,7 +395,7 @@ body{
     }
     #screen-bar img{
         width: 60%;
-        margin-left: 100px;
+        margin-left: 300px;
     }
 }
 
