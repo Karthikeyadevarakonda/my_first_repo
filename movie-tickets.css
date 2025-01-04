@@ -379,7 +379,7 @@ body{
         width: 315%;      
         margin-top: 350px;
         position: relative;
-        top: -600px;
+        top: -400px;
     }
     #booked-sucessfull{
         width: 80%;
@@ -389,6 +389,9 @@ body{
     }
     #screen-bar{
         height: 200px;
+    }
+    #body{
+        height: 70vh;
     }
 }
 
