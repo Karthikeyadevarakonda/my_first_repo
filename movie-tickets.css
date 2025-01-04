@@ -372,6 +372,20 @@ body{
 }
 
 
+@media (max-width : 500px) {
+
+    #container{
+        height: 200vh;   
+        width: 250%;      
+        margin-top: 10px;
+    }
+    #booked-sucessfull{
+        width: 60%;
+        height: 27%;
+        left: 25%;
+    }
+}
+
 
 
 
