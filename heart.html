@@ -5,6 +5,50 @@
             <title>heart</title>
             <link rel="stylesheet" href="./heart.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <style>
+                *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   height: 100vh;
+   background-color: black;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+#heart h1{
+    color: red;
+    font-size: 200px;
+    position: relative;
+    bottom: 40px;
+    animation: beat 900ms linear infinite;
+}
+@keyframes beat{
+    0%{
+        transform: scale(0.75); opacity: 0.5;color: red;
+    }
+    50%{
+        transform: scale(1); opacity: 1;color: darkred;
+    }
+    100%{
+        transform: scale(0.75); opacity: 0.5;color: red;
+    }
+}
+#heart h1:hover{
+    animation: none;
+}
+h3{
+    position: absolute;
+    color:grey;
+    font-size: 50px;
+    display: none;
+}
+#heart:hover h3{
+    display: block;
+}
+            </style>
         </head>
         <body>
             <main>

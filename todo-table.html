@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Todo-list.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#main{
+    margin: auto;
+    width: 800px; 
+    /* border: 1px solid red; */
+    height: 100vh;
+}
+#container-1{
+    width: 1000px;
+    height: 80px;
+    position: relative;
+    top: 50px;
+    right: 70px;
+     /* border: 1px solid black; */
+     display: flex;
+     align-items: center;
+     justify-content: space-around;
+}
+#container-1 input{
+    width: 200px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 10px;
+    border-radius: 4px;
+    border: 1px solid black;
+    outline: none;
+    overflow: hidden;
+}
+
+body{
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+}
+#container-1{
+    display: flex;
+}
+#btn1{
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(184, 169, 198);
+    margin-left: 10px;
+    box-shadow: 3px 3px 2px 1px gray;
+}
+
+
+#itemsContainer button{
+   color: red;
+   background-color: transparent;
+   border: none;
+    cursor: pointer;
+}
+#itemsContainer table {
+    background-color: lightgray;
+    width: 100%;
+    border-collapse: collapse; 
+    position: relative;
+    top: 60px;
+    right: 40px;
+}
+
+#itemsContainer th, #itemsContainer td {
+    border: 1px solid white; 
+    text-align: center;
+    padding: 8px;
+}
+th{
+   background-color:  lightblue;
+    color: white;
+}
+
+
+@media (max-width : 500px) {
+   #main{
+          width: 100px;
+          height: 280vh;
+   }
+   #container-1{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      height: 50vh;
+   }
+   #container-1 input{
+    width: 800px;
+    height: 100px;
+    position: relative;
+    top: 40px;
+    border-radius: 10px;
+    font-size: 40px;
+   }
+   #container-1 input::placeholder{
+      font-size: 40px;
+   }
+   #btn1{
+    width: 400px;
+    height: 85px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    background-color: rgb(184, 169, 198);
+    margin-left: 10px;
+    box-shadow: 3px 3px 2px 1px gray;
+    position: relative;
+    top: 60px;
+    font-size: 40px;
+}
+#itemsContainer table {
+    background-color: lightgray;
+    border-collapse: collapse; 
+    width: 100%;
+    position: relative;
+    top: 150px;
+    left :30px;
+    font-size:35px;
+}
+#itemsContainer th, #itemsContainer td {
+   
+    padding: 8px;
+    font-size: 35px;
+}
+#itemsContainer button{
+    color: red;
+    background-color: transparent;
+    border: none;
+     cursor: pointer;
+     font-size: 40px;
+ }
+}
+
+
+    </style>
+</head>
+<body>
+    <main id="main">
+   <section id="container-1">
+    <input type="text" id="names" placeholder= "NAME">
+    <input type="text" id="id" placeholder="STD-ID">
+    <input type="text"  id="course" placeholder="COURSE">
+    <input type="number" id="fee" placeholder="FEE">
+    <button id="btn1">ADD</button>
+   </section>
+   <section id="container-2">
+          <div id="itemsContainer"> 
+           
+          </div>
+        
+   </section>
+</main>
+<script>
+    
+const btn1 = document.getElementById('btn1');
+const container2 = document.getElementById('container-2');
+const itemsContainers = document.getElementById('itemsContainer');
+
+
+const names = document.getElementById('names');
+const id = document.getElementById('id');
+const course = document.getElementById('course');
+const fee = document.getElementById('fee');
+
+
+
+
+
+let table = document.createElement('table');
+table.style.border = '1px solid black'; // Add a border for visibility
+table.style.width = '100%';
+itemsContainers.appendChild(table);
+
+
+let FirstcolumnsNames = document.createElement('tr');
+FirstcolumnsNames.style.display='none';
+
+let namesArray = ['NAMES','STD_ID','COURSE','FEE','ACTION'];
+
+namesArray.forEach( eachX =>{
+     let column  =  document.createElement('th');
+     column.textContent = eachX;
+     FirstcolumnsNames.appendChild(column);
+});
+
+table.appendChild(FirstcolumnsNames);
+
+btn1.addEventListener('click',()=>{
+    let namefeild = names.value.trim();
+    let idfeild = id.value.trim();
+    let coursefeild = course.value.trim();
+    let feefeild = fee.value.trim();
+
+    if(namefeild && idfeild && coursefeild && feefeild !== ''){
+
+        if(FirstcolumnsNames.style.display === 'none'){
+            FirstcolumnsNames.style.display='';
+        }
+     
+        let row = table.insertRow();
+
+       let cellname = row.insertCell();
+       cellname.textContent = namefeild;
+    
+       let cellid = row.insertCell();
+       cellid.textContent = idfeild;
+
+       let cellcourse = row.insertCell();
+       cellcourse.textContent = coursefeild;
+
+       let cellfee = row.insertCell();
+       cellfee.textContent = feefeild;
+
+       let deleteCell = row.insertCell();
+
+       let delbtn = document.createElement('button');
+       delbtn.innerHTML='<i class="fa-solid fa-trash"></i>';
+       delbtn.style.cursor ="pointer";
+
+       deleteCell.appendChild(delbtn);
+    //   itemsContainers.classList.add('deletebutton');
+      delbtn.addEventListener('click',()=>{
+
+        if(confirm("ARE YOU SURE WANT TO DELETE THIS ROW ?")){
+            table.deleteRow(row.rowIndex);
+            
+            alert('deleted sucessfuly');
+
+            if(table.rows.length === 1){
+            FirstcolumnsNames.style.display = 'none';            }
+        }else{
+            alert('delete canceled');
+        }
+
+        
+    });
+     
+    
+
+    names.value='';
+    id.value = '';
+    course.value = '';
+    fee.value ='';
+    }else{
+        alert("enter four fields to add");
+    }
+})
+</script>
+    <!-- <script src="./Todo-list.js"></script> -->
+</body>
+</html>

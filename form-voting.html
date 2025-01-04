@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./js-alert.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-day-1</title>
+    <style>
+      *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#form-container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 300px;
+    height: 400px;
+    /* border: 1px solid black; */
+    position: relative;
+    top: 60px;
+    background-color: rgba(2, 2, 2, 0.667);
+}
+#form-container input{
+    width: 250px;
+   height: 50px;
+   position: relative;
+   outline: none;
+   left: 15px;
+   top: 40px;
+   margin: 10px;
+   padding: 10px;
+}
+button{
+    position: relative;
+    top: 60px;
+    left: 80px;
+    width: 120px;
+    height: 30px;
+    border-radius: 2px;
+    border: none;   
+}
+button:focus{
+    background-color: cornflowerblue;
+}
+    </style>
+</head>
+<body>
+    <div id="form-container">
+    <form id="ageform">
+  <input type="text" placeholder="NAME">
+  <input type="number" placeholder="PHONE:NO">
+  <input type="number" placeholder="AGE" id="ageInput">
+  <input type="text" placeholder="ADDRESS">
+  <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('ageform').addEventListener('submit',function(event){
+    event.preventDefault();
+
+const age = parseInt(document.getElementById('ageInput').value);
+   if(age > 18){
+    alert("YOUR ELIGIBLE FOR VOTE");
+   }else{
+    alert("YOUR NOT ELIGIBLE FOR VOTE");
+   }
+   });
+
+
+  </script>
+  <!-- <script src="./js-Alert.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./login-pagefor-todo.css">
+</head>
+<body>
+    <H1>welcome,<span id="title">GUEST</span></H1>
+    <div id="form">
+        <form action="">
+            <input id="uname"  type="text" placeholder="USER NAME">
+            <br><br>
+            <input id="pwd"  type="password" placeholder="PASSWORD">
+            <br><br>
+            <button id="login">LOGIN</button>
+            <br>
+            <br>
+        </form>
+    </div>
+      <div id="buttons">
+           <button id="logout">LOGOUT</button>
+      </div>
+   <script>
+    const login = document.getElementById('login');
+const logout = document.getElementById('logout');
+const form = document.getElementById('form');
+const uname = document.getElementById('uname');
+const pwd = document.getElementById('pwd');
+const title = document.getElementById('title');
+
+login.addEventListener('click',(e)=>{
+    e.preventDefault();
+    let userinput = uname.value.trim();
+    let pwdinput  = pwd.value.trim();
+
+    if(userinput !=='' && pwdinput !== ''){
+    title.innerText = userinput;
+    uname.value='';
+    pwd.value='';
+    form.style.display ='none';
+    logout.style.display ='inline';
+    localStorage.setItem('task',userinput);
+    }else{
+        alert('enter valid username and password');
+    }
+   
+})
+logout.addEventListener('click',()=>{
+    title.innerText = 'GUEST';
+    form.style.display ='block';
+    logout.style.display ='none';
+    localStorage.removeItem('task');
+})
+
+let task = localStorage.getItem('task');
+
+if(task !== null){
+    title.innerText = task;
+    form.style.display ='none';
+    logout.style.display ='inline';
+}else{
+    title.innerText = 'GUEST';
+    form.style.display ='block';
+    logout.style.display ='none';
+}
+   </script>
+    <!-- <script src="./login-page-for-todo.js"></script> -->
+</body>
+</html>

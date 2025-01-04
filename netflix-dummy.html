@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html>
+        <head>
+            <title>My-web</title>
+            <link rel="stylesheet" href="./button.css">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    font-family: "Roboto", sans-serif;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box ;
+}
+.box{
+
+    width: 99vw;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.329);
+    color: white;
+}
+.nav-data{
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid rgba(214, 200, 200, 0.158);
+    
+}
+.nav-data img{
+    margin-right: 40px;
+}
+.nav-data a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.788);
+    margin-right: 25px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+.nav-data a:hover{
+    color: red;
+}
+
+.para1{
+    color: red;
+    border: solid beige;
+    /* background-color: azure; */
+     padding: 5px; 
+     margin: 30px;
+}
+#btn{
+    background-color: transparent;
+    border: 0;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 9px; 
+    cursor: pointer;
+    margin-bottom: 30px; /*this will provide gap under button*/
+    margin-left: 50%; /*here the margin-left:50% means the % takes before parent width in our code the parent is above section para in that section we did not given any width therefore it takes the default width 100% and in that we use margin-left:50% that means we place our button from the 50% width of the above para width */
+}
+#btn:hover{
+  color:rgba(255, 0, 0, 0.589);
+  background-color: rgba(255, 255, 255, 0.737);
+
+}
+.back-image{
+    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/bfc0fc46-24f6-4d70-85b3-7799315c01dd/web/IN-en-20240923-TRIFECTA-perspective_74e21c19-980e-45ef-bd6c-78c1a6ce9381_large.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size:cover;
+    background-attachment: fixed;
+}
+#signin-form{
+    /* border: 1px solid red; */
+    /* width 250px; */
+    background-color: rgba(0, 0, 0, 0.566);
+    color: white;
+    padding: 2rem;
+    height: 70vh;
+    /* border-radius: 20px; */
+}
+#form-heading{
+    margin-bottom: 0.9rem;
+    font-size: 1.5rem;
+}
+
+#signin-form input{
+border: 0;
+outline: 0;
+padding: 1rem 1.5rem;
+width: 100%; 
+border-radius: 3px;
+border: 1px solid grey;
+background-color: rgba(0, 0, 0, 0.566);
+color: white;
+font-size: 1.2rem;
+font-family:"Roboto", sans-serif ;
+}
+#container{
+  /* background-color: red; */
+  height: 100vh;
+  padding-top: 6rem;
+  width: 30%;
+  margin: auto;
+}
+#signin-button input{
+    background-color:red;
+    cursor: pointer;
+
+}
+#signin-button input:hover{
+    color:rgba(255, 255, 255, 0.644);
+    background-color: rgba(255, 0, 0, 0.571);
+}
+
+#scrolling-text marquee{
+    color: white;
+    background-color: black;
+    animation: scroll-left 10s linear infinite;
+}
+#back-image-cover{
+    background-image: linear-gradient(transparent,black);
+    height: 100vh;
+}
+
+            </style>
+        </head>
+        <body>
+            <main class="box">
+                <nav class="nav-data">
+                    <img src="https://www.freepnglogos.com/uploads/netflix-logo-circle-png-5.png" width="150" height="100" style="margin-right: 700px;">
+                    <a href="#para1">sign&nbsp;up</a>
+                    <a href="#para2">about</a>
+                    <a href="#para3">support</a>
+                    <a href="#para4">pricing</a>
+                    <a href="#para5">tools</a>
+                    <a href="#para6">menu</a>
+                </nav>
+                <section class="back-image">
+                    <!-- <div id="back-image-cover"></div> -->
+                   
+                    <div id="container">
+                      <div id="signin-form">
+                        <div id="form-heading">
+                            <h3>Sign in</h3>
+                            </div>
+                        <form>
+                            <input type="text" placeholder="Email or MobileNumber">
+                            <br><br>
+                            <input type="password" placeholder="password">
+                            <br><br>
+                            <div id="signin-button">
+                            <input type="button" value="Sign in">
+                            </div>
+                        </form>
+                 
+                           </div>
+                      </div>
+                </section>
+                <br><br>
+                <section class="para1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati doloris voluptate laboriosam, ipsa corporis nostrum quidem. Temporibus, vel animi illo sapiente iste voluptatum voluptates perferendis cum, ullam quo maiores error Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse necessitatibus corporis incidunt unde quia ab, ad culpa, eligendi fugit vel nulla eum, nam fuga. Accusantium blanditiis enim debitis odit vero!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur quidem provident tempore aut maiores numquam nesciunt unde omnis ducimus cum rerum similique molestias, odio ab error impedit praesentium ea reprehenderit!Lorem</p>
+                </section>
+                <section class="para1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati doloris voluptate laboriosam, ipsa corporis nostrum quidem. Temporibus, vel animi illo sapiente iste voluptatum voluptates perferendis cum, ullam quo maiores error Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse necessitatibus corporis incidunt unde quia ab, ad culpa, eligendi fugit vel nulla eum, nam fuga. Accusantium blanditiis enim debitis odit vero!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur quidem provident tempore aut maiores numquam nesciunt unde omnis ducimus cum rerum similique molestias, odio ab error impedit praesentium ea reprehenderit!Lorem</p>
+                </section>
+                <section class="para1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati doloris voluptate laboriosam, ipsa corporis nostrum quidem. Temporibus, vel animi illo sapiente iste voluptatum voluptates perferendis cum, ullam quo maiores error Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse necessitatibus corporis incidunt unde quia ab, ad culpa, eligendi fugit vel nulla eum, nam fuga. Accusantium blanditiis enim debitis odit vero!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur quidem provident tempore aut maiores numquam nesciunt unde omnis ducimus cum rerum similique molestias, odio ab error impedit praesentium ea reprehenderit!Lorem</p>
+                </section>
+                <section class="para1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati doloris voluptate laboriosam, ipsa corporis nostrum quidem. Temporibus, vel animi illo sapiente iste voluptatum voluptates perferendis cum, ullam quo maiores error Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse necessitatibus corporis incidunt unde quia ab, ad culpa, eligendi fugit vel nulla eum, nam fuga. Accusantium blanditiis enim debitis odit vero!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur quidem provident tempore aut maiores numquam nesciunt unde omnis ducimus cum rerum similique molestias, odio ab error impedit praesentium ea reprehenderit!Lorem</p>
+                </section>
+                <section class="para1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati doloris voluptate laboriosam, ipsa corporis nostrum quidem. Temporibus, vel animi illo sapiente iste voluptatum voluptates perferendis cum, ullam quo maiores error Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse necessitatibus corporis incidunt unde quia ab, ad culpa, eligendi fugit vel nulla eum, nam fuga. Accusantium blanditiis enim debitis odit vero!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur quidem provident tempore aut maiores numquam nesciunt unde omnis ducimus cum rerum similique molestias, odio ab error impedit praesentium ea reprehenderit!Lorem</p>
+                </section>
+                <section class="para1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati doloris voluptate laboriosam, ipsa corporis nostrum quidem. Temporibus, vel animi illo sapiente iste voluptatum voluptates perferendis cum, ullam quo maiores error Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse necessitatibus corporis incidunt unde quia ab, ad culpa, eligendi fugit vel nulla eum, nam fuga. Accusantium blanditiis enim debitis odit vero!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur quidem provident tempore aut maiores numquam nesciunt unde omnis ducimus cum rerum similique molestias, odio ab error impedit praesentium ea reprehenderit!Lorem</p>
+                </section>
+                <section class="para1">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati doloris voluptate laboriosam, ipsa corporis nostrum quidem. Temporibus, vel animi illo sapiente iste voluptatum voluptates perferendis cum, ullam quo maiores error Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse necessitatibus corporis incidunt unde quia ab, ad culpa, eligendi fugit vel nulla eum, nam fuga. Accusantium blanditiis enim debitis odit vero!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur quidem provident tempore aut maiores numquam nesciunt unde omnis ducimus cum rerum similique molestias, odio ab error impedit praesentium ea reprehenderit!Lorem</p>
+                </section>
+                
+                <section>
+                     <a href="./Project1.html"><button type="submit" id="btn">Know More</button></a>
+                </section>
+                <div id="scrolling-text">
+                    <marquee onmouseover="this.stop()" onmouseout="this.start()" direction="right">....THANK YOU....</marquee>
+                    </div>
+
+                
+                    
+            </main>
+        </body>
+    </html>
+</html>

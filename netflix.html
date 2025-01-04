@@ -4,7 +4,198 @@
         <head>
             <title>NETFLIX...</title>
             <link rel="stylesheet" href="./netflix.css">
-            
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+    background-color: black;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+#background-image{
+    background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/bfc0fc46-24f6-4d70-85b3-7799315c01dd/web/IN-en-20240923-TRIFECTA-perspective_74e21c19-980e-45ef-bd6c-78c1a6ce9381_large.jpg");
+    /* height: 100vh; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+#gradient{
+    background-image: linear-gradient(to top right, black,transparent);
+    height: 100vh;
+}
+#netflix-logo{
+  padding: 30px;
+  padding-left: 160px;
+}
+#signup-form-container{
+    width: 90%;
+    max-width: 600px;
+    /* height: 80vh; */
+    /* border: 2px solid red; */
+    margin: auto;
+    /* padding: -20px; */
+    margin-top: -15px;
+}
+#sign-up-form form{
+    /* border: 1px solid white; */
+    width:90%;
+    max-width: 450px;
+    height:auto;
+    background-color: rgba(0, 0, 0, 0.587);
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 15px;
+    margin: auto;
+}
+#sign-in-font{
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+    /* padding: 35px 68px;  */
+    margin: 20px;
+    margin-right: 220px;
+    
+}
+#sign-in-button{
+    width:100%;
+    max-width: 315px;
+    /* background: none; */
+    height: 40px;
+    border: 0;
+    outline: 0;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    background-color:red ;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
+    margin-top: -1px;
+    border-radius:3px;
+    margin-bottom: -4px;
+}
+#sign-in-button:hover{
+    color:rgba(255, 255, 255, 0.644);
+    background-color: rgba(255, 0, 0, 0.571);
+}
+#or-tag{
+    color: gray;
+    /* margin-top: -50px; */
+    font-size: 15px;
+    font-weight: 500;
+
+
+}
+#sign-up-form input{
+    width: 100%;
+    max-width:314px;
+    height:56px;
+    border:1px solid gray;
+    background-color: rgba(0, 0, 0, 0.587);
+    /* text-align: left; */
+    padding-left: 1.2vw;
+    font-size: 15px;
+    border-radius: 3px;
+    color: white;
+}
+ #sign-up-form input[type="text"]:focus{
+    border: 1px double transparent ;
+    outline:4px double white;
+ }
+ #sign-up-form input[type="password"]:focus{
+    border: 1px double transparent ;
+    outline: 4px double white;
+}
+#sign-up-form input:hover{
+    background-color:rgba(255, 255, 255, 0.16);
+}
+#sign-up-form a{
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+}
+
+#sign-up-form input[type="checkbox"] {
+   
+   width: 3vh;
+   margin-right: 10px;
+   accent-color: grey;
+}
+ #custom-checkbox{
+    display: flex;  
+    align-items: center;
+} 
+#custom-checkbox label {
+    font-size: 15px; 
+    cursor: pointer;
+    color: white; 
+    margin-right: 189px;
+}
+#footer{
+ height: 7vh;
+ color: white;
+}
+#footer-data{
+    margin-top: 220px;
+    /* background-color: black; */
+}
+#footer-links{
+    /* border: 1px solid wheat; */
+    display: flex;
+    justify-content:flex-start;
+    /* margin-bottom: 10vh; */
+    margin-left: 151px;
+    flex-wrap: wrap;
+    gap:19px 10px;    
+
+}
+#footer-links a{
+    height: 5vh;
+    padding: 5px;
+    font-size: 14px;
+    color: #FFFFFFB3;
+}
+#drop-down-menu select{
+    margin-left: 150px;
+    margin-top: 20px;
+    padding: 3px 5px;
+    border: 1px solid gray;
+    background-color: transparent;
+    color: white;
+    width: 10vw;
+    height: 5vh;
+    text-align: center;
+    font-weight: 400px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-bottom: 10vh;
+
+    
+    
+}
+#drop-down-menu option {
+    background-color: white;
+    color: black; 
+}
+#drop-down-menu select:hover {
+    border: 1px double transparent ;
+    outline: 4px double white;
+    cursor: pointer;
+}
+#footer-data .fotter-box-links{
+    /* border: 1px solid red; */
+    width: 250px;
+}
+
+            </style>
         </head>
         <body>
             <main>

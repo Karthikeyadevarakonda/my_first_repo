@@ -6,6 +6,305 @@
     <title>Document</title>
     <link rel="stylesheet" href="./todo-final.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Inter", sans-serif;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 75%, #C850C0 46%, #FFCC70 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#main-title {
+    width: 506px;
+    height: auto;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 40px; 
+    font-weight: bold;
+    font-family: 'Arial', sans-serif; 
+    color:rgba(255, 68, 0, 0.822); 
+
+    text-shadow: 
+        1px 1px 1px #FFC300, 
+        2px 4px 0px #DAF7A6, 
+        3px 3px 0px #33FF57, 
+        4px 8px 0px #33FFF6,
+        5px 5px 0px #3357FF,
+        6px 7px 0px #8E33FF, 
+        7px 9px 0px #FF33F6;
+}
+
+#container{
+    width: 500px;
+    height: auto;
+    margin: auto;
+    padding: 2rem;
+    border: 1px solid black;
+    box-shadow: 2px 2px 5px 3px gray;
+    background-color: #ffff;
+    border-radius: 10px;
+}
+#input-box{
+    width: 360px;
+    height: 50px;
+    border:1.5px solid #49678b;
+    border-radius: 5px;
+    padding-left: 4rem;
+    background: none;
+    outline: none;
+    margin-left: 40px;
+}
+#addBtn{
+    position: relative;
+    right: 50px;
+    top: 5px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #387ED1;;
+}
+#input-box-todo{
+    position: relative;
+    top: 40px;
+    left: 54px;
+    color: #387ED1;
+    width: 2px;
+}
+.div-box{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.2rem;
+    margin: 0.4rem 0;
+    padding-right: 20px;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+   position: relative;
+   /* left: 10px; */
+  }
+.p-box{
+padding: 0.2rem;
+border-radius: 0.5rem;
+margin-left: 1rem;
+}
+.btn-box{
+    background: none;
+    color: crimson;
+   font-size: 20px;
+   border: none;
+}
+.finish{
+    text-decoration: line-through;
+    cursor: pointer;
+    width: auto;
+}
+#top{
+   padding-top: 20px;
+   display: flex;
+   gap: 25px;
+   margin: auto;
+   position: relative;
+   /* left: 45px; */
+   width: 470PX;
+   /* border: 1PX solid RED; */
+}
+#clear{
+    background-color: #387ED1;
+    border-radius: 5px;
+    font-size: 12px;
+     color: #ffff;
+     padding: 0.4rem;
+     border: 0;
+}
+.top-names{
+  background: none;
+  border: 0;
+  font-weight: 600;
+}
+.top-names:hover{
+  color: #387ED1;
+}
+#clearbtn{
+    background-color: #d13838;
+    border-radius: 5px;
+    font-size: 12px;
+     color: #ffff;
+     padding: 0.4rem;
+     border: 0;
+     position: relative;
+     left: 320px;
+     display: none;
+}
+.fa-circle{
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+    top: 3px;
+}
+.fa-circle-check{
+    font-size: 25px;
+    font-weight: 700;
+    position: relative;
+    top: 3px;
+    color: #38d154;
+}
+#no-todos{
+    position: relative;
+    top: 120px;
+    left: 30px;
+    color: rgba(240, 248, 255, 0.913);
+}
+
+@media screen and (max-width: 568px) {
+    
+
+   
+        #main-title {
+            width: 340px;
+            height: auto;
+            margin-left: auto;
+            padding-top: 100px;
+            padding-bottom: 50px;
+            font-size: 30px; 
+            font-weight: bold;
+            font-family: 'Arial', sans-serif; 
+            color:rgba(255, 68, 0, 0.822); 
+          /* border: 1px solid red; */
+            text-shadow: 2px 1px 0px white;
+        }
+        
+    
+    #container{
+        width: 350px;
+        margin: auto;
+    }
+    #input-box{
+        width: 260px;
+        height: 50px;
+        border:1.5px solid #49678b;
+        border-radius: 5px;
+        padding-left: 4rem;
+        background: none;
+        outline: none;
+        margin-left: 10px;
+        font-size: 18px;
+    }
+    #addBtn i{
+        position: relative;
+        left: 280px;
+        bottom: 45px;
+        font-size: 30px;
+        background: none;
+        border: none;
+        color: #387ED1;
+    }
+    #input-box-todo{
+        position: relative;
+        top: 40px;
+        left: 24px;
+        color: #387ED1;
+        width: 2px;
+    }
+    .div-box{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.2rem;
+        margin: 0.4rem 0;
+        padding-right: 20px;
+        color: black;
+        font-size: 18px;
+        font-weight: 500;
+       position: relative;
+      }
+    .p-box{
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
+    font-size: 18px;
+    margin: 3px;
+    }
+    .btn-box{
+        background: none;
+        color: crimson;
+       font-size: 20px;
+       border: none;
+    }
+    .finish{
+        text-decoration: line-through;
+        cursor: pointer;
+        width: auto;
+    }
+    #top{
+       padding-top: 20px;
+       display: flex;
+       gap: 20px;
+       margin: auto;
+       position: relative;
+       right: 10px;
+       width: 270PX;
+       flex-direction: column;
+    }
+    #clear{
+        background-color: #387ED1;
+        border-radius: 5px;
+        font-size: 18px;
+         color: #ffff;
+         padding: 0.5rem;
+         border: 0;
+         position: relative;
+         right: 5px;
+    }
+    .top-names{
+      background: none;
+      border: 0;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    .top-names:hover{
+      color: #387ED1;
+    }
+    #clearbtn{
+        background-color: #d13838;
+        border-radius: 5px;
+        font-size: 12px;
+         color: #ffff;
+         padding: 0.4rem;
+         border: 0;
+         position: relative;
+         left: 150px;
+         display: none;
+    }
+    .fa-circle{
+        font-size: 25px;
+        font-weight: 700;
+        position: relative;
+        top: 3px;
+    }
+    .fa-circle-check{
+        font-size: 25px;
+        font-weight: 700;
+        position: relative;
+        top: 3px;
+        color: #38d154;
+    }
+    #no-todos {
+        color: rgba(240, 248, 255, 0.913);
+        text-align: center; 
+    }
+
+}
+    </style>
 </head>
 <body>
   <div id="main-title"><h1>TODO-LIST</h1></div>
@@ -30,6 +329,259 @@
   <div id="no-todos"><marquee behavior="" direction="right"><h1><i>NO TODOS YET......<i class="fa-regular fa-face-frown"></i></i></h1></marquee></div>
   <button id="clearbtn">CLEAR-COMPLETED</button>
 </main>
-    <script src="./todo-final.js"></script>
+<script>
+  const one = document.getElementById('one');
+const two = document.getElementById('two');
+const three = document.getElementById('three');
+
+const inputBox = document.getElementById('input-box');
+
+const addBtn = document.getElementById('addBtn');
+const clearBtn = document.getElementById('clearbtn');
+const noTodos =document.getElementById('no-todos');
+
+const todoContainer = document.getElementById('todo-container');
+const clear = document.getElementById('clear');
+
+
+let objectsContainer =[];
+let mainid = 101;
+
+let canAdd = true;
+
+let totalcount =0;
+let completedcount =0;
+let incompletecount =0;
+
+function updateCounts(){
+  
+    totalcount = objectsContainer.length;
+    completedcount = objectsContainer.filter(todo => todo.iscompleted).length;
+    incompletecount = totalcount - completedcount;
+ 
+ 
+     one.innerText = "ALL ( " +totalcount+ " )";
+    three.innerText = "IN-PROGRESS ( " +incompletecount+ " )";
+    two.innerText = "COMPLETED ( " +completedcount+ " )";
+    localStorage.setItem('counts',JSON.stringify(objectsContainer));
+    
+ }
+
+function check(){
+if(objectsContainer.length === 0){
+   clearBtn.style.display ='none';
+   noTodos.style.display = 'block';
+   setTimeout(function() {
+    noTodos.innerHTML = "<marquee direction='right'><h1><i>NO TODOS YET......<i class='fa-regular fa-face-frown'></i></h1></marquee>";
+  }, 100);
+}else{
+   clearBtn.style.display ='block';
+   noTodos.style.display = 'none';
+}
+}
+
+function completedcheck(){
+   const completed = objectsContainer.filter(x=> x.iscompleted)
+   clearBtn.style.display =  completed.length > 0 ? 'block' : 'none' ;
+   
+}
+
+function Incompletedcheck(){
+   const incompleted = objectsContainer.filter(x=> !x.iscompleted)
+   clearBtn.style.display = 'none';
+
+}
+
+addBtn.addEventListener('click',handleTodos);
+inputBox.addEventListener('keydown',(e)=>{
+   if(e.key === 'Enter'){
+      handleTodos();
+   }
+});
+
+function handleTodos(){
+
+   if(!canAdd){
+      alert('YOU CAN`T ADD FROM HERE GO TO "ALL" SECTION');
+      inputBox.value = '';
+      return;
+   }
+    one.style.color='#387ED1'
+    let userinput = inputBox.value;
+
+    if(userinput.trim() !== ''){
+       
+        let eachTodo = {
+            id : mainid++,
+            text: userinput,
+            iscompleted : false
+         }
+         inputBox.value='';
+        objectsContainer.unshift(eachTodo);
+        addtodos(objectsContainer);
+        updateCounts()
+
+       localStorage.setItem('tasks',JSON.stringify(objectsContainer));
+      
+      }else{
+         alert("ENTER data to add");
+      }
+   
+   }
+      
+function addtodos(TodoList) {
+   check();
+todoContainer.innerHTML = '';
+
+TodoList.forEach(eachTodo =>{
+
+        let div =  document.createElement('div');
+        div.setAttribute('data-id', eachTodo.id);
+        div.classList.add('div-box');
+  
+        let p =  document.createElement('p');
+        p.classList.add('p-box');
+  
+        let btn =  document.createElement('button');
+        btn.classList.add('btn-box');
+        btn.innerHTML = `<i class="fa-regular fa-trash-can"></i>`;
+
+      
+        p.innerHTML = `<i class="${eachTodo.iscompleted ? 'fa-regular fa-circle-check' : 'fa-regular fa-circle'}"></i> ${eachTodo.text}`;
+
+        if (eachTodo.iscompleted) {
+
+            p.classList.add('finish');
+           
+        }
+
+     div.appendChild(p);
+     div.appendChild(btn);
+     todoContainer.appendChild(div);
+
+       
+   btn.addEventListener('click',(e)=>{    
+      e.stopPropagation();
+     const TodoId = e.target.closest('div')?.getAttribute('data-id');
+      if(!TodoId) return;
+    objectsContainer  = objectsContainer.filter(todo => todo.id !== +TodoId);
+    addtodos(objectsContainer);
+    updateCounts()
+    localStorage.setItem('tasks',JSON.stringify(objectsContainer));
+   
+ 
+})
+
+p.addEventListener('click', (e) => {
+   e.stopPropagation();
+    const TodoId = e.target.closest('div')?.getAttribute('data-id'); 
+    if(!TodoId) return;
+   
+    objectsContainer = objectsContainer.map(obj => {
+       if(obj.id === +TodoId){
+       obj.iscompleted = obj.iscompleted ? false : true;
+       e.target.classList.toggle('finish',obj.iscompleted);
+       }
+        return obj;
+    })
+   
+     sorttodos();
+   
+     addtodos(objectsContainer);
+     updateCounts()
+  
+     localStorage.setItem('tasks',JSON.stringify(objectsContainer));
+     
+   })
+});
+
+}
+
+one.addEventListener('click',()=>{
+   canAdd=true;
+   addBtn.disabled = false;
+   clearBtn.disabled = false;
+   one.style.color ='#387ED1'
+    two.style.color=''
+     three.style.color =''
+       addtodos(objectsContainer);
+      
+   })
+two.addEventListener('click',()=>{
+   canAdd =false;
+   clearBtn.disabled = false;
+   two.style.color='#387ED1'
+    one.style.color =''
+    three.style.color =''
+   let twoobjectsContainer  = objectsContainer.filter(todo => todo.iscompleted); 
+    addtodos(twoobjectsContainer);
+    completedcheck();
+   
+ });
+
+three.addEventListener('click',()=>{
+   canAdd=false;
+   three.style.color ='#387ED1'
+    one.style.color =''
+     two.style.color=''
+  let threeobjectsContainer  = objectsContainer.filter(todo => !todo.iscompleted);
+   addtodos(threeobjectsContainer);
+   Incompletedcheck();
+ });
+   
+ clearBtn.addEventListener('click',()=>{
+    objectsContainer  = objectsContainer.filter(todo => !todo.iscompleted);
+     addtodos(objectsContainer);
+     updateCounts()
+     localStorage.setItem('tasks',JSON.stringify(objectsContainer));
+   
+ });
+ 
+ function sorttodos() {
+     objectsContainer.sort((a, b) => a.iscompleted - b.iscompleted);
+     addtodos(objectsContainer);  
+ 
+ }
+
+
+ clear.addEventListener('click',(e)=>{
+if(objectsContainer.length > 0){
+   if(confirm('are u sure want to delete all todos ?')){
+   objectsContainer= [];
+   addtodos(objectsContainer);
+    two.style.color=''
+     one.style.color='#387ED1'
+      three.style.color=''
+     canAdd = true;
+      updateCounts()
+      
+   }else{
+      alert('delete canceled');
+      updateCounts()
+   }
+}else{
+   alert('no todos to delete..!')
+}
+inputBox.value='';
+localStorage.setItem('tasks',JSON.stringify(objectsContainer));
+ })
+
+ let tasks = JSON.parse(localStorage.getItem('tasks'));
+
+ if(tasks !== null){
+   objectsContainer = tasks;
+   addtodos(tasks);
+ }else{
+   objectsContainer=[];
+ }
+
+ let counts = JSON.parse(localStorage.getItem('counts'));
+
+ if(counts !== null){
+   objectsContainer = counts;
+   updateCounts(counts);
+ }
+</script>
+    <!-- <script src="./todo-final.js"></script> -->
 </body>
 </html>

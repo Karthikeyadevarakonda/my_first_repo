@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./col.css">
+    <style>
+        
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Inter", sans-serif;  
+}
+#main{
+    display: flex;
+}
+#box1{
+    width: 257px;
+    height: 100vh;
+    /* border: 1px solid red; */
+    background-color: #18bdcd;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    padding-left: 60px;
+    font-size: 25px;
+    font-weight: 700;
+}
+#box2{
+    width: 257px;
+    height: 100vh;
+    /* border: 1px solid red; */
+    background-color: #f7567c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    padding-left: 70px;
+    font-size: 25px;
+    font-weight: 700;
+}
+#box3{
+    width: 256px;
+    height: 100vh;
+    /* border: 1px solid red; */
+    background-color:#e1c899;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    padding-left: 70px;
+    font-size: 25px;
+    font-weight: 700;
+
+}
+#box4{
+    width: 256px;
+    height: 100vh;
+    /* border: 1px solid red; */
+    background-color: #b8730c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    padding-left: 70px;
+    font-size: 25px;
+    font-weight: 700;
+}
+#box5{
+    width: 255px;
+    height: 100vh;
+    /* border: 1px solid red; */
+    background-color: #ffffff;
+    color: black;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-end;
+     padding-bottom: 50px;
+     padding-left: 70px;
+     font-size: 25px;
+     font-weight: 700;
+     
+}
+@media screen and (max-width:1200px){
+    #main{
+        display: flex;
+        flex-direction: column;
+    }
+    #box1{
+        width: 100vw;
+        height: 20vh;
+        /* border: 1px solid red; */
+        background-color: #18bdcd;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 50px;
+         padding-left: 100px;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    #box2{
+        width: 100vw;
+        height: 20vh;
+        /* border: 1px solid red; */
+        background-color: #f7567c;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 50px;
+        padding-left: 100px;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    #box3{
+        width: 100vw;
+        height: 20vh;
+        /* border: 1px solid red; */
+        background-color:#e1c899;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 50px;
+        padding-left: 100px;
+        font-size: 25px;
+        font-weight: 700;
+    
+    }
+    #box4{
+        width: 100vw;
+        height: 20vh;
+        /* border: 1px solid red; */
+        background-color: #b8730c;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-bottom: 50px;
+        padding-left: 100px;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    #box5{
+        width: 100vw;
+        height: 20vh;
+        /* border: 1px solid red; */
+        background-color: #ffffff;
+        color: black;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-end;
+         padding-bottom: 50px;
+         padding-left: 100px;
+         font-size: 25px;
+         font-weight: 700;
+    }  
+}
+    </style>
+</head>
+<body>
+    <main id="main">
+        <section id="box1"><p id="colorCode1">#000000</p></section>
+        <section id="box2"><p id="colorCode2">#000000</p></section>
+        <section id="box3"><p id="colorCode3">#000000</p></section>
+        <section id="box4"><p id="colorCode4">#000000</p></section>
+        <section id="box5"><p id="colorCode5">#000000</p></section>
+    </main>
+    <script>
+        
+const box1 = document.getElementById('box1');
+const box2 = document.getElementById('box2');
+const box3 = document.getElementById('box3');
+const box4 = document.getElementById('box4');
+const box5 = document.getElementById('box5');
+
+const colorCode1 = document.getElementById('colorCode1');
+const colorCode2 = document.getElementById('colorCode2');
+const colorCode3 = document.getElementById('colorCode3');
+const colorCode4 = document.getElementById('colorCode4');
+const colorCode5 = document.getElementById('colorCode5');
+
+window.addEventListener('keydown',(e)=>{
+
+
+    
+
+    if(e.key === ' ' || e.key === 32){
+
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+
+
+    const r1 = Math.floor(Math.random() * 256);
+    const g1 = Math.floor(Math.random() * 256);
+    const b1 = Math.floor(Math.random() * 256);
+
+    const r2 = Math.floor(Math.random() * 256);
+    const g2 = Math.floor(Math.random() * 256);
+    const b2 = Math.floor(Math.random() * 256);
+
+    const r3 = Math.floor(Math.random() * 256);
+    const g3 = Math.floor(Math.random() * 256);
+    const b3 = Math.floor(Math.random() * 256);
+
+    const r4 = Math.floor(Math.random() * 256);
+    const g4 = Math.floor(Math.random() * 256);
+    const b4 = Math.floor(Math.random() * 256);
+
+        box1.style.backgroundColor=`rgb(${r},${g},${b})`;
+        box2.style.backgroundColor=`rgb(${r1},${g1},${b1})`; 
+        box3.style.backgroundColor=`rgb(${r2},${g2},${b2})`; 
+        box4.style.backgroundColor=`rgb(${r3},${g3},${b3})`; 
+        box5.style.backgroundColor=`rgb(${r4},${g4},${b4})`; 
+        box1.style.backgroundColor=`rgb(${r},${g},${b})`;
+        
+        colorCode1.innerText = `${r},${g},${b}`;
+        colorCode2.innerText = `${r},${g},${b}`;
+        colorCode3.innerText = `${r},${g},${b}`;
+        colorCode4.innerText = `${r},${g},${b}`;
+        colorCode5.innerText = `${r},${g},${b}`;
+       
+    }else{
+        alert("click space bar to change colours");
+    
+    }
+})
+    </script>
+    <!-- <script src="./col.js"></script> -->
+</body>
+</html>

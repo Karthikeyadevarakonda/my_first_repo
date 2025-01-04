@@ -11,6 +11,278 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    *{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+}
+#text{
+  font-size: 30px;
+  font-weight: 700;
+  white-space: pre-wrap;
+}
+#copy-2{
+  position: absolute;
+  top: 19px;
+  right: 20px;
+  cursor: pointer;
+}
+#bags{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  right: 20px;
+  top: 100px;
+}
+#bags img{
+  width: 100px;
+  height: 100px;
+}
+.toast-body{
+   color: black;
+   font-size: 20px;
+   padding-left: 1rem;
+   width: 100%;
+}
+#notification{
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: rgba(19, 92, 219, 0.879);
+  height: 30px;
+  padding-left: 2rem;
+  padding-top: 5px;
+  color: white;
+}
+#img-div{
+ width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+ position: relative;
+ top: 10px;
+}
+#footer{
+  position: relative;
+  bottom: 150px;
+}
+#img-div img{
+  height: 300px;
+}
+
+#imfo-2{
+  padding: 4rem;
+  width: 900px;
+  position: relative;
+}
+#img-div-2{
+  width: 70%;
+  position: relative;
+  display: flex;
+  bottom: 180px;
+ }
+ #img-div-2 img{
+   height: 300px;
+   position: absolute;
+   right: 0;
+ }
+  #custom{
+    width: 300px;
+    direction: rtl;
+    height: 40px;
+    position: absolute;
+    top: 30px;
+  }
+#copy i{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    top: 38px;
+}
+#copied{
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  font-size: 16px;
+  background-color: rgba(223, 187, 28, 0.676);
+  border-radius: 50px;
+  padding:0.2rem 2rem;
+  font-weight: 700;
+  display: none;
+}
+#copied2{
+  font-size: 14px;
+  background-color: rgba(223, 187, 28, 0.676);
+  border-radius: 50px;
+  padding:0.1rem 2rem;
+  font-weight: 700;
+  position: relative;
+  left: 190px;
+  bottom: 20px;
+  display: none;
+  width: 80px;
+}
+#otpBox{
+    width: 200px;
+   border: 3px solid grey;
+   border-radius: 9px;
+   position: absolute;
+   top: 30px;
+   left: 0;
+  }
+#main-conatiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#container{
+    width:350px;
+    height: 250px;
+    padding: 3rem;
+    position: relative;
+    border-radius: 30px;
+    bottom: 150px;
+    box-shadow: 0px 0px 20px 1px;
+    left: 200px;
+}
+#inputBox{
+    height: 40px;
+    position: relative;
+    width: 285px;
+}
+#inputBox input{
+    width: 300px;
+    height: 43px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+#timeDisplay{
+   font-size: 20px;
+}
+#slider{
+    position: relative;
+    top: 50px;
+}
+#popUp{
+  width: 320px;
+  height: 80px;
+  box-shadow: 0px 0px 5px 1px lightgray;
+  position: absolute;
+  right: 20px;
+  bottom: 50px;
+  border-radius: 10px;
+  background-color: rgba(211, 211, 211, 0.384);
+  display: none;
+  position:fixed;
+  z-index: 1000;
+}
+@keyframes box-1-slide-in {
+  from{
+     transform: translateX(100vw);
+  }
+  to{
+      transform:translateX(0);
+  }
+}
+@keyframes box-1-slide-out {
+  from{
+      transform:translateX(0);
+  }
+  to{
+      transform: translateX(100vw);  
+  }
+}
+#name{
+  position:relative;
+  top: 150px;
+ text-align: center;
+ width: 190px;
+}
+#my-name{
+background-color: rgba(0, 0, 0, 0.607);
+padding: 0.3rem;
+font-size: 20px;
+border-top-right-radius: 5px;
+color: white;
+}
+
+#outer{
+  margin: 100px;
+  width: 271px;
+  height: 5px;
+  background-color: rgba(211, 211, 211, 0.397);
+  border-radius: 50px;
+  position: relative;
+  bottom: 80px;
+  right: 95px;
+}
+#inner{
+  background-color: rgb(255, 0, 0);
+  width:0;
+  height: 5px;
+  border-radius: 50px;
+  position: absolute;
+
+}
+
+@media screen and (max-width: 568px) {
+#popUp{
+  right: 20px;
+  top: 20px;
+}
+#img-div{
+ width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+ position: relative;
+ top: 10px;
+ margin-bottom: 50px;
+}
+#img-div h1,h4{
+ margin-left: 20px;
+}
+#imfo-2{
+  width: 420px;
+  position: relative;
+  padding-top: 2px;
+  padding-left: 20px;
+  text-align: justify;
+  top: 170px;
+  left: 30px;
+}
+#img-div-2{
+  width: 60%;
+  position: relative;
+  display: flex;
+  top: 20px;
+  right: 40px;
+ }
+ #img-div-2 img{
+   height: 270px;
+   position: absolute;
+   left : 10px;
+ }
+#container{
+    position: relative;
+    bottom: 0;
+    left: 35px;
+}
+#name{
+ position:relative;
+ top: 340px;
+ height: 40px;
+ text-align: center;
+ width: 130%;
+}
+#my-name{
+padding: 0.3rem;
+border-top-right-radius: 5px;
+width: 100%;
+position: absolute;
+}
+}
+  </style>
 </head>
 <body id="window"> 
   <div id="img-div">
@@ -62,7 +334,97 @@
 <div id="name">
   <h3 id="my-name">by Karthikeya</h3>
 </div>
-<script src="./opt-30-seconds.js"></script>
+<script>
+  const slider = document.getElementById('custom');
+const timeDisplay = document.getElementById('timeDisplay');
+const otpBox = document.getElementById('otpBox');
+const copyElement = document.getElementById('copy');
+const copied = document.getElementById('copied');
+const popUp = document.getElementById('popUp');
+const copyElement2 = document.getElementById('copy-2')
+const copied2 =document.getElementById('copied2')
+
+
+
+
+function popIn(duration = 900){
+    popUp.style.display = 'block';
+    popUp.style.animation= `box-1-slide-in  ${duration}ms cubic-bezier(0.2, 1, 1, 1) forwards`;
+}
+
+function hidePopUp(duration = 900){
+    popUp.style.animation= `box-1-slide-out  ${duration}ms cubic-bezier(0.2, 1, 1, 1) forwards`;
+    setTimeout(()=>{
+        popUp.style.display = 'none';
+    },duration)
+}
+
+setTimeout(() => {
+    popIn();
+    setTimeout(hidePopUp, 4000);
+}, 3000);
+
+function generatedOtps(){
+    let generatedOtp='';
+        for(let i=0;i<4;i++){
+            generatedOtp += Math.floor(Math.random()*10);
+        }
+    otpBox.value = generatedOtp;
+}
+generatedOtps();
+
+
+copyElement.addEventListener('click', () => {
+        navigator.clipboard.writeText(otpBox.value)
+        copied.style.display = 'block';
+       setTimeout(()=>{
+        copied.style.display = 'none';
+       },1500)
+      });
+copyElement2.addEventListener('click', () => {
+        navigator.clipboard.writeText(otpBox.value)
+        copied2.style.display = 'block';
+      });
+const text = "OTP Code Generator....!";
+const textContainer = document.getElementById("text");
+let index = 0;
+
+    function typeText() {
+      if (index < text.length) {
+        textContainer.textContent += text[index];
+        index++;
+        setTimeout(typeText, 120); 
+      }
+    }
+
+ typeText();
+
+const inner = document.getElementById('inner');
+let maxwidth = 280;
+let duration = 30;
+let increment = maxwidth/duration;
+let valu =0;
+let value = 30;
+
+
+function combiningBothSliderAndTimer() {
+   let currentTime = duration;
+   setInterval(()=>{
+    currentTime--;
+    if(currentTime <= 0){
+        currentTime = duration;
+        generatedOtps();
+    }
+    timeDisplay.textContent = currentTime;
+
+    const width = ((duration - currentTime) / duration) * maxwidth;
+    inner.style.width = `${width}px`
+   },1000)
+}
+
+combiningBothSliderAndTimer();
+</script>
+<!-- <script src="./opt-30-seconds.js"></script> -->
 </body>
 </html>
 

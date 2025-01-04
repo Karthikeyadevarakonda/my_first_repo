@@ -7,6 +7,164 @@
     <link rel="stylesheet" href="./calculator.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<style>
+    *{
+    margin: 0;
+    box-sizing: border-box;
+}
+#calculator{
+    margin: auto;
+    margin-top: 50px;
+    border: 2px solid lightcoral;
+    width: 320px;
+    height: 460px;
+    border-radius: 15px;
+    /* background-color: rgba(211, 211, 211, 0.231); */
+    /* box-shadow: 0px 0px 30px 10px white; */
+    background-color: #ffffffa9;
+}
+#head{
+    width: 100%;
+    height: 89px;
+    position: relative;
+}
+body{
+    /* background-color:rgba(222, 219, 219, 0.797); */
+    background-color: rgba(0, 0, 0, 0.952);
+}
+#body{
+    height: 345px;
+    display: flex;
+    flex-direction: column;
+}
+button{
+    width: 40px;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 0 0 5px 2px white;
+    background-color: rgba(3, 3, 3, 0.253);
+    color: #fff;
+}
+button:focus{
+    animation: click 100ms ease-in-out forwards;
+}
+@keyframes click{
+    0%{
+        transform: scale(0.89);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+#sub-div-3-right{
+    display: flex;
+    width: 40px;
+    justify-content: flex-end;
+}
+#head input{
+    width: 85%;
+    height: 55px;
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    border-radius: 8px;
+    padding-left: 1rem;
+    padding-top: 8px;
+    font-size: 20px;
+    border: 2px solid rgba(128, 128, 128, 0.715);
+    outline: none;
+}
+#head input::placeholder{
+    color: rgb(116, 116, 214);
+    font-weight: 500;
+    font-size: 30px;
+}
+#sub-div-1{
+    width: 80%;
+    margin: auto;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+#btnAdd{
+    background-color: rgba(24, 52, 24, 0.208);
+    position: relative;
+    left: 3px;
+    /* background-color: rgba(196, 204, 193, 0.26); */
+}
+#btnequalto{
+    background-color: rgba(88, 128, 160, 0.699);
+}
+#ClearBtn{
+   width: 110px;
+   font-size: 16px;
+   font-weight: 600;
+   background-color: lightcoral;
+   color: #fff;
+}
+#DivBtn{
+    width: 40px;
+    font-size: 20px;
+    font-weight: 600;
+}
+#MulDiv{
+    width: 40px;
+}
+#sub-div-2{
+    width: 80%;
+    margin: auto;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+#sub-div-3-left{
+    width: 72%;
+    position: relative;
+    right: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#sub-div-3{
+    width: 80%;
+    margin: auto;
+    height: 99px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    left: 5px;
+}
+#sub-div-3-left-bottom{
+    display: flex;
+    justify-content: space-between;
+}
+#sub-div-3-left-top{
+    display: flex;
+    justify-content: space-between;
+}
+#sub-div-3-left-top button{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+#sub-div-3-left-bottom button{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+#sub-div-4{
+    width: 80%;
+    margin: auto;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+</style>
 <body>
     <main>
         <div id="calculator">
@@ -59,6 +217,217 @@
             </div>
         </div>
     </main>
-    <script src="./calculator.js"></script>
+    <script>
+const btnTwozeroes = document.getElementById('btn00');
+const btn0 = document.getElementById('btn0');
+const btn1 = document.getElementById('btn1');
+const btn2 = document.getElementById('btn2');
+const btn3 = document.getElementById('btn3');
+const btn4 = document.getElementById('btn4');
+const btn5 = document.getElementById('btn5');
+const btn6 = document.getElementById('btn6');
+const btn7 = document.getElementById('btn7');
+const btn8 = document.getElementById('btn8');
+const btn9 = document.getElementById('btn9');
+const ClearBtn = document.getElementById('ClearBtn');
+const DivBtn = document.getElementById('DivBtn');
+const MulBtn = document.getElementById('MulBtn');
+const btnSub = document.getElementById('btnSub');
+const btnAdd = document.getElementById('btnAdd');
+const backspace = document.getElementById('backspace');
+const btnequalto = document.getElementById('btnequalto');
+const modBtn = document.getElementById('modBtn');
+const dot = document.getElementById('dot');
+const power = document.getElementById('power');
+const oneByX = document.getElementById('oneByX');
+const inputBox = document.getElementById('inputBox');
+
+
+
+btn0.addEventListener('click',()=>{
+   let input =  inputBox.value ;
+   if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
+    inputBox.value = "0";
+   }else{
+    inputBox.value = input +"0";
+   }
+  
+})
+btn1.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
+        inputBox.value = "1";
+       }else{
+        inputBox.value = input +"1";
+       }
+ })
+ btn2.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
+        inputBox.value = "2";
+       }else{
+        inputBox.value = input +"2";
+       }
+ })
+ btn3.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
+        inputBox.value = "3";
+       }else{
+        inputBox.value = input +"3";
+       }
+ })
+ btn4.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
+        inputBox.value = "4";
+       }else{
+        inputBox.value = input +"4";
+       }
+ })
+ btn5.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
+        inputBox.value = "5";
+       }else{
+        inputBox.value = input +"5";
+       }
+ })
+ btn6.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
+        inputBox.value = "6";
+       }else{
+        inputBox.value = input +"6";
+       }
+ })
+ btn7.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
+        inputBox.value = "7";
+       }else{
+        inputBox.value = input +"7";
+       }
+ })
+ btn8.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
+        inputBox.value = "8";
+       }else{
+        inputBox.value = input +"8";
+       }
+ })
+ btn9.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
+        inputBox.value = "9";
+       }else{
+        inputBox.value = input +"9";
+       }
+ })
+ btnTwozeroes.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity"|| input === "-Infinity"){
+        inputBox.value = "00";
+       }else{
+        inputBox.value = input +"00";
+       }
+ })
+ btnAdd.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    let n = input.length;
+    let y = input.slice(n-1,n);
+      if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== '' && y !== 'y' && y !== 'N'&& y !== '!'){
+            inputBox.value = input +"+";
+      }
+ })
+ btnSub.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    let n = input.length;
+    let y = input.slice(n-1,n);
+    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== '' && y !== 'y' && y !== 'N'&& y !== '!'){
+        inputBox.value = input +"-";
+      }
+ })
+ MulBtn.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    let n = input.length;
+    let y = input.slice(n-1,n);
+    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== '' && y !== 'y' && y !== 'N'&& y !== '!'){
+        inputBox.value = input +"*";
+      }
+ })
+ DivBtn.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    let n = input.length;
+    let y = input.slice(n-1,n);
+    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== '' && y !== 'y' && y !== 'N'&& y !== '!'){
+        inputBox.value = input +"/";
+      }
+ })
+ dot.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    let n = input.length;
+    let y = input.slice(n-1,n);
+    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== '' && y !== 'y' && y !== 'N'&& y !== '!'){
+        inputBox.value = input +".";
+      }
+ })
+ modBtn.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    let n = input.length;
+    let y = input.slice(n-1,n);
+    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== '' && y !== 'y' && y !== 'N'&& y !== '!'){
+        inputBox.value = input +"%";
+      }
+ })
+ power.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    let n = input.length;
+    let y = input.slice(n-1,n);
+    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== '' && y !== 'y' && y !== 'N'&& y !== '!'){
+        inputBox.value = eval(input*input);
+      }
+ })
+ oneByX.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    let n = input.length;
+    let y = input.slice(n-1,n);
+    if(y !== '+' && y !== '-' && y !== '*' && y !== '/' && y !== '%' && y !== '.' && y !== '' && y !== 'y' && y !== 'N'&& y !== '!'){
+        inputBox.value = eval(1/input);
+      }
+ })
+ ClearBtn.addEventListener('click',()=>{
+    inputBox.value = '';
+ })
+ btnequalto.addEventListener('click',()=>{
+    let res = inputBox.value;
+  
+    if(res !== ''){
+    let finalRes = eval(res);
+    if(finalRes.toString() === 'NaN'){
+        inputBox.value = "CANNOT DIVIDE BY 0 !";
+        return;
+    }else{
+    inputBox.value = finalRes;
+    }
+}
+ })
+ backspace.addEventListener('click',()=>{
+    let input =  inputBox.value ;
+    if(input === "CANNOT DIVIDE BY 0 !" || input === "NaN" || input === "Infinity" || input === "-Infinity"){
+        inputBox.value = '';
+    }else{
+        let y = input.slice(0,-1);
+        inputBox.value = y;
+    }
+    
+ })
+
+
+
+
+    </script>
+    <!-- <script src="./calculator.js"></script> -->
 </body>
 </html>

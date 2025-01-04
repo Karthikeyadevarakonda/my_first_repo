@@ -6,6 +6,150 @@
     <title>Document</title>
     <link rel="stylesheet" href="./clock.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #387Ed1;
+    font-family: sans-serif;
+}
+#clock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 10px;
+    
+}
+#times{
+    display: flex;
+    width: 800px;
+    height: 200px;
+    align-items: center;
+    position: relative;
+    bottom: 90px;
+    justify-content: space-around;
+    border-radius: 10px;
+    background-color:#ffffffb2;
+}
+.backgroud-for-times{
+    width:120px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    background-color: rgba(121, 117, 117, 0.763);
+    color: whitesmoke;
+    border-radius: 15px;
+}
+.names{
+    font-size: 20px;
+    font-weight: 300;
+}
+#a{
+    font-size: 60px;
+     color: black;
+     padding-top: 7px;
+}
+#b{
+    font-size: 60px;
+     color: black;
+     padding-top: 7px;
+}
+#c{
+    font-size: 60px;
+     color: black;
+     padding-top: 7px;
+}
+.fa-play{
+    font-size: 22px;
+
+}
+#start-btn{
+    width: 40px;
+    height: 40px;
+    color: black;
+
+}
+#start-btn:hover{
+    transform: scale(0.91);
+    transition: transform 0.299s ease-in-out;
+}
+#stop-btn{
+    width: 40px;
+    height: 40px;
+    color: black;
+}
+#stop-btn:hover{
+    transform: scale(0.91);
+    transition: transform 0.299s ease-in-out;
+}
+#reset-btn{
+    width: 40px;
+    height: 40px;
+    color: black;
+}
+#reset-btn:hover{
+    transform: scale(0.91);
+    transition: transform 0.299s ease-in-out;
+}
+.fa-pause{
+    font-size: 22px;
+}
+.fa-rotate-right{
+    font-size: 22px;
+}
+@media (max-width : 500px) {
+    #times{
+        display: flex;
+        width: 350px;
+        height: 100px;
+        align-items: center;
+        position: relative;
+        bottom: 90px;
+        justify-content: space-around;
+        border-radius: 10px;
+        background-color:#ffffffb2;
+    }
+    .backgroud-for-times{
+        width:70px;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+        background-color: rgba(121, 117, 117, 0.763);
+        color: whitesmoke;
+        border-radius: 15px;
+    }
+    .names{
+        font-size: 10px;
+        font-weight: 300;
+    }
+    #a{
+        font-size: 20px;
+         color: black;
+         padding-top: 7px;
+    }
+    #b{
+        font-size: 20px;
+         color: black;
+         padding-top: 7px;
+    }
+    #c{
+        font-size: 20px;
+         color: black;
+         padding-top: 7px;
+    }
+}
+    </style>
 </head>
 <body>
 <div id="clock">
@@ -34,6 +178,72 @@
     <button id="reset-btn"><i class="fa-solid fa-rotate-right"></i></button>
    </div>
 </div>
-    <script src="./clock.js"></script>
+<script>
+    const seconds = document.getElementById('seconds')
+const minutes = document.getElementById('minutes')
+const hours = document.getElementById('hours')
+const ampm = document.getElementById('am-pm')
+
+
+const startBtn = document.getElementById('start-btn')
+const stopBtn = document.getElementById('stop-btn')
+const resetBtn = document.getElementById('reset-btn')
+
+let i=1;
+let j=0;
+let k=0;
+let timerid;
+
+
+startBtn.addEventListener('click',()=>{
+    startBtn.disabled = true;
+    resetBtn.disabled = true;
+    timerid = setInterval(()=>{
+        c.innerText = i < 10 ? '0' + i : i;
+        i++;
+        if(i === 60){
+            i = 0;
+            min();
+        }
+    },1000);
+
+})
+
+let min = function(){ 
+    j++;
+    if(j === 60){
+        j = 0;
+        hour();
+    }
+    b.innerText= j < 10 ? '0' + j : j;
+}
+
+let hour = function(){ 
+    k++;
+    if(k === 12){
+        ampm.innerText = ampm.innerText === "AM" ? "PM" : "AM";
+    }
+    else if(k === 13){
+        k=1;
+    }
+    a.innerText= k < 10 ? '0' + k : k;
+}
+
+stopBtn.addEventListener('click',()=>{
+    clearInterval(timerid);
+    startBtn.disabled = false;
+    resetBtn.disabled = false;
+})
+resetBtn.addEventListener('click',()=>{
+      a.innerText="00"
+      b.innerText="00"
+      c.innerText="00"
+    i=1;
+    j=0;
+    k=0;
+    ampm.innerText = "AM";
+})
+</script>
+    <!-- <script src="./clock.js"></script> -->
 </body>
 </html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html>
+        <head>
+            <title>swiggy</title>
+            <link rel="stylesheet" href="./swiggy-product-card.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+}
+.card{
+    width: 273px;
+    height: 300px;
+    margin: auto;
+    position: relative;
+    top: 40px;
+}
+.card:hover{
+    transform: scale(0.91);
+    transition: transform 0.299s ease-in-out;
+}
+.card img{
+    width: 100%;
+    border-radius: 15px;
+}
+#item-name{
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    left: 14px;
+    top: 5px; 
+}
+#rating-and-time{
+    position: relative;
+    left:14px;
+    top: 5px;
+}
+#timing{
+  font-weight: 700;
+}
+#rating{
+    font-weight: 500px;
+}
+#imfo{
+    position: relative;
+    left: 14px;
+    top: 6px;
+}
+#imfo p{
+font-size: 16px;
+color: #02060C99;
+}
+.fa-star{
+    background-color: green;
+    border-radius: 50%;
+    /* height: 25%; */
+    width: 8%;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+    position: relative;
+    bottom: 4px;
+    right: 2px;
+    padding-top: 3px;
+
+    
+}
+#rating-and-time .fa-star{
+    height: 18px;
+}
+@media screen and (max-width: 1200px) {
+    #card{
+        width: 173px;
+        height: 200px;
+        margin: auto;
+        position: relative;
+        top: 40px;   
+    }
+    .card:hover{
+        transform: scale(0.91);
+        transition: transform 0.299s ease-in-out;
+    }
+    .card img{
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    #item-name{
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        left: 14px;
+        top: 5px; 
+    }
+    #rating-and-time{
+        position: relative;
+        left:14px;
+        top: 5px;
+    }
+    #timing{
+      font-weight: 700;
+    }
+    #rating{
+        font-weight: 500px;
+    }
+    #imfo{
+        position: relative;
+        left: 14px;
+        top: 6px;
+    }
+    #imfo p{
+    font-size: 16px;
+    color: #02060C99;
+    }
+    .fa-star{
+        background-color: green;
+        border-radius: 50%;
+        /* height: 25%; */
+        width: 8%;
+        text-align: center;
+        color: white;
+        font-size: 10px;
+        position: relative;
+        bottom: 4px;
+        right: 2px;
+        padding-top: 3px;
+    
+        
+    }
+    #rating-and-time .fa-star{
+        height: 18px;
+    }
+}
+            </style>
+        </head>
+        <body>
+          <div id="main-container">
+            <div id="cards-container">
+                <div class="card">
+                    <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/rvxp5xbniat84r6efku2" alt="">
+                        <div id="item-name">Satkar Restaurant</div>
+                        <div id="rating-and-time">
+                            <span id="rating"><i class="fa-solid fa-star"></i>4.3</span>
+                            <span id="timing">• 45-50 mins</span>
+                        </div>
+                        <div id="imfo"><p>North Indian, South Indian, Indian, Salads, Desserts
+                            Satkar Chowk</p></div>
+                </div>
+            </div>
+          </div>  
+        </body>
+        
+    </html>
+</html>
