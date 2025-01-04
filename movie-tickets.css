@@ -375,11 +375,11 @@ body{
 @media (max-width : 500px) {
 
     #container{
-        height: 70vh;   
+        height: 30vh;   
         width: 315%;      
         margin-top: 350px;
         position: relative;
-        top: 300px;
+        top: 500px;
     }
     #booked-sucessfull{
         width: 80%;
