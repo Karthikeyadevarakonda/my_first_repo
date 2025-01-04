@@ -376,10 +376,12 @@ body{
 
     #container{
         height: -20vh;   
-        width: 315%;      
+        width: 315%;  
+        max-width: 315%; 
+        min-width: 315%;   
         margin-top: 350px;
         position: relative;
-        top: 100px;
+        top: 10px;
     }
     #booked-sucessfull{
         width: 80%;
@@ -391,8 +393,11 @@ body{
     #nav-bar{
         height: 300px;
         padding-left: 30px;
-        padding-top: 50px;
+        padding-top: 100px;
         padding-right: 50px;
+    }
+    #right-nav{
+        right: 40px;
     }
 }
 
