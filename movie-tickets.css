@@ -375,7 +375,7 @@ body{
 @media (max-width : 500px) {
 
     #container{
-        height: 10vh;   
+        height: -20vh;   
         width: 315%;      
         margin-top: 350px;
         position: relative;
@@ -386,6 +386,9 @@ body{
         height: 67%;
         left: 10%;
         top: 20px;
+    }
+    #screen-bar{
+        height: 200px;
     }
 }
 
