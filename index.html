@@ -4,67 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./movie-tickets.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <style>
+        #check:checked ~ #menu{
+            display: block;
+            left: 0%;
+            width: 100%;
+        }
+    </style>
 </head>
-<body id="body">
-   <div class="gradient">
-    <nav id="nav-bar">
-        <div id="left-nav">
-            <div id="logo">
-             <h1 >MY-THEATRE</h1>
-            </div>
-            <div id="left-bottom">
-                 <div id="date">
-                    <h3 id="day">Thu</h3>
-                    <h3>4 Jan</h3>
-                 </div>
-                 <div id="Currenttime"  class="time">
-                    <h3>10:33 PM</h3>
-                    <p>2D</p>
-                 </div>
-                 <div class="time">
-                    <h3>12:33 PM</h3>
-                    <p class="twod">2D</p>
-                 </div>
-                 <div class="time">
-                    <h3>4:00 PM</h3>
-                    <p class="twod">2D</p>
-                 </div>
-            </div>
-        </div>
-        <div id="mid-nav">
-            <h2 class="textClamp">Pushpa 2: The Rule • Telugu</h2>
-              <h3 class="address">Today,  2 Jan, 06:35 PM at M1 Cinemas (Earlier S2), Pogathota, Nellore</h3>
-        </div>
-        <div id="right-nav">
-           <span class="boxes" id="box-1"></span><p class="nav-bar-shows">AVAILABLE</p>
-           <span class="boxes" id="box-2"></span><p class="nav-bar-shows">BOOKED</p>
-           <span class="boxes" id="box-3"></span><p class="nav-bar-shows">SELECTED</p>
-        </div>
+
+
+<body>
+    <nav class="h-20 w-full bg-slate-100 shadow">
+    <div class="leading-[80px]">
+        <input type="checkbox" id="check" class="hidden">
+        <label for="check" class="text-lg float-right leading-[80px] mr-4 sm:mr-10 block sm:hidden">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label for="" class="text-amber-500 font-bold text-lg sm:text-2xl px-1 sm:px-10">SWIGGY</label>
+        <a href="" ><span class="font-bold underline text-xs sm:text-sm">Others  <span class="text-amber-500" ><i class="fa-solid fa-angle-down"></i></span></span></a>
+    
+        <ul class="fixed sm:static left-[-100%] h-screen transition-all duration-300 ease-in-out bg-slate-800 sm:bg-slate-100 sm:float-right sm:mr-10 sm:h-full" id="menu">
+            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-5 text-center "><a href="#" class="text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75">Swiggy Corporate</a></li>
+            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-5 text-center "><a href="#" class="text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75">Search</a></li>
+            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-5 text-center "><a href="#" class="text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75">Offer</a></li>
+            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-5 text-center "><a href="#" class="text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75">Help</a></li>
+            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-5 text-center "><a href="#" class="text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75">Sign in</a></li>
+            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-5 text-center "><a href="#" class="text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75">Cart</a></li>
+        </ul>
+    </div>
     </nav>
-
-    <main>
-<div id="main-div">
-        <div id="booked-sucessfull">
-                
-       </div>
-</div>
-
-     <div id="container">
-          <h3 id="top-title">295 GOLD : <i class="fa-solid fa-indian-rupee-sign"></i>295</h3>
-     </div>
-
-
-     <div id="screen-bar">
-        <img src="https://assetscdn1.paytm.com/movies_new/_next/static/media/screen-icon.8dd7f126.svg" alt="">
-     </div>
-   
-</div>
-    </main>
-
-
-
-    <script src="./movie-tickets.js"></script>
 </body>
 </html>
