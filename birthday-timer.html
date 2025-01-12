@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+         body{
+            font-family: "Roboto", serif;
+            font-variant-numeric: tabular-nums;
+            /* background-color: black; */
+           
+         }
+         #section-pic{
+            margin: auto;
+            background-image: url('./birthday-pic.jpeg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 78vh;
+            width: 900px;
+         }
+        #date{
+            border: 1px solid rgb(135, 130, 130);
+            padding: 0.2rem;
+            font-size: 20px;
+        }
+        #top{
+            width: 500px;
+            margin: auto;
+            /* border: 1px solid red; */
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+        }
+        #btn{
+            background-color:rgb(36, 10, 100);
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 4px;
+            padding: 0.2rem 1rem;
+        }
+        #resetBtn{
+            background-color:rgb(36, 10, 100);
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 4px;
+            padding: 0.2rem 1rem;
+        }
+        .times{
+            display: flex;
+            /* border: 1px solid red; */
+            width: 40%;
+            height: 130px;
+            top: 20px;
+            position: relative;
+            justify-content: space-between;
+
+        }
+    .container-box{
+        width:100%;
+        height: 180px;
+        margin: 30px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        bottom: 0;
+        top: 28px;
+        align-items: center;
+        /* border: 1px solid red; */
+        /* box-shadow: 0px 0px 10px 1px rgb(199, 197, 197), 0px 0px 10px 1px rgb(126, 125, 128); */
+
+        background-image: linear-gradient(to bottom right,rgb(239, 141, 158), rgba(35, 10, 100, 0.724));
+       
+        }
+        .eachdigit{
+            font-size: 50px;
+            padding:0.6rem 0.5rem;
+            background-color:#fdfdfdd3;
+            border-radius: 10px;
+            color: rgb(104, 19, 129);
+            margin: 4px;
+        }
+        .dots{
+            font-size: 40px;
+            position: relative;
+            /* border: 1px solid red; */
+            left: 30px;
+            bottom: 6px;
+           color: #ffffff;
+
+        }
+        .label{
+            position: absolute;
+            top: 14px;
+            left: 65px;
+            color: #ffffff;
+            font-size: 30px;
+        }
+        .lables-1{
+            position: absolute;
+            bottom: 20px;
+            font-weight: 700;
+            left: 20px;
+           
+            color: #ffffff;
+        }
+        .lables-2{
+            position: absolute;
+            bottom: 20px;
+            font-weight: 700;
+            left: 160px;
+            color: #ffffff;
+        }
+        .lables-3{
+            position: absolute;
+            bottom: 20px;
+            font-weight: 700;
+            right: 162px;
+            color: #ffffff;
+        }
+        .lables-4{
+            position: absolute;
+            bottom: 20px;
+            font-weight: 700;
+            right: 30px;
+            color: #ffffff;
+        }
+ #text{
+  margin-left: 30px;
+  font-size: 50px;
+  font-weight: 700;
+  font-family: sans-serif;
+  color: rgb(36, 10, 100);
+  white-space: pre-wrap;
+}
+#sub-text{
+    font-size: 20px;
+    margin-left: 39px;
+    color: gray;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="imfo">
+            <h1 id="text"></h1>
+            <h4 id="sub-text">Track Every Second Until Your Birthday , Your Birthday is Closer Than You Think!</h4>
+         </div>
+            
+       <div id="section-pic">
+           
+       </div>
+
+
+        <div id="top">
+        <input type="date" name="" id="date">
+        <button id="btn">START</button>
+        <button id="resetBtn">RESET</button>
+        </div>
+
+        <div class="container-box">
+            <h1 class="label">BIRTHDAY SOON</h1>
+            <div class="times">
+                <h3 class="timer-circle">
+                    <span id="displayDays">
+                        <span class="eachdigit">00</span><span class="dots">:</span>
+                    </span>
+                </h3>
+                <span class="lables-1">days</span>
+
+                <h3 class="timer-circle">
+                    <span id="displayHours">
+                        <span class="eachdigit">00</span><span class="dots">:</span>
+                    </span>
+                </h3>
+                <span  class="lables-2">hours</span>
+
+                <h3 class="timer-circle">
+                    <span id="displayMinutes">
+                        <span class="eachdigit">00</span><span class="dots">:</span>
+                    </span>
+                </h3>
+                <span  class="lables-3">mins</span>
+
+                <h3 class="timer-circle">
+                    <span id="displaySeconds">
+                        <span class="eachdigit">00</span>
+                    </span>
+                </h3>
+                <span  class="lables-4">sec</span>
+            </div>
+        </div>
+        
+    </div>
+   <script>
+
+    const inputdate = document.getElementById('date');
+
+const btn = document.getElementById('btn');
+const resetBtn = document.getElementById('resetBtn');
+
+const displayDays = document.getElementById('displayDays')
+const displayHours = document.getElementById('displayHours')
+const displayMinutes = document.getElementById('displayMinutes')
+const displaySeconds = document.getElementById('displaySeconds')
+const times = document.getElementById("times")
+
+let timer;
+
+btn.addEventListener('click',()=>{
+    btn.disabled = true;
+ let  totaldays =0;
+ let  totalhours =0;
+ let  totalminutes=0;
+ let totalseconds =0;
+    let userDate = inputdate.value;
+
+    if(!userDate){
+        alert("ENTER A VALID DATE");
+        return;
+    }
+
+
+let currentDate = new Date();
+
+
+let birthdate = new Date(userDate);
+birthdate.setHours(0,0,0,0);
+
+let Difference_In_Time =  birthdate.getTime() - currentDate.getTime() ;
+
+if(Difference_In_Time < 0){
+    alert("YOU HAVE ENTERED A PAST DATE !");
+    btn.disabled = false;
+    return;
+}
+
+let seconds = Math.floor(Difference_In_Time/1000);
+
+totaldays = Math.floor(seconds/(24*3600));
+seconds %= (24*3600);
+
+totalhours = Math.floor(seconds/3600);
+seconds %= 3600;
+
+ totalminutes = Math.floor(seconds/60);
+
+ totalseconds = seconds % 60;
+
+
+timer = setInterval(()=>{
+    if(totaldays <= 0 && totalhours <= 0 && totalminutes <= 0 && totalseconds <= 0){
+        clearInterval(timer);
+        btn.disabled = false;
+        console.log("timer ended");
+    } else {
+         
+        if(totalseconds > 0) totalseconds--;
+        else if(totalminutes > 0){
+            totalseconds = 59;
+            totalminutes--;
+        }else if(totalhours > 0){
+            totalminutes = 59;
+            totalseconds = 59
+            totalhours--;
+        }else if(totaldays > 0){
+            totalhours = 23;
+            totalseconds = 59;
+            totalminutes = 59;;
+            totaldays--;
+        }
+    }
+
+    displayDays.innerHTML =`<span class="eachdigit">${totaldays < 10 ? '0' +totaldays : totaldays }</span><span class="dots">:</span>`;
+    displayHours.innerHTML  =`<span class="eachdigit">${totalhours < 10 ? '0' +totalhours : totalhours }</span><span class="dots">:</span>`;
+    displayMinutes.innerHTML = `<span class="eachdigit">${totalminutes < 10 ? '0' +totalminutes : totalminutes }</span><span class="dots">:</span>`;
+    displaySeconds.innerHTML =`<span class="eachdigit">${totalseconds < 10 ? '0' +totalseconds : totalseconds }</span>`;
+    console.log(`days${totaldays},hours${totalhours},minutes${totalminutes},seconds${totalseconds}`)
+},1000);
+
+
+});
+
+resetBtn.addEventListener('click',()=>{
+    clearInterval(timer);
+    totaldays =0;
+    totalhours =0;
+    totalminutes=0;
+    totalseconds =0;
+    btn.disabled = false;
+    displayDays.innerHTML =`<span class="eachdigit">00</span><span class="dots">:</span>`;
+    displayHours.innerHTML  =`<span class="eachdigit">00</span><span class="dots">:</span>`;
+    displayMinutes.innerHTML = `<span class="eachdigit">00</span><span class="dots">:</span>`;
+    displaySeconds.innerHTML =`<span class="eachdigit">00</span>`;
+})
+
+
+const text = "Countdown to the Big Day....!";
+const textContainer = document.getElementById("text");
+let index = 0;
+
+    function typeText() {
+      if (index < text.length) {
+        textContainer.textContent += text[index];
+        index++;
+        setTimeout(typeText, 120); 
+      }
+    }
+
+ typeText();
+
+   
+   </script>
+</body>
+</html>
