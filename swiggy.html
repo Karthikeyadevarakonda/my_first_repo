@@ -20,25 +20,23 @@ body{
     width: 100%;
     background-color: rgba(211, 211, 211, 0.188);
 }
-#container{
-    padding-top: 5px;
+/* #container{
+    padding:5px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap:9px 5px;
     
    margin: auto;
    width: 98%;
    /* border: 1px solid red; */
-   padding: 0.5%;
-   
-}
+
         #check:checked ~ #menu{
             display: block;
             left: 0%;
             width: 100%;
         }
-        .card{
+        /* .card{
     width: 170px;
     height: 240px;
     display: flex;
@@ -47,20 +45,20 @@ body{
     padding: 0.5rem;
     border-radius: 8px;
     background-color: #ffffff;
-    /* box-shadow: 2px 2px 2px 1px rgb(85, 83, 83); */
-}
+} */
 .image{
     width: 60px;
     height: 60px;
     border-radius: 50%;
     /* border: 1px solid red; */
 }
+
     </style>
 </head>
 
 
 <body>
-    <nav class="h-20 w-full bg-slate-100 shadow">
+    <nav class="z-10 fixed h-20 w-full bg-slate-100 shadow">
        <div class="leading-[80px]">
          <input type="checkbox" id="check" class="hidden">
 
@@ -86,8 +84,8 @@ body{
         </ul>
      </div>
     </nav>
-    <main>
-        <div id="container">
+    <main class="pt-20">
+        <div id="container" class="flex flex-wrap space-evenly gap-2 m-auto pl-2 pt-20">
 
         </div>
     </main>
@@ -103,7 +101,7 @@ fetch("https://dummyjson.com/recipes")
     let k = "";
 
     newdata.forEach((x) => {
-      k += `<div class="card">
+      k += `<div class="card w-[170px] h-[240px] flex justify-around relative p-2 rounded-lg bg-white">
            <div class="top">
              <img class="image" src="${x.image}"/>
             </div>
