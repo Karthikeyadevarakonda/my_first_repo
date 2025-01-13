@@ -11,7 +11,7 @@
 
 
     <style>
-             *{
+*{
     margin: 0px;
     padding: 0;
     box-sizing: border-box;
@@ -20,12 +20,11 @@ body{
     width: 100%;
     background-color: rgba(211, 211, 211, 0.188);
 }
-
-        #check:checked ~ #menu{
+ #check:checked ~ #menu{
             display: block;
             left: 0%;
             width: 100%;
-        }
+ }
      
 .image{
     padding-top: 10px;
@@ -37,7 +36,9 @@ body{
 .fa-star{
     color: green;
 }
+
     </style>
+    
 </head>
 
 
@@ -59,12 +60,12 @@ body{
 
         <a href=""class="ml-24" ><span class="font-bold underline text-xs sm:text-sm">Others  <span class="text-green-600" ><i class="fa-solid fa-angle-down"></i></span></span></a>
     
-        <ul class="pt-10 sm:pt-0 fixed sm:static left-[-100%] h-screen transition-all duration-300 ease-in-out bg-slate-800 sm:bg-slate-100 sm:float-right sm:mr-10 sm:h-full" id="menu">
+        <ul id="menu" class="navBar pt-10 sm:pt-0 fixed sm:static left-[-100%] sm:left-0 h-screen transition-all duration-300 ease-in-out bg-slate-800 sm:bg-slate-100 sm:float-right sm:mr-10 sm:h-full sm:block hidden">
             <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-3 text-center "><a href="#" id="" class="text-lg sm:text-base text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75"><i class="fa-solid fa-magnifying-glass"></i> &nbsp;Search</a></li>
             <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-3 text-center "><a href="#" id="offerlink" class="text-lg sm:text-base text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75"><i class="fa-solid fa-tag"></i>&nbsp;Offer</a></li>
             <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-3 text-center "><a href="#" id="all" class="text-lg sm:text-base text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75"><i class="fa-regular fa-handshake"></i>&nbsp;All</a></li>
             <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-3 text-center "><a href="#" id="signinbtn" class="text-lg sm:text-base text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75"><i class="fa-regular fa-user"></i>&nbsp;Profile</a></li>
-            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-3 text-center "><a href="#" id="" class="text-lg sm:text-base text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75"><i class="fa-sharp fa-solid fa-cart-shopping"></i>&nbsp;Cart</a></li>
+            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-3 text-center "><a href="#" id="cart" class="text-lg sm:text-base text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75"><i class="fa-sharp fa-solid fa-cart-shopping"></i>&nbsp;Cart</a></li>
         </ul>
      </div>
     </nav>
@@ -73,10 +74,15 @@ body{
 
         </div>
     </main>
+
     <script>
+    localStorage.clear();
  const container = document.getElementById("container");
  const addtocart = document.getElementById('addtocart');
+ 
+ const cart = document.getElementById('cart');
 
+let cardState = JSON.parse(localStorage.getItem('cartState')) || {};
 
 fetch("https://dummyjson.com/recipes")
   .then((res) => res.json())
@@ -88,7 +94,7 @@ fetch("https://dummyjson.com/recipes")
 
       
 
-    newdata.forEach((x) => {
+    newdata.forEach((x,index) => {
        
              const price = (Math.random() * (1000 - 200) + 200).toFixed(2);
              const originalprice = (Math.random() * (1000 - 200) + 200).toFixed(2);
@@ -99,7 +105,7 @@ fetch("https://dummyjson.com/recipes")
              }  
 
 
-      k += `<div class="card w-[170px] h-[240px] flex flex-col justify-around relative p-2 rounded-lg bg-white transform transition-transform duration-200 ease-in-out sm:hover:scale-105"  data-new="${newLabel ? 'true' :'false'}">
+      k += `<div class="card w-[170px] h-[240px] flex flex-col justify-around relative p-2 rounded-lg bg-white transform transition-transform duration-200 ease-in-out sm:hover:scale-105" data-id="${index}" data-new="${newLabel ? 'true' :'false'}">
            <div class="top">
              <img class="image" src="${x.image}"/>
             </div>
@@ -117,7 +123,7 @@ fetch("https://dummyjson.com/recipes")
                      <span class="original-price text-xs text-gray-500 line-through">
                          ₹${originalprice} </span>
                   </h5>
-                  <button  class="addtocart text-xs font-bold text-red-500 absolute right-2 top-[43px] border border-green-300 px-1 py-0.5">ADD</button>
+                  <button  class="addtocart text-xs font-bold text-red-500 absolute right-2 top-[43px] border border-green-300 px-1 py-0.5">${cardState[index] ? "ADDED" : "ADD"}</button>
                   
             </div>
 
@@ -125,13 +131,54 @@ fetch("https://dummyjson.com/recipes")
     `
     });
     container.innerHTML = k;
+    loadCartState();
 
+    function loadCartState(){
+        document.querySelectorAll('.card').forEach(card=>{
+            const cardId = card.dataset.id;
+            const addButton = card.querySelector('.addtocart');
+
+            if(cardState[cardId]){
+                addButton.innerText ="ADDED"
+                addButton.style.color = "blue"
+                addButton.classList.add('carted');
+            }else{
+                addButton.innerText ="ADD"
+                addButton.style.color = "red"
+                addButton.classList.remove('carted');
+            }
+        })
+    }
    container.addEventListener('click',(e)=>{
     if(e.target && e.target.classList.contains('addtocart')){
+    const card = e.target.closest('.card')
+    const cardId = card.dataset.id;
     console.log("CLICKED");
-    
+    if(e.target.innerText === "ADD"){
+    e.target.innerText ="ADDED"
+    e.target.style.color = "blue"
+    e.target.classList.add('carted');
+    cardState[cardId]="true"
+    }else{
+        e.target.innerText ="ADD"
+        e.target.style.color = "red"
+        e.target.classList.remove('carted');
+        cardState[cardId]="false"
+        delete cardState[cardId]
+        localStorage.setItem('cartState', JSON.stringify(cardState));
+    }
+    localStorage.setItem('cartState', JSON.stringify(cardState));
     }
 })
+
+cart.addEventListener('click',()=>{
+    let cartedCards = Array.from(document.querySelectorAll('.card')).filter(card => card.querySelector('.addtocart').classList.contains('carted'));
+    container.innerHTML ='';
+    cartedCards.forEach(card=>{
+        container.appendChild(card);
+    })
+})
+
  
 const offerlink = document.getElementById('offerlink');
 
@@ -142,8 +189,10 @@ offerlink.addEventListener('click',()=>{
 
     container.innerHTML ='';
     OfferCards.forEach(card=>{
-        container.appendChild(card);
+    container.appendChild(card);
+
     })
+    loadCartState();
 })
 
 
@@ -152,12 +201,21 @@ offerlink.addEventListener('click',()=>{
 const all = document.getElementById('all');
 all.addEventListener('click',()=>{
     container.innerHTML = k;
+    loadCartState();
 })
 
 });
 
-
-
+const navlinks = document.querySelectorAll('.navBar a');
+const checkBox = document.getElementById('check')
+   navlinks.forEach(link=>{
+    console.log('Link clicked');
+          link.addEventListener('click',()=>{
+            if(window.innerWidth <=630){
+                checkBox.checked = false;
+            }
+        })
+   })
 
 
     </script>
