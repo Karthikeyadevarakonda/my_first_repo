@@ -102,80 +102,27 @@ body{
 
     <script>
 
- localStorage.clear();
+localStorage.clear();
  const container = document.getElementById("container");
  const addtocart = document.getElementById('addtocart');
- const tickSound = new Audio('./click.mp3'); 
- const deleteSound = new Audio('./delete.mp3');
+
  
- const cart = document.getElementById('cart');
+const cart = document.getElementById('cart');
 
 const searchBar = document.getElementById('searchBar');
-
+let newdata = [];
 
 
 let cardState = JSON.parse(localStorage.getItem('cartState')) || {};
 
-fetch("https://dummyjson.com/recipes")
-  .then((res) => res.json())
-  .then((data) => {
-   
-    let newdata = data.recipes;
-
-    searchBar.addEventListener('input',()=>{
-            let userInput = searchBar.value.trim();
-            console.log(userInput)
-    })
-    
-    let k = "";
-
-      
-
-    newdata.forEach((x,index) => {
-       
-             const price = (Math.random() * (1000 - 200) + 200).toFixed(2);
-             const originalprice = (Math.random() * (1000 - 200) + 200).toFixed(2);
-
-             let newLabel = '';
-             if(price < 500){
-                newLabel = `<div class="new-label absolute top-0 right-0 bg-pink-300 text-white text-xs px-2 py-1 rounded-tr-lg">New</div>`;
-             }  
 
 
-      k += `<div class="card w-[170px] h-[240px] flex flex-col justify-around relative p-2 rounded-lg bg-white transform transition-transform duration-200 ease-in-out sm:hover:scale-105" data-id="${index}" data-new="${newLabel ? 'true' :'false'}">
-           <div class="top">
-             <img class="image" src="${x.image}"/>
-            </div>
-            <div class="label absolute top-2 left-2 px-3 py-1 text-white text-sm font-bold rounded-lg bg-gradient-to-r from-amber-400 to-amber-600 shadow-lg transform -rotate-6 translate-x-2 translate-y-2 w-[80px] text-center overflow-hidden text-ellipsis whitespace-nowrap">
-               ${x.mealType}
-            </div>
-
-         
-          ${newLabel}
-
-            <div class="bottom relative">
-                 <h4 class="ratingAndCount text-xs">${x.rating} <i class="fa-solid fa-star"></i> | ${x.reviewCount}</h4>
-                 <p class="font-medium truncate">${x.name}</p>
-                  <h5 class="price text-sm">₹${price}
-                     <span class="original-price text-xs text-gray-500 line-through">
-                         ₹${originalprice} </span>
-                  </h5>
-                  <button  class="addtocart text-xs font-bold text-red-500 absolute right-2 top-[43px] border border-green-300 px-1 py-0.5">${cardState[index] ? "ADDED" : "ADD"}</button>
-                  
-            </div>
-
-     </div>
-    `
-    });
-    container.innerHTML = k;
-    loadCartState();
-
-    function loadCartState(){
+function loadCartState(){
         document.querySelectorAll('.card').forEach(card=>{
-            const cardId = card.dataset.id;
+            const cardName = card.dataset.name;
             const addButton = card.querySelector('.addtocart');
 
-            if(cardState[cardId]){
+            if(cardState[cardName]){
                 addButton.innerText ="ADDED"
                 addButton.style.color = "blue"
                 addButton.classList.add('carted');
@@ -186,53 +133,96 @@ fetch("https://dummyjson.com/recipes")
             }
         })
     }
-   container.addEventListener('click',(e)=>{
-    if(e.target && e.target.classList.contains('addtocart')){
-    const card = e.target.closest('.card')
-    const cardId = card.dataset.id;
-    console.log("CLICKED");
-    if(e.target.innerText === "ADD"){
-    e.target.innerText ="ADDED"
-    tickSound.currentTime = 0;
-    tickSound.play();
-    e.target.style.color = "blue"
-    e.target.classList.add('carted');
-    cardState[cardId]="true"
-    }else{
-        e.target.innerText ="ADD"
-        deleteSound.currentTime = 0;
-        deleteSound.play();
-        e.target.style.color = "red"
-        e.target.classList.remove('carted');
-        cardState[cardId]="false"
-        delete cardState[cardId]
-        localStorage.setItem('cartState', JSON.stringify(cardState));
-    }
-    localStorage.setItem('cartState', JSON.stringify(cardState));
-    }
+
+
+
+
+function display(newdata){
+
+let k = "";
+newdata.forEach((x) => {
+
+        if(!x.price && !x.originalprice){
+         x.price = (Math.random() * (1000 - 200) + 200).toFixed(2);
+         x.originalprice = (Math.random() * (1000 - 200) + 200).toFixed(2);
+        }
+         let newLabel = '';
+         if(x.price < 500){
+            newLabel = `<div class="new-label absolute top-0 right-0 bg-pink-300 text-white text-xs px-2 py-1 rounded-tr-lg">New</div>`;
+         }  
+
+         const isInCart = cardState[x.name] === "true" ;
+
+
+  k += `<div class="card w-[170px] h-[240px] flex flex-col justify-around relative p-2 rounded-lg bg-white transform transition-transform duration-200 ease-in-out sm:hover:scale-105" data-name="${x.name}" data-new="${newLabel ? "true" :"false"}">
+       <div class="top">
+         <img class="image" src="${x.image}"/>
+        </div>
+        <div class="label absolute top-2 left-2 px-3 py-1 text-white text-sm font-bold rounded-lg bg-gradient-to-r from-amber-400 to-amber-600 shadow-lg transform -rotate-6 translate-x-2 translate-y-2 w-[80px] text-center overflow-hidden text-ellipsis whitespace-nowrap">
+           ${x.mealType}
+        </div>
+
+     
+      ${newLabel}
+
+        <div class="bottom relative">
+             <h4 class="ratingAndCount text-xs">${x.rating} <i class="fa-solid fa-star"></i> | ${x.reviewCount}</h4>
+             <p class="font-medium truncate">${x.name}</p>
+              <h5 class="price text-sm">₹${x.price}
+                 <span class="original-price text-xs text-gray-500 line-through">
+                     ₹${x.originalprice} </span>
+              </h5>
+            <button class="addtocart text-xs font-bold text-${isInCart ? 'blue' : 'red'} absolute right-2 top-[43px] border border-green-300 px-1 py-0.5">${isInCart ? "ADDED" : "ADD"}</button>
+        </div>
+
+ </div>
+`
+});
+container.innerHTML = k;
+loadCartState();
+
+}
+
+
+
+fetch("https://dummyjson.com/recipes")
+  .then((res) => res.json())
+  .then((data) => {
+   
+    newdata = data.recipes;
+    display(newdata);
+  })
+
+  cart.addEventListener('click',()=>{
+    let cartedCards = newdata.filter(card=> cardState[card.name] === "true")
+    container.innerHTML ='';
+    display(cartedCards);
 })
 
-cart.addEventListener('click',()=>{
-    let cartedCards = Array.from(document.querySelectorAll('.card')).filter(card => card.querySelector('.addtocart').classList.contains('carted'));
-    container.innerHTML ='';
-    cartedCards.forEach(card=>{
-        container.appendChild(card);
-    })
-})
+    searchBar.addEventListener('input',()=>{
+            let userInput = searchBar.value.trim();
+            if(userInput.length>0){
+                let capitalized = userInput.charAt(0).toUpperCase() + userInput.slice(1);
+                 console.log(capitalized);
+                 searchBar.value = capitalized;
+                 let searchedCards = newdata.filter(item => item.name.startsWith(capitalized))
+                 console.log(searchedCards)
+                 container.innerHTML = '';
+                 display(searchedCards)
+                 loadCartState();
+            }else{
+                display(newdata);
+                loadCartState();
+            } 
+        });
 
  
 const offerlink = document.getElementById('offerlink');
 
 offerlink.addEventListener('click',()=>{
-    let Allcards = document.querySelectorAll('.card');
-
-    const OfferCards = Array.from(Allcards).filter(card => card.getAttribute('data-new')=== 'true');
-
+    let offerCards = newdata.filter(card => card.price < 500); 
     container.innerHTML ='';
-    OfferCards.forEach(card=>{
-    container.appendChild(card);
-
-    })
+    display(offerCards);
     loadCartState();
 })
 
@@ -241,11 +231,36 @@ offerlink.addEventListener('click',()=>{
 
 const all = document.getElementById('all');
 all.addEventListener('click',()=>{
-    container.innerHTML = k;
+    container.innerHTML= '';
+   display(newdata)
     loadCartState();
 })
 
-});
+container.addEventListener('click',(e)=>{
+
+if(e.target && e.target.classList.contains('addtocart')){
+const card = e.target.closest('.card')
+const cardName = card.dataset.name;
+console.log("CLICKED");
+
+if(e.target.innerText === "ADD"){
+e.target.innerText ="ADDED"
+e.target.style.color = "blue"
+e.target.classList.add('carted');
+cardState[cardName]="true"
+}else{
+    e.target.innerText ="ADD"
+    e.target.style.color = "red"
+    e.target.classList.remove('carted');
+    cardState[cardName]="false"
+    delete cardState[cardName]
+}
+localStorage.setItem('cartState', JSON.stringify(cardState));
+loadCartState();
+}
+})
+
+
 
 const navlinks = document.querySelectorAll('.navBar a');
 const checkBox = document.getElementById('check')
@@ -261,8 +276,8 @@ const checkBox = document.getElementById('check')
 
 
 const Words = ["Chicken", "Chocolate", "Ice Cream", "Pizza", "Burger"];
-
 let index = 0;
+let typeinterval ;
 
     function typeText() {
         searchBar.placeholder = `Search for "${Words[index]}" & more ....`;
