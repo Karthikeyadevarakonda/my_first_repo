@@ -48,6 +48,25 @@ body{
    width: 130%;
 }
 
+
+@keyframes fall {
+    0%{
+        transform:translateY(-100vh);
+         opacity: 0;
+    }
+    50%{
+        transform:translateY(20px);
+         opacity: 0.5;
+    }
+    100%{
+        transform:translateY(0);
+         opacity: 1;
+    }
+   
+}
+.animate-fall{
+    animation: fall 1s ease-out forwards;
+}
 @media screen and (max-width: 630px) {
 
 #searchBar::placeholder{
@@ -94,7 +113,7 @@ body{
         </ul>
      </div>
     </nav>
-    <main class="pt-20">
+    <main id="main" class="pt-20">
         <div id="container" class="flex flex-wrap justify-evenly md:justify-start gap-x-2 gap-y-4 m-auto px-1 pt-10">
 
         </div>
@@ -103,6 +122,7 @@ body{
     <script>
 
 localStorage.clear();
+ const main = document.getElementById('main');
  const container = document.getElementById("container");
  const addtocart = document.getElementById('addtocart');
 
@@ -194,9 +214,20 @@ fetch("https://dummyjson.com/recipes")
   })
 
   cart.addEventListener('click',()=>{
-    let cartedCards = newdata.filter(card=> cardState[card.name] === "true")
     container.innerHTML ='';
+
+    let cartedCards = newdata.filter(card=> cardState[card.name] === "true")
+
+    if(cartedCards.length > 0){
     display(cartedCards);
+    }else{
+        // main.style.backgroundColor ="#FFFFFF"
+        container.innerHTML=`
+                         <div class="flex flex-col m-auto relative bottom-10 sm:bottom-0 animate-fall"> 
+                               <h1 class="cartEmpty absolute top-2 sm:top-5 left-5 text-amber-500 text-lg sm:text-3xl font-bold"><span class="text-blue-300">CART</span> IS EMPTY...</h1>
+                               <img class="cartEmptyimage w-screen sm:w-[500px] h-[380px] sm:h-[400px]" src="./emptycart.jpg"/> 
+                          </div>`;
+    }
 })
 
     searchBar.addEventListener('input',()=>{
