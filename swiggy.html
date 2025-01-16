@@ -44,13 +44,21 @@ body{
             background-clip: text;
             -webkit-background-clip: text;
 }
-
+.copyright{
+    background-image: linear-gradient(to right, #2bd271 ,rgb(207, 105, 105));
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+}
 #searchBar{
     padding-top: 2px;
 }
 #searchBar::placeholder{
    font-size: 14px;
    width: 130%;
+}
+.custom-scrollbar::-webkit-scrollbar{
+    height: 5px;
 }
 
 
@@ -144,7 +152,7 @@ body{
     </nav>
     <main id="main" class="pt-20">
          <div id="homepage">
-          <div class="m-auto sm:w-4/6">
+          <div class="m-auto p-2 sm:p-0 sm:w-4/6">
             <h1 class="font-bold text-sm sm:text-3xl mt-5 sm:mt-10 ml-5 text-slate-900 tracking-wide"> <span class="taste text-xl sm:text-4xl"><i class="fa-solid fa-bell-concierge"></i> Taste</span>  the Best of Your City, Delivered to Your Door.</h1>
             <h1 id="title-text" class="mb-5 sm:mb-10  ml-5 sm:ml-8  text-sm sm:text-lg text-slate-400 "></h1>
           </div>
@@ -152,16 +160,55 @@ body{
             <img src="" class="" alt="">
           </div>
           <h1 class="font-bold text-sm sm:text-3xl mt-5 sm:mt-10 ml-5 text-slate-900 tracking-wide"> <span class="text-amber-500"><i class="fa-solid fa-utensils"></i></span> Restaurants with online food delivery in Nellore</h1>
-        <div class="mt-5 mb-10 sm:mt-5 flex">
-          <img src="./8840238.jpg" alt="" class="w-1/4 h-30 sm:h-72">
-          <img src="./11948.jpg" alt=""   class="w-1/4 h-30 sm:h-72">
-          <img src="./5045320.jpg" alt="" class="w-1/4 h-30 sm:h-72">
-          <img src="./8381321.jpg" alt="" class="w-1/4 h-30 sm:h-72">
+        <div class="mt-5 mb-10 sm:mt-5 flex overflow-x-auto space-x-4 custom-scrollbar">
+          <img src="./8840238.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
+          <img src="./11948.jpg"   alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
+          <img src="./5045320.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
+          <img src="./8381321.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
+          <img src="./8840238.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
+          <img src="./11948.jpg"   alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
+          <img src="./5045320.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
+          <img src="./8381321.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
+        </div>
+        <div class="mb-2 sm:mb-8">
+            <h1 class="font-bold text-lg sm:text-3xl ml-5 sm:ml-20 mb-5 sm:mb-10"><span class="text-blue-400"><i class="fa-solid fa-hotel"></i></span> Best Places to Eat Across Cities</h1>
+            <div class="w-screen sm:w-9/12 m-auto p-2 sm:p-0">
+                <div class="flex justify-evenly mb-8 ml-2 sm:ml-0 gap-2 sm:gap-0">
+                    <p class="border-2 border-gray-300 p-1 sm:p-4 rounded-lg text-xs sm:text-lg font-bold text-slate-500">Best Restaurants In Bangalore</p>
+                    <p class="border-2 border-gray-300 p-1 sm:p-4 rounded-lg text-xs sm:text-lg font-bold text-slate-500">Best Restaurants In Pune</p>
+                    <p class="border-2 border-gray-300 p-1 sm:p-4 rounded-lg text-xs sm:text-lg font-bold text-slate-500">Best Restaurants In Mumbai</p>
+                </div>
+                <div class="flex justify-evenly mb-8 gap-2 sm:gap-0">
+                    <p class="border-2 border-gray-300 p-2 sm:p-4 rounded-lg text-xs sm:text-lg font-bold text-slate-500">Best Restaurants In Chennai</p>
+                    <p class="border-2 border-gray-300 p-2 sm:p-4 rounded-lg text-xs sm:text-lg font-bold text-slate-500">Best Restaurants In Goa</p>
+                    <p class="border-2 border-gray-300 p-2 sm:p-4 rounded-lg text-xs sm:text-lg font-bold text-slate-500">Best Restaurants In delhi</p>
+                </div>
+                <div class="flex justify-evenly mb-8 gap-2 sm:gap-0">
+                    <p class="border-2 border-gray-300 p-2 sm:p-4 rounded-lg text-xs sm:text-lg font-bold text-slate-500">Best Restaurants In Haryana</p>
+                    <p class="border-2 border-gray-300 p-2 sm:p-4 rounded-lg text-xs sm:text-lg font-bold text-slate-500">Best Restaurants In Kerala</p>
+                    <p class="border-2 border-gray-300 p-2 sm:p-4 rounded-lg text-xs sm:text-lg font-bold text-slate-500">Best Restaurants In Kochi</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-200 w-screen h-20 p-4">
+            <div class="flex w-1/2 sm:w-1/4 m-auto ">
+                <span class="sm:top-4 sm:left-5 top-5 left-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 61" class="mr-2 sm:w-12 sm:h-8 w-6 h-6">
+                        <path fill="#2bd271" d="M.32 30.5c0-12.966 0-19.446 3.498-23.868a16.086 16.086 0 0 1 2.634-2.634C10.868.5 17.354.5 30.32.5s19.446 0 23.868 3.498c.978.774 1.86 1.656 2.634 2.634C60.32 11.048 60.32 17.534 60.32 30.5s0 19.446-3.498 23.868a16.086 16.086 0 0 1-2.634 2.634C49.772 60.5 43.286 60.5 30.32 60.5s-19.446 0-23.868-3.498a16.086 16.086 0 0 1-2.634-2.634C.32 49.952.32 43.466.32 30.5Z"/>
+                        <path fill="#fff" fill-rule="evenodd" d="M32.317 24.065v-6.216a.735.735 0 0 0-.732-.732.735.735 0 0 0-.732.732v7.302c0 .414.336.744.744.744h.714c10.374 0 11.454.54 10.806 2.73-.03.108-.066.21-.102.324-.006.024-.012.048-.018.066-2.724 8.214-10.092 18.492-12.27 21.432a.764.764 0 0 1-1.23 0c-1.314-1.776-4.53-6.24-7.464-11.304-.198-.462-.294-1.542 2.964-1.542h3.984c.222 0 .402.18.402.402v3.216c0 .384.282.738.666.768a.73.73 0 0 0 .582-.216.701.701 0 0 0 .216-.516v-4.362a.76.76 0 0 0-.756-.756h-8.052c-1.404 0-2.256-1.2-2.814-2.292-1.752-3.672-3.006-7.296-3.006-10.152 0-7.314 5.832-13.896 13.884-13.896 7.17 0 12.6 5.214 13.704 11.52.006.054.048.294.054.342.288 3.096-7.788 2.742-11.184 2.76a.357.357 0 0 1-.36-.36v.006Z" clip-rule="evenodd"></path>
+                    </svg>
+                </span>
+                
+                </span>
+               <h1 class="copyright text-2xl font-bold ">SNACKZ</h1>
+            </div>
+            <p class="w-3/2 ml-10 sm:ml-0 sm:w-1/4 m-auto text-xs sm:text-sm">&copy; 2025 Snackz Limited . All rights reserved.</p>
         </div>
          </div>
         <div id="container" class="hidden flex flex-wrap justify-evenly md:justify-start gap-x-2 gap-y-4 m-auto px-1 pt-10 ">
 
         </div>
+
     </main>
 
     <script>
