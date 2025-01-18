@@ -50,7 +50,7 @@
             <label for="uname" class="text-sm block w-20 px-1 relative top-12 ml-2 text-black bg-white h-3 z-10 ">USERNAME</label>
             <input type="text" id="uname" name="uname" placeholder="Enter your username" class="border border-slate-900 block w-full h-[50px] p-5 text-black focus:outline-none focus:ring-2 focus:ring-slate-300 rounded relative top-6 ">
             <label for="" class="block text-sm  w-20 px-1 relative top-6 ml-2 text-black bg-white h-3 z-10">PASSWORD</label>
-            <input type="password"  placeholder="Enter password" class="border border-slate-900 block w-full h-[50px] p-5 text-black focus:outline-none focus:ring-2 focus:ring-slate-300 rounded">
+            <input type="password" id="pwd" placeholder="Enter password" class="border border-slate-900 block w-full h-[50px] p-5 text-black focus:outline-none focus:ring-2 focus:ring-slate-300 rounded">
             <button type="button" id="signinbtn" onclick="signin()" class="border border-0 block max-w-lg rounded h-[40px] bg-emerald-700 w-full">Sign-In</button>
         </form>
     </div>  
@@ -58,11 +58,19 @@
    <script>
            const signBtn = document.getElementById('signinbtn');
            const uname = document.getElementById('uname');
+           const pwd = document.getElementById('pwd')
 
-           function signin(){
-                 uname.value='';
-                 window.location.href='./swiggy.html'
-           }
+          signBtn.addEventListener('click',()=>{
+             localStorage.setItem('username',uname.value)
+             localStorage.setItem('password',pwd.value)
+             uname.value = '';
+             pwd.value = '';
+
+            window.location.href='./swiggy.html'
+          })
+               
+                 
+         
 
    </script>
 </body>
