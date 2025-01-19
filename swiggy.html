@@ -37,7 +37,9 @@ body{
 .fa-star{
     color: green;
 }
-
+.fa-clock{
+    color: red;
+}
 .fetchtext{
     background-image: linear-gradient(to right, #2bd271 ,rgb(207, 105, 105));
             color: transparent;
@@ -96,7 +98,9 @@ body{
         transform:translateX(0);
     }
   }
-
+.fa-fire{
+    color: orange;
+}
 
 #container{
     display: none;
@@ -110,8 +114,40 @@ body{
 #profilePage{
     display: none;
 }
+#virtualcardsdiv{
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.608), rgba(255, 255, 255, 0.5));
+    background-color: transparent;
+    box-shadow: 0 4px 8px 10px rgba(238, 235, 235, 0.15); 
+    border-radius: 4px;
+}
+
+.fa-percent{
+    color: rgb(86, 146, 231);
+}
+.fa-sliders{
+    font-size: 15px;
+}
+.fa-arrow-up-long{
+    color: rgb(153, 255, 0);
+}
+
+.A{
+    position: sticky;
+    top: 80px;
+    z-index: 10;
+    left: 0;
+    background-color:#ffffffe8;
+}
+
 @media screen and (max-width: 630px) {
 
+ .A{
+    position: sticky;
+    top: 80px;
+    z-index: 10;
+    left: 0;
+    background-color:#ffffffe8;
+}
 #searchBar::placeholder{
    font-size: 10px;
    width: 80%;
@@ -150,11 +186,11 @@ body{
         <label for="searchBar" class="text-xs sm:text-sm absolute left-[179px] sm:left-[345px] top-[42px] sm:top-[41px] transform -translate-y-1/2 text-gray-500 z-10 pointer-events-none"><i class="fa-solid fa-magnifying-glass"></i></label>
         <input type="text" class="search-bar sm:text-xs w-36 sm:w-[300px] pl-8 sm:pl-10 outline-0 h-[28px] sm:h-[38px] ml-2 sm:ml-40 text-slate-900 truncate border rounded " id="searchBar" placeholder="Search for Chicken">
         <ul id="menu" class="navBar pt-10 sm:pt-0 fixed sm:static left-[-100%] sm:left-0 h-screen transition-all duration-300 ease-in-out bg-slate-800 sm:bg-slate-100 sm:float-right sm:mr-10 sm:h-full sm:block hidden">
-            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-3 text-center "><a href="javascript:void(0);" id="signinbtn" class="text-lg sm:text-base text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75"><i class="fa-regular fa-user"></i>&nbsp;Profile</a></li>
-            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-3 text-center "><a href="javascript:void(0);" id="offerlink" class="text-lg sm:text-base text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75"><i class="fa-solid fa-tag"></i>&nbsp;Offer</a></li>
-            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-3 text-center "><a href="#" id="all" class="text-lg sm:text-base text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75"><i class="fa-solid fa-layer-group"></i>&nbsp;All</a></li>
-            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-3 text-center "><a href="javascript:void(0);" id="aboutlink" class="text-lg sm:text-base text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75"><i class="fa-regular fa-handshake"></i> &nbsp;About</a></li>
-            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-3 text-center "><a href="#" id="cart" class="text-lg sm:text-base text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75"><i class="fa-sharp fa-solid fa-cart-shopping"></i>&nbsp;Cart</a></li>
+            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-3 text-center "><a href="javascript:void(0);" id="signinbtn" class="text-lg sm:text-base text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75"><i class="fa-regular fa-user"></i> Profile</a></li>
+            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-3 text-center "><a href="javascript:void(0);" id="offerlink" class="text-lg sm:text-base text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75"><i class="fa-solid fa-tag"></i>Offer</a></li>
+            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-3 text-center "><a href="#" id="all" class="text-lg sm:text-base text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75"><i class="fa-solid fa-layer-group"></i> foods</a></li>
+            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-3 text-center "><a href="javascript:void(0);" id="aboutlink" class="text-lg sm:text-base text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75"><i class="fa-regular fa-handshake"></i>About</a></li>
+            <li class="block sm:inline-block leading-[80px] mx-1 sm:mx-3 text-center "><a href="#" id="cart" class="text-lg sm:text-base text-white sm:text-stone-800 hover:text-amber-500 px-4 py-2  rounded-md hover:bg-white transition-all duration-75"><i class="fa-sharp fa-solid fa-cart-shopping"></i>Cart</a></li>
         </ul>
      </div>
     </nav>
@@ -168,23 +204,37 @@ body{
             <img src="" class="" alt="">
           </div>
           <h1 class="font-bold text-sm sm:text-3xl mt-5 sm:mt-10 ml-5 text-slate-900 tracking-wide"> <span class="text-amber-500"><i class="fa-solid fa-utensils"></i></span> Restaurants with online food delivery in Nellore</h1>
-        <div class="mt-5 mb-10 sm:mt-5 flex overflow-x-auto space-x-4 custom-scrollbar">
-          <img src="./8840238.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
-          <img src="./11948.jpg"   alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
-          <img src="./5045320.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
-          <img src="./8381321.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
-          <img src="./8840238.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
-          <img src="./11948.jpg"   alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
-          <img src="./5045320.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
-          <img src="./8381321.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
+        <div class="p-5 sm:p-10 mt-5 mb-4 sm:mt-5 flex overflow-x-auto space-x-4 custom-scrollbar relative">
+          <img src="./8840238.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-lg">
+          <img src="./11948.jpg"   alt="" class="w-1/4 h-30 sm:h-72 rounded-lg">
+          <img src="./5045320.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-lg">
+          <img src="./8381321.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-lg">
+          <img src="./8840238.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-lg">
+          <img src="./11948.jpg"   alt="" class="w-1/4 h-30 sm:h-72 rounded-lg">
+          <img src="./5045320.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-lg">
+          <img src="./8381321.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-lg">
         </div>
 
-        <div id="virtualCards" class="overflow-x-auto flex gap-5 p-10 m-auto border border-black">
+        <div class="A shadow sm:h-24 sm:h-14 h-20 pt-2">
+           <h1 class="font-bold text-sm sm:text-xl sm:ml-10 ml-5 sm:pt-2"><i class="fa-solid fa-sliders"></i> Filter by</h1>
+           <div class="flex sm:gap-4 gap-5 absolute left-8 sm:bottom-4 bottom-4">
+            <p class="border shadow rounded-md sm:px-2 py-1 sm:text-lg text-sm px-1.5 cursor-pointer"><i class="fa-solid fa-fire"></i> Top-Rated</p>
+            <p class="border shadow rounded-md sm:px-2 py-1 sm:text-lg text-sm px-1.5 cursor-pointer"><i class="fa-solid fa-percent"></i> Low-Cost</p>
+            <p class="border shadow rounded-md sm:px-2 py-1 sm:text-lg text-sm px-1.5 cursor-pointer"><i class="fa-solid fa-arrow-up-long"></i> Above-500</p>
+           </div>
+        </div>
+
+
+        <div>
+            <h1 class="mt-10 sm:mt-4 font-bold text-sm sm:text-3xl sm:ml-20 ml-5 relative bottom-5 sm:top-5"><i class="fa-regular fa-clock"></i> What's on your mind?</h1>
+        </div>
+        <div id="virtualCards" class="overflow-hidden w-5/7 sm:h-96 h-44 p-2 sm:p-20 gap-2  flex flex-wrap m-auto justify-evenly">
         
-
-
+        
         </div>
-
+    <div id="virtualcardsdiv" class="relative bottom-12 sm:bottom-28 w-5/6 sm:w-[1105px] h-12 sm:h-32 m-auto">
+        <button id="viewMore" class="relative sm:left-[460px] left-28 top-8 sm:top-24 rounded-md text-sm sm:text-lg font-bold bg-green-400 p-2 text-white">VIEW MORE</button>
+    </div>
         <div class="mb-2 sm:mb-8">
             <h1 class="font-bold text-lg sm:text-3xl ml-5 sm:ml-20 mb-5 sm:mb-10"><span class="text-blue-400"><i class="fa-solid fa-hotel"></i></span> Best Places to Eat Across Cities</h1>
             <div class="w-screen sm:w-9/12 m-auto p-2 sm:p-0">
@@ -205,7 +255,7 @@ body{
                 </div>
             </div>
         </div>
-        <div class="bg-gray-200 w-screen h-20 p-4">
+        <div class="bg-gray-200  h-20 p-4">
             <div class="flex w-1/2 sm:w-1/4 m-auto ">
                 <span class="sm:top-4 sm:left-5 top-5 left-6">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 61 61" class="mr-2 sm:w-12 sm:h-8 w-6 h-6">
@@ -225,7 +275,7 @@ body{
 
         </main>
 
-        <div id="container" class="hidden flex flex-wrap justify-evenly md:justify-start gap-x-2 gap-y-4 m-auto px-1 pt-10 ">
+        <div id="container" class="hidden flex flex-wrap justify-evenly md:justify-start gap-x-2 gap-y-4 sm:gap-x-4 m-auto px-1 sm:p-24 pt-10 ">
 
         </div>
 
@@ -253,7 +303,7 @@ body{
                             <p class="pl-5 pt-2 text-sm sm:text-xl ">Shipping Policy </p>
                             <p class="pl-5 pt-2 text-sm sm:text-xl ">Cancellation Policy </p>
                             <p class="pl-5 pt-2 text-sm sm:text-xl ">Terms & Conditions </p>
-                     </div>
+                </div>
             </div>
         </div>
 
@@ -279,6 +329,8 @@ body{
 
  
 <script>
+
+
 
 const virtualCards = document.getElementById('virtualCards');
 let dummyArray =[]
@@ -315,7 +367,7 @@ function MainPageCards(mainpagedata){
          const isInCart = cardState[x.name] === "true" ;
 
 
-  list += `<div class="card w-[170px] h-[240px] flex flex-col justify-around relative p-2 rounded-lg bg-white transform transition-transform duration-200 ease-in-out sm:hover:scale-105" data-name="${x.name}" data-new="${newLabel ? "true" :"false"}">
+  list +=`<div class="card w-[150px] h-[210px] flex flex-col justify-around relative p-2 rounded-lg bg-white transform transition-transform duration-200 ease-in-out sm:hover:scale-105" data-name="${x.name}" data-new="${newLabel ? "true" :"false"}">
        <div class="top">
          <img class="image" src="${x.image}"/>
         </div>
@@ -333,7 +385,7 @@ function MainPageCards(mainpagedata){
                  <span class="original-price text-xs text-gray-500 line-through">
                      ₹${x.originalprice} </span>
               </h5>
-            <button class="addtocart text-xs font-bold text-${isInCart ? 'blue' : 'red'} absolute right-2 top-[43px] border border-green-300 px-1 py-0.5">${isInCart ? "ADDED" : "ADD"}</button>
+               <button class="addtocart hidden text-xs font-bold text-${isInCart ? 'blue' : 'red'} absolute right-2 top-[43px] border border-green-300 px-1 py-0.5">${isInCart ? "ADDED" : "ADD"}</button>
         </div>
 
  </div>
@@ -461,9 +513,9 @@ filterdata.forEach((x) => {
          const isInCart = cardState[x.name] === "true" ;
 
 
-  k += `<div class="card w-[170px] h-[240px] flex flex-col justify-around relative p-2 rounded-lg bg-white transform transition-transform duration-200 ease-in-out sm:hover:scale-105" data-name="${x.name}" data-new="${newLabel ? "true" :"false"}">
+  k += `<div class="card w-[170px] sm:w-[200px] h-[240px] sm:h-[270px] flex flex-col justify-around relative p-2 rounded-lg bg-white transform transition-transform duration-200 ease-in-out sm:hover:scale-105" data-name="${x.name}" data-new="${newLabel ? "true" :"false"}">
        <div class="top">
-         <img class="image" src="${x.image}"/>
+         <img class="image sm:w-[150px] sm:h-[150px]" src="${x.image}"/>
         </div>
         <div class="label absolute top-2 left-2 px-3 py-1 text-white text-sm font-bold rounded-lg bg-gradient-to-r from-amber-400 to-amber-600 shadow-lg transform -rotate-6 translate-x-2 translate-y-2 w-[80px] text-center overflow-hidden text-ellipsis whitespace-nowrap">
            ${x.mealType}
@@ -473,13 +525,13 @@ filterdata.forEach((x) => {
       ${newLabel}
 
         <div class="bottom relative">
-             <h4 class="ratingAndCount text-xs">${x.rating} <i class="fa-solid fa-star"></i> | ${x.reviewCount}</h4>
+             <h4 class="ratingAndCount text-xs sm:text-base">${x.rating} <i class="fa-solid fa-star"></i> | ${x.reviewCount}</h4>
              <p class="font-medium truncate">${x.name}</p>
               <h5 class="price text-sm">₹${x.price}
                  <span class="original-price text-xs text-gray-500 line-through">
                      ₹${x.originalprice} </span>
               </h5>
-            <button class="addtocart text-xs font-bold text-${isInCart ? 'blue' : 'red'} absolute right-2 top-[43px] border border-green-300 px-1 py-0.5">${isInCart ? "ADDED" : "ADD"}</button>
+            <button class="addtocart text-xs bg-white font-bold text-${isInCart ? 'blue' : 'red'} absolute right-2 top-[43px] sm:top-[49px] border border-green-300 px-1 py-0.5">${isInCart ? "ADDED" : "ADD"}</button>
         </div>
 
  </div>
@@ -545,8 +597,8 @@ let datafetched = false;
                  if(searchedCards.length === 0){
                      homepage.style.display = 'none'
                      container.style.display = 'flex';
-                    container.innerHTML = `<div class ="w-1/4 m-auto">
-                        <h1 class="m-auto text-2xl ">NO SUCH ITEMS FOUND.. <span class="text-blue-300"> <i class="fa-solid fa-truck"></i></span> <h1>
+                    container.innerHTML = `<div class ="w-1/2 sm:w-1/4 m-auto">
+                        <h1 class="m-auto sm:text-2xl text-sm ">NO SUCH ITEMS FOUND.. <span class="text-blue-300"> <i class="fa-solid fa-truck"></i></span> <h1>
                         </div>
                    `;
                  }else{
@@ -582,6 +634,14 @@ all.addEventListener('click',()=>{
    display(newdata)
     loadCartState();
 })
+
+const viewMore = document.getElementById('viewMore');
+viewMore.addEventListener('click',()=>{
+    display(newdata)
+    loadCartState();
+})
+
+
 
 container.addEventListener('click',(e)=>{
 
@@ -662,7 +722,7 @@ function loadImages(){
        
   slides.innerHTML = '';
   let i ='';
-  i+= `<img class="slide" src="${imagesArray[currentIndex]}"/>`
+  i+= `<img class="slide rounded-lg" src="${imagesArray[currentIndex]}"/>`
   slides.innerHTML = i;
   currentIndex = (currentIndex + 1) % imagesArray.length;
 }
