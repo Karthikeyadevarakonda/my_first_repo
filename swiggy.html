@@ -178,6 +178,13 @@ body{
           <img src="./5045320.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
           <img src="./8381321.jpg" alt="" class="w-1/4 h-30 sm:h-72 rounded-md">
         </div>
+
+        <div id="virtualCards" class="overflow-x-auto flex gap-5 p-10 m-auto border border-black">
+        
+
+
+        </div>
+
         <div class="mb-2 sm:mb-8">
             <h1 class="font-bold text-lg sm:text-3xl ml-5 sm:ml-20 mb-5 sm:mb-10"><span class="text-blue-400"><i class="fa-solid fa-hotel"></i></span> Best Places to Eat Across Cities</h1>
             <div class="w-screen sm:w-9/12 m-auto p-2 sm:p-0">
@@ -272,6 +279,69 @@ body{
 
  
 <script>
+
+const virtualCards = document.getElementById('virtualCards');
+let dummyArray =[]
+function fetchdataMainPage(){
+   fetch("https://dummyjson.com/recipes")
+    .then((res) => res.json())
+    .then((data) => {
+   
+    newdata = data.recipes;
+    MainPageCards(newdata);
+  })
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+    fetchdataMainPage();
+
+})
+
+function MainPageCards(mainpagedata){
+
+    let list = "";
+
+    mainpagedata.forEach((x) => {
+
+        if(!x.price && !x.originalprice){
+         x.price = (Math.random() * (1000 - 200) + 200).toFixed(2);
+         x.originalprice = (Math.random() * (1000 - 200) + 200).toFixed(2);
+        }
+         let newLabel = '';
+         if(x.price < 500){
+            newLabel = `<div class="new-label absolute top-0 right-0 bg-pink-300 text-white text-xs px-2 py-1 rounded-tr-lg">New</div>`;
+         }  
+
+         const isInCart = cardState[x.name] === "true" ;
+
+
+  list += `<div class="card w-[170px] h-[240px] flex flex-col justify-around relative p-2 rounded-lg bg-white transform transition-transform duration-200 ease-in-out sm:hover:scale-105" data-name="${x.name}" data-new="${newLabel ? "true" :"false"}">
+       <div class="top">
+         <img class="image" src="${x.image}"/>
+        </div>
+        <div class="label absolute top-2 left-2 px-3 py-1 text-white text-sm font-bold rounded-lg bg-gradient-to-r from-amber-400 to-amber-600 shadow-lg transform -rotate-6 translate-x-2 translate-y-2 w-[80px] text-center overflow-hidden text-ellipsis whitespace-nowrap">
+           ${x.mealType}
+        </div>
+
+     
+      ${newLabel}
+
+        <div class="bottom relative">
+             <h4 class="ratingAndCount text-xs">${x.rating} <i class="fa-solid fa-star"></i> | ${x.reviewCount}</h4>
+             <p class="font-medium truncate">${x.name}</p>
+              <h5 class="price text-sm">₹${x.price}
+                 <span class="original-price text-xs text-gray-500 line-through">
+                     ₹${x.originalprice} </span>
+              </h5>
+            <button class="addtocart text-xs font-bold text-${isInCart ? 'blue' : 'red'} absolute right-2 top-[43px] border border-green-300 px-1 py-0.5">${isInCart ? "ADDED" : "ADD"}</button>
+        </div>
+
+ </div>
+`
+});
+
+virtualCards.innerHTML = list;
+}
 
 
 const name = document.getElementById('name')
