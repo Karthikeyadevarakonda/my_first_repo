@@ -554,12 +554,8 @@ filterdata.forEach((x) => {
          if(x.price < 500){
             newLabel = `<div class="new-label absolute top-0 right-0 bg-pink-300 text-white text-xs px-2 py-1 rounded-tr-lg">New</div>`;
          }  
-        //  let countBtn =''
-        //  let count = '+';
+    
          const isInCart = cardState[x.name] === "true" ;
-        //  if(isInCart){
-        //     countBtn = `<button class=" itemsCount flex items-center justify-center w-6 h-6 absolute right-6 top-[140px] sm:top-[185px] text-white text-lg font-bold pb-1 bg-gray-400 rounded-full">${count}</button>`
-        //  }
 
 
   k += `<div class="card w-[170px] sm:w-[200px] h-[240px] sm:h-[270px] flex flex-col justify-around relative p-2 rounded-lg bg-white transform transition-transform duration-200 ease-in-out sm:hover:scale-105" data-name="${x.name}" data-new="${newLabel ? "true" :"false"}">
@@ -572,7 +568,7 @@ filterdata.forEach((x) => {
 
      
       ${newLabel}
-    //   ${countBtn}
+    
 
         <div class="bottom relative">
              <h4 class="ratingAndCount text-xs sm:text-base">${x.rating} <i class="fa-solid fa-star"></i> | ${x.reviewCount}</h4>
