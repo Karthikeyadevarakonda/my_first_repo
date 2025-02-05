@@ -275,7 +275,7 @@ body{
 
         </main>
 
-        <div id="container" class="hidden flex flex-wrap justify-evenly md:justify-start gap-x-1 gap-y-4 sm:gap-x-4 m-auto px-0 sm:p-24 pt-10 ">
+        <div id="container" class="hidden flex flex-wrap justify-evenly md:justify-start gap-x-1 gap-y-4 sm:gap-x-4 m-auto px-1 sm:p-24 pt-10 ">
 
         </div>
 
@@ -329,6 +329,7 @@ body{
 
  
 <script>
+
 
 
 
@@ -558,7 +559,7 @@ filterdata.forEach((x) => {
          const isInCart = cardState[x.name] === "true" ;
 
 
-  k += `<div class="card w-[170px] sm:w-[200px] h-[240px] sm:h-[270px] flex flex-col justify-around relative p-2 rounded-lg bg-white transform transition-transform duration-200 ease-in-out sm:hover:scale-105" data-name="${x.name}" data-new="${newLabel ? "true" :"false"}">
+  k += `<div class="card w-[160px] sm:w-[200px] h-[230px] sm:h-[270px] flex flex-col justify-around relative p-2 rounded-lg bg-white transform transition-transform duration-200 ease-in-out sm:hover:scale-105" data-name="${x.name}" data-new="${newLabel ? "true" :"false"}">
        <div class="top">
          <img class="image sm:w-[150px] sm:h-[150px]" src="${x.image}"/>
         </div>
@@ -819,6 +820,29 @@ function loadData(fn){
     fn()
  },2000)
 }
+
+
+document.addEventListener('click', function (event) {
+    if (event.target.classList.contains('addtocart')) {
+        const card = event.target.closest('.card');
+        const name = card.dataset.name;
+        const price = card.querySelector('.price').textContent;
+        const rating = card.querySelector('.ratingAndCount').textContent;
+        
+        // Construct WhatsApp message
+        const message = `Hi, I want to order:\n\n*${name}*\nPrice: ${price}\nRating: ${rating}`;
+        
+        // Encode message for URL
+        const encodedMessage = encodeURIComponent(message);
+        
+        // WhatsApp URL with your number
+        const whatsappURL = `https://wa.me/9346133185?text=${encodedMessage}`;
+        
+        // Open WhatsApp
+        window.open(whatsappURL, '_blank');
+    }
+});
+
     </script>
 </body>
 </html>
